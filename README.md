@@ -1,7 +1,7 @@
-# Importent Notes and Recording Link 
+# Importent Notes, Topic Name, Recording Link 
 
 ## Importent Notes
-- CSS All :[Web Site Link](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- CSS All : [Web Site Link](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Day, Topic Name, Recording Link
 - Day 1 - Introduction of HTML Tag 
@@ -24,7 +24,7 @@
     - Recording Link : [Provide By Mentor](https://youtube.com/live/2dqlkaex9-M?feature=share) , [MyRcording](https://www.awesomescreenshot.com/video/24311825?key=7b89aff2f1345a6ac3fc6b716ab081d7) , [Releted Topic](https://www.youtube.com/watch?v=-65YXXhJvOE&list=PL0b6OzIxLPbw5xyi8Q6cdR05Gz-0x-vaf&ab_channel=YahooBaba)
 
 - Day 8 - More Flex properties
-    - Recording : [Provide By Mentor](https://youtube.com/live/TmsrlLE6WnY?feature=share) , [MyRcording](https://www.awesomescreenshot.com/video/24348587?key=e2f2f574a375f8d3485a4f45fdeaee59)
+    - Recording Link : [Provide By Mentor](https://youtube.com/live/TmsrlLE6WnY?feature=share) , [MyRcording](https://www.awesomescreenshot.com/video/24348587?key=e2f2f574a375f8d3485a4f45fdeaee59)
     
 - Day 9 -  
-    - Recording : [Provide By Mentor]() , [MyRcording]()
+    - Recording Link : [Provide By Mentor]() , [MyRcording]()
