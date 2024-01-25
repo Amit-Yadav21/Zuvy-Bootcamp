@@ -17,19 +17,7 @@
     - Recording Link : [Provide By Mentor](https://youtube.com/live/q_ydElZpwGQ?feature=share)
 - Day 7 - Flexbox Properties
     - Recording Link : [Provide By Mentor](https://youtube.com/live/2dqlkaex9-M?feature=share) [MyRcording](https://www.awesomescreenshot.com/video/24311825?key=7b89aff2f1345a6ac3fc6b716ab081d7) [Releted Topic](https://www.youtube.com/watch?v=-65YXXhJvOE&list=PL0b6OzIxLPbw5xyi8Q6cdR05Gz-0x-vaf&ab_channel=YahooBaba)
-- Day 8 -  
-    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 8 - More Flex properties
+    - Recording : [Provide By Mentor](https://youtube.com/live/TmsrlLE6WnY?feature=share) [MyRcording](https://www.awesomescreenshot.com/video/24348587?key=e2f2f574a375f8d3485a4f45fdeaee59)
 - Day 9 -  
-    - Recording : [Provide By Mentor]() [MyRcording]()
-- Day 10 -  
-    - Recording : [Provide By Mentor]() [MyRcording]()
-- Day 11 -  
-    - Recording : [Provide By Mentor]() [MyRcording]()
-- Day 12 -  
-    - Recording : [Provide By Mentor]() [MyRcording]()
-- Day 13 -  
-    - Recording : [Provide By Mentor]() [MyRcording]()
-- Day 14 -  
-    - Recording : [Provide By Mentor]() [MyRcording]()
-- Day 15 -  
     - Recording : [Provide By Mentor]() [MyRcording]()
