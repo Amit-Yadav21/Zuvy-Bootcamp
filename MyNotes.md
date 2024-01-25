@@ -1,11 +1,35 @@
 # Importent Notes and Recording Link 
 
 ## Importent Notes
-- 
+- CSS All :[Web Site Link](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Day, Topic Name, Recording Link
 - Day 1 - Introduction of HTML Tag 
-- Day 2 - Make Form 
-    - Recording : [YouTub Link](https://www.youtube.com/watch?v=pLkbk4t7iVs) [Awesome Link](https://www.awesomescreenshot.com/video/24103511?key=2bbf757ed2b0f67111935755e7a9b603)
-- Day 3 - CSS Colors, Font Properties, Box Model
-    - Recording : [YouTub Link](https://www.youtube.com/watch?v=Q7ADbsAnwXM) [Awesome Link](https://www.awesomescreenshot.com/video/24139536?key=5b42efc595c85460eab83dabb3db5900)
+- Day 2 - Forms and Semantic Elements
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=pLkbk4t7iVs) [MyRcording](https://www.awesomescreenshot.com/video/24103511?key=2bbf757ed2b0f67111935755e7a9b603)
+- Day 3 - CSS Colors, Font Properties, Box Model 
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Q7ADbsAnwXM) [MyRcording](https://www.awesomescreenshot.com/video/24139536?key=5b42efc595c85460eab83dabb3db5900)
+- Day 4 - CSS Cascade, Combining Selectors, CSS Positioning  
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=hgqbzJMNGcU) [MyRcording](https://www.awesomescreenshot.com/video/24175547?key=df3860720f802d0e889c81d3f8b76522)
+- Day 5 - CSS Display, CSS Float
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=3u-qmYh8jJc) [MyRcording](https://www.awesomescreenshot.com/video/24239952?key=811411c8408b20841e2c4b712d533ac5)
+- Day 6 - Responsiveness and Media Queries
+    - Recording Link : [Provide By Mentor](https://youtube.com/live/q_ydElZpwGQ?feature=share)
+- Day 7 - Flexbox Properties
+    - Recording Link : [Provide By Mentor](https://youtube.com/live/2dqlkaex9-M?feature=share) [MyRcording](https://www.awesomescreenshot.com/video/24311825?key=7b89aff2f1345a6ac3fc6b716ab081d7) [Releted Topic](https://www.youtube.com/watch?v=-65YXXhJvOE&list=PL0b6OzIxLPbw5xyi8Q6cdR05Gz-0x-vaf&ab_channel=YahooBaba)
+- Day 8 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 9 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 10 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 11 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 12 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 13 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 14 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
+- Day 15 -  
+    - Recording : [Provide By Mentor]() [MyRcording]()
