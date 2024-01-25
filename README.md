@@ -7,6 +7,7 @@
 - Day 1 - Introduction of HTML Tag 
 - Day 2 - Forms and Semantic Elements
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=pLkbk4t7iVs) , [MyRcording](https://www.awesomescreenshot.com/video/24103511?key=2bbf757ed2b0f67111935755e7a9b603)
+    
 - Day 3 - CSS Colors, Font Properties, Box Model 
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Q7ADbsAnwXM) , [MyRcording](https://www.awesomescreenshot.com/video/24139536?key=5b42efc595c85460eab83dabb3db5900)
 - Day 4 - CSS Cascade, Combining Selectors, CSS Positioning  
