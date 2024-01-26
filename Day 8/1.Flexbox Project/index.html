@@ -13,7 +13,91 @@
 
     /* Write your CSS here */
 
+    .pricing-container{
+      height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .pricing-plan{
+     flex-basis: 350px;
+     height: 250px;
+     background-color:hsl(204, 43%, 93%);
+    }
+    .plan-title{
+      display: flex;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 23px;
+     
+    }
+    .plan-price{
+      font-weight: bold;
+      font-size: 40px;
+     display: flex;
+     justify-content: center;
+    }
+    .plan-button{
+      background-color:rgb(250, 104, 51);
+      height: 25px;
+      width: 80px;
+      position: relative;
+      top: 130px;
+      left: 130px;
+      border-radius: 5px;
 
+    }
+    .plan-features{
+      list-style-type: none;
+      position:absolute;
+      display: flex;
+      flex-direction: column;
+    }
+    .list-1{
+      position: relative;
+     left: 60px;
+    }
+    .list-2{
+      position: relative;
+      top: 17px;
+      left: 100px;
+    }
+    .list-3{
+      position: relative;
+      top: 35px;
+      left: 85px;
+    }
+    .list-4{
+      position: relative;
+      left: 70px;
+    }
+    .list-5{
+      position: relative;
+      top: 15px;
+      left: 90px;
+    }
+    .list-6{
+      position: relative;
+      top: 35px;
+      left: 70px;
+    }
+    .item-1{
+      position: relative;
+      left: 70px;
+      bottom: 10px;
+    }
+    .item-2{
+      position: relative;
+      top: 15px;
+      left: 90px;
+    }
+    .item-3{
+      position: relative;
+      top: 35px;;
+      left: 40px;
+    }
   </style>
 </head>
 
@@ -22,20 +106,20 @@
     <div class="pricing-plan">
       <div class="plan-title">Basic</div>
       <div class="plan-price">$9.99/month</div>
-      <ul class="plan-features">
-        <li>✅ 10GB Storage</li>
-        <li>✅ 1 User</li>
-        <li>🚫 Support</li>
-      </ul>
-      <button class="plan-button">Sign Up</a>
+        <ul class="plan-features">
+          <li class="list-1">✅ 10GB Storage</li>
+          <li class="list-2">✅ 1 User</li>
+          <li class="list-3">🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</a>
     </div>
     <div class="pricing-plan">
       <div class="plan-title">Standard</div>
       <div class="plan-price">$19.99/month</div>
       <ul class="plan-features">
-        <li>✅ 50GB Storage</li>
-        <li>✅ 5 Users</li>
-        <li>✅ Phone &amp; Email Support</li>
+        <li class="item-1">✅ 50GB Storage</li>
+        <li class="item-2">✅ 5 Users</li>
+        <li class="item-3">✅ Phone &amp; Email Support</li>
       </ul>
       <button class="plan-button">Sign Up</a>
     </div>
@@ -43,9 +127,9 @@
       <div class="plan-title">Premium</div>
       <div class="plan-price">$49.99/month</div>
       <ul class="plan-features">
-        <li>✅ 100GB Storage</li>
-        <li>✅ 10 Users</li>
-        <li>✅ 24/7 Support</li>
+        <li class="list-4">✅ 100GB Storage</li>
+        <li class="list-5">✅ 10 Users</li>
+        <li class="list-6">✅ 24/7 Support</li>
       </ul>
       <button class="plan-button">Sign Up</a>
     </div>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,174 @@
   <style>
     /* Write your CSS here*/
 
+    body {
+      background-color: hsl(204, 43%, 93%);
+     
+    }
+  
+    .container-1 {
+      height: 12rem;
+      width: 32.5rem;
+      background-color: white;
+      padding: 10px;
+    }
+
+    .para {
+      color: hsl(71, 73%, 54%);
+    }
+
+    .paragraph{
+      position: relative;
+      top: 10px;
+    }
+    #heading {
+      color: hsl(179, 62%, 43%);
+    }
+
+    #second-mainDiv {
+      display: flex;
+    }
+
+    .container-2 {
+      height: 250px;
+      width: 270px;
+      background-color: hsl(179, 85%, 31%);
+    }
+
+    span {
+      font-size: 15px;
+    }
+
+    button {
+      height: 50px;
+      width: 207px;
+      font-size: 20px;
+      background-color: hsl(71, 73%, 54%);
+      position: relative;
+      top: 20px;
+      border-radius: 8px;
+    }
+
+    .container-3 {
+      height: 250px;
+      width: 270px;
+      background-color: hsl(179, 62%, 43%);
+      align-items: center;
+    }
+
+    .fixed-txt {
+      position: relative;
+      left: 20px;
+    
+
+    }
+
+    .down-mainDiv {
+      display: flex;
+      width: 560px;
+      flex-wrap: wrap;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .remove-dot {
+      list-style-type: none;
+      text-align: justify;
+      position: relative;
+      top: 25px;
+
+    }
+
+    .first-head {
+      position: relative;
+      top: 15px;
+      right: 15px;
+    }
+
+    h1 {
+      position: relative;
+      right: 40px;
+      top: 15px;
+    }
+
+    .para-2 {
+      position: relative;
+     
+      left: 5px;
+    }
+
+    .first-head-1 {
+      position: relative;
+      top: 20px;
+      right: 60px;
+    }
+
+    #main-container{
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    @media (max-width:600px) {
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        height: 20%;
+        width: 90%;
+
+      }
+      .container-1{
+        height: 32vh;
+        width: 100vh;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <!-- Write your own HTML only content is provided -->
-  Join our community
 
-  30-day, hassle-free money back guarantee
-
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
-
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
+  <div id="main-container">
+    <div class="container">
+      <div class="container-1">
+        <div class="fixed-txt">
+          <h2 id="heading">Join our community</h2>
+          <p class="para">30-day, hassle-free money back guarantee</p>
+          <p class="paragraph">Gain access to our full library of tutorials along with expert code reviews.
+            Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+      </div>
+  
+      <div class="down-mainDiv">
+        <div class="container-2">
+          <h3 class="first-head">Monthly Subscription</h3>
+  
+          <h1>&dollar;29 <span>per month</span></h1>
+  
+          <p class="para-2">Full access for less than &dollar;1 a day</p>
+  
+          <button> Sign Up</button>
+        </div>
+  
+        <div class="container-3">
+          <h3 class="first-head-1">Why Us</h3>
+          <ul class="para-3">
+            <li class="remove-dot">Tutorials by industry experts</li>
+            <li class="remove-dot">Peer &amp; expert code review </li>
+            <li class="remove-dot">Coding exercises </li>
+            <li class="remove-dot">Access to our GitHub repos </li>
+            <li class="remove-dot"> Community forum </li>
+            <li class="remove-dot">Flashcard decks </li>
+            <li class="remove-dot">New videos every week</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
+
 </html>
