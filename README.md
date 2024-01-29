@@ -27,7 +27,7 @@
     - Recording Link : [Provide By Mentor](https://youtube.com/live/TmsrlLE6WnY?feature=share) , [MyRcording](https://www.awesomescreenshot.com/video/24348587?key=e2f2f574a375f8d3485a4f45fdeaee59)
     
 - Day 9 - CSS Grid
-    - Recording Link : [Provide By Mentor](https://youtube.com/live/UDWhV4NcLeA?feature=share)
+    - Recording Link : [Provide By Mentor](https://youtube.com/live/UDWhV4NcLeA?feature=share), [Releted Topic](https://www.youtube.com/watch?v=h7CsJ6x-sI0&list=PL0b6OzIxLPbyTHa8kl8krEvyszCKO1Uml&ab_channel=YahooBaba)
 
 - Day 10 -  
     - Recording Link : [Provide By Mentor](), [MyRcording]()
