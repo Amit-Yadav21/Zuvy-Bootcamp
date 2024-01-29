@@ -26,5 +26,23 @@
 - Day 8 - More Flex properties
     - Recording Link : [Provide By Mentor](https://youtube.com/live/TmsrlLE6WnY?feature=share) , [MyRcording](https://www.awesomescreenshot.com/video/24348587?key=e2f2f574a375f8d3485a4f45fdeaee59)
     
-- Day 9 -  
-    - Recording Link : [Provide By Mentor]() , [MyRcording]()
+- Day 9 - CSS Grid
+    - Recording Link : [Provide By Mentor](https://youtube.com/live/UDWhV4NcLeA?feature=share)
+
+- Day 10 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 11 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 12 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 13 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 14 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 15 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
