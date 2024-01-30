@@ -1,181 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flex Box Task 2</title>
-  <style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
+    <title>Flex Box Task 2</title>
+    <style>
     /* Write your CSS here*/
-
-    body {
-      background-color: hsl(204, 43%, 93%);
-     
-    }
-  
-    .container-1 {
-      height: 12rem;
-      width: 32.5rem;
-      background-color: white;
-      padding: 10px;
-    }
-
-    .para {
-      color: hsl(71, 73%, 54%);
-    }
-
-    .paragraph{
-      position: relative;
-      top: 10px;
-    }
-    #heading {
-      color: hsl(179, 62%, 43%);
-    }
-
-    #second-mainDiv {
-      display: flex;
-    }
-
-    .container-2 {
-      height: 250px;
-      width: 270px;
-      background-color: hsl(179, 85%, 31%);
-    }
-
-    span {
-      font-size: 15px;
-    }
-
-    button {
-      height: 50px;
-      width: 207px;
-      font-size: 20px;
-      background-color: hsl(71, 73%, 54%);
-      position: relative;
-      top: 20px;
-      border-radius: 8px;
-    }
-
-    .container-3 {
-      height: 250px;
-      width: 270px;
-      background-color: hsl(179, 62%, 43%);
-      align-items: center;
-    }
-
-    .fixed-txt {
-      position: relative;
-      left: 20px;
-    
-
-    }
-
-    .down-mainDiv {
-      display: flex;
-      width: 560px;
-      flex-wrap: wrap;
-      text-align: center;
-      position: relative;
-      color: white;
-    }
-
-    .remove-dot {
-      list-style-type: none;
-      text-align: justify;
-      position: relative;
-      top: 25px;
-
-    }
-
-    .first-head {
-      position: relative;
-      top: 15px;
-      right: 15px;
-    }
-
-    h1 {
-      position: relative;
-      right: 40px;
-      top: 15px;
-    }
-
-    .para-2 {
-      position: relative;
-     
-      left: 5px;
-    }
-
-    .first-head-1 {
-      position: relative;
-      top: 20px;
-      right: 60px;
-    }
-
-    #main-container{
+    body{
+      font-size: 1rem;
       height: 100vh;
-      width: 100%;
+      background-color: PowderBlue;
+      font-family: Karl, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
     }
-    @media (max-width:600px) {
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        height: 20%;
-        width: 90%;
-
-      }
-      .container-1{
-        height: 32vh;
-        width: 100vh;
-      }
+    main{
+      width: 45%;
+      /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
     }
+    .Introduction{
+      background-color: white;
+      padding: 2rem;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .Introduction h2{
+      color:LightSeaGreen;
+    }
+    .Introduction h3{
+      font-size: 1rem;
+      color: hsl(71, 73%, 54%);
+    }
+    .Introduction p{
+      font-size: 0.9rem;
+      color: hsl(218, 22%, 67%);
+      font-weight: 500;
+      
+    }
+    .Subscription{
+      background-color: LightSeaGreen;
+      padding: 2rem;
+      width: 50%;
+      border-bottom-left-radius: 10px;
+    }
+    .Subscription .second_para{
+      font-size: 0.86rem;
+    }
+    .Subscription >h4, .Subscription>button, .Subscription p>span, .Why-Us>h4{
+      color: white;
+    }
+    .Subscription .second_para, .Why-Us >ul{
+      color:rgb(166, 217, 219);
+    }
+    .Subscription p>span{
+      font-size: 2rem;
+    }
+    .Subscription p{
+      color: rgb(38, 209, 201);
+    }
+    .Subscription button{
+      width: 100%;
+      height: 2.5rem;
+      margin-top: 1rem;
+      background-color:rgb(172, 223, 70);
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .Why-Us{
+      background-color: rgb(50, 184, 177);
+      padding: 2rem;
+      width: 50%;
+      border-bottom-right-radius: 10px;
+    }
+    .Why-Us ul{
+      list-style: none;
+      padding: 0px;
+      font-size: 0.8rem;
+    }
+    .Why-Us ul li{
+      line-height: 1.3rem;
+    }
+    .bottom-div{
+      display: flex;
+    }
+
   </style>
-</head>
-
-<body>
-
-  <!-- Write your own HTML only content is provided -->
-
-  <div id="main-container">
-    <div class="container">
-      <div class="container-1">
-        <div class="fixed-txt">
-          <h2 id="heading">Join our community</h2>
-          <p class="para">30-day, hassle-free money back guarantee</p>
-          <p class="paragraph">Gain access to our full library of tutorials along with expert code reviews.
-            Perfect for any developers who are serious about honing their skills.</p>
+  </head>
+  <body>
+    <!-- Write your own HTML only content is provided -->
+    <main>
+      <section class="Introduction">
+        <h2>Join our community</h2>
+        <h3>30-day, hassle-free money back guarantee</h3>
+        <p>Gain access to our full library of tutorials along with expert code reviews.</p>
+        <p>Perfect for any developers who are serious about honing their skills.</p>
+      </section>
+      <section class="bottom-div">
+        <div class="Subscription">
+          <h4>Monthly Subscription</h4>
+          <p><span>&dollar;29</span> per month</p>
+          <p class="second_para">Full access for less than &dollar;1 a day</p>
+          <button>Sign Up</button>
         </div>
-      </div>
-  
-      <div class="down-mainDiv">
-        <div class="container-2">
-          <h3 class="first-head">Monthly Subscription</h3>
-  
-          <h1>&dollar;29 <span>per month</span></h1>
-  
-          <p class="para-2">Full access for less than &dollar;1 a day</p>
-  
-          <button> Sign Up</button>
-        </div>
-  
-        <div class="container-3">
-          <h3 class="first-head-1">Why Us</h3>
-          <ul class="para-3">
-            <li class="remove-dot">Tutorials by industry experts</li>
-            <li class="remove-dot">Peer &amp; expert code review </li>
-            <li class="remove-dot">Coding exercises </li>
-            <li class="remove-dot">Access to our GitHub repos </li>
-            <li class="remove-dot"> Community forum </li>
-            <li class="remove-dot">Flashcard decks </li>
-            <li class="remove-dot">New videos every week</li>
+        <div class="Why-Us">
+          <h4>Why Us</h4>
+          <ul>
+            <li>Tutorials by industry experts</li>
+            <li>Peer &amp; expert code review</li>
+            <li>Coding exercises</li>
+            <li>Access to our GitHub repos</li>
+            <li>Community forum</li>
+            <li>Flashcard decks</li>
+            <li>New videos every week</li>
           </ul>
         </div>
-      </div>
-    </div>
-  </div>
-
-</body>
-
+      </section>
+    </main>
+  </body>
 </html>
