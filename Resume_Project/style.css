@@ -1,5 +1,6 @@
 body{
     background: #f8fafc;
+    font-family: Karla sans-serif;
 }
 nav{
     display: flex;
@@ -7,6 +8,9 @@ nav{
     justify-content:space-between;
     flex: wrap;
     background-color:burlywood;
+    height: 3rem;
+    border-bottom-left-radius: 2rem;
+    border-top-right-radius: 2rem;
 }
 .logo{
     height: 2.5rem;
@@ -42,4 +46,12 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+}
+main{
+    display: grid;
+    grid-template-areas: "header" "main" "second" "third" "forth" "five" "footer";
+    grid-template-rows: 100vh 450px 450px 530px 530px 880px 395px;
+    height: 10vw;
+    width: 100%;
+    grid-gap: 7px;
 }
