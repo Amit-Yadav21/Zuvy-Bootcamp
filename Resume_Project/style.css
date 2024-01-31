@@ -1,7 +1,7 @@
 body{
     background: #f8fafc;
     font-family: Karla sans-serif;
-    margin: 0px 0.5rem 0px 0.5rem;
+    margin: 0px 0.5rem 0 0.5rem;
 }
 html{
     scroll-behavior: smooth;
@@ -17,8 +17,6 @@ nav{
     flex: wrap;
     background-color:burlywood;
     height: 3.5rem;
-    border-bottom-left-radius: 2rem;
-    border-top-right-radius: 2rem;
 }
 .logo{
     height: 2.5rem;
@@ -41,7 +39,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
-    /* padding: 8px; */
+    padding: 5px;
 }
 nav ul li a:hover{
     background-color: white;
@@ -68,7 +66,7 @@ main{
     display: grid;
     grid-template-areas: "Home" "Project" "About" "Experience" "Bootcamp" "Tranning" "Contact";
     grid-template-rows: 60vh 500px 500px 500px 500px 500px 395px;
-    grid-gap: 5px;
+    grid-gap: 2px;
 }
 #Home{
     grid-area: Home;
@@ -104,7 +102,9 @@ main{
 /* back top */
 #back-top{
     height: 3rem;
-    background-color: #ff004f;
+    background-color:black;
+    opacity: .9;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,4 +118,36 @@ main{
     float: right;
     border-radius: 50%;
     padding: 0.5rem;
+}
+#back-top >button:hover{
+    transition: scale(1.3);
+    cursor: pointer;
+}
+
+#back-top .fa-whatsapp{
+    font-size: 28px;
+}
+/* .social-icons{
+    transition: all 0.2s;
+} */
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    /* color:white; */
+    display: inline-block;
+    transition: all 0.5s;
+
+}
+/* -----------------------------what's app icon color */
+.fa-github{
+    color: white;
+}
+.fa-whatsapp{
+    color: #25D366;
+    transition: scale(1.3);
+}
+/* ----------------------------------linkedin icon color */
+.social-icons .fa-linkedin{
+    color: #0A66C2;
 }
