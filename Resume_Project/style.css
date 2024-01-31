@@ -2,6 +2,9 @@ body{
     background: #f8fafc;
     font-family: Karla sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 nav{
     display: flex;
     align-items: center;
@@ -47,11 +50,52 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+
 main{
     display: grid;
-    grid-template-areas: "header" "main" "second" "third" "forth" "five" "footer";
-    grid-template-rows: 100vh 450px 450px 530px 530px 880px 395px;
-    height: 10vw;
-    width: 100%;
-    grid-gap: 7px;
+    grid-template-areas: "Home" "Project" "About" "Experience" "Bootcamp" "Tranning" "Contact";
+    grid-template-rows: 60vh 500px 500px 500px 500px 500px 395px;
+    grid-gap: 5px;
+}
+/*Home,Project,About,Experience,Bootcamp,Tranning,Contact*/
+#Home{
+    grid-area: Home;
+    background-color: #ff004f;
+}
+#Project{
+    grid-area: Project;
+    background-color: black;
+}
+#About{
+    grid-area: About;
+    background-color:red;
+}
+#Experience{
+    grid-area: Experience;
+    background-color:brown;
+}
+#Bootcamp{
+    grid-area: Bootcamp;
+    background-color: blueviolet;
+}
+#Tranning{
+    grid-area: Tranning;
+    background-color: aqua;
+}
+#Contact{
+    grid-area: Contact;
+    background-color: chartreuse;
+}
+
+/* back top */
+#back-top{
+    display: flex;
+    justify-content:end;
+    align-items:end;
+}
+#back-top button{
+    border-radius: 50%;
+    padding: 0.3rem;
+    /* transform: translateY(-5px); */
+    /* transition: transform 0.1s; */
 }
