@@ -61,6 +61,7 @@ main{
 #Home{
     grid-area: Home;
     background-color: #ff004f;
+    position:fixed;
 }
 #Project{
     grid-area: Project;
