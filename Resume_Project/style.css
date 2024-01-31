@@ -5,6 +5,10 @@ body{
 html{
     scroll-behavior: smooth;
 }
+header{
+    width: 98.8%;
+    position: fixed;
+}
 nav{
     display: flex;
     align-items: center;
@@ -61,7 +65,6 @@ main{
 #Home{
     grid-area: Home;
     background-color: #ff004f;
-    position:fixed;
 }
 #Project{
     grid-area: Project;
