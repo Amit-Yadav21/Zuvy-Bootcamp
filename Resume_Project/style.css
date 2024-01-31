@@ -1,5 +1,5 @@
 body{
-    background: #f8fafc;
+    /* background-color: black; */
     font-family: Karla sans-serif;
     margin: 0px 0.5rem 0 0.5rem;
 }
@@ -64,26 +64,31 @@ nav ul li a:hover::after{
 
 main{
     display: grid;
-    grid-template-areas: "Home" "Project" "About" "Experience" "Bootcamp" "Tranning" "Contact";
-    grid-template-rows: 60vh 500px 500px 500px 500px 500px 395px;
+    grid-template-areas: "Home" "About" "Project" "Experience" "Bootcamp" "Tranning" "Contact";
+    grid-template-rows: 325px 500px 500px 500px 500px 500px 395px;
     grid-gap: 2px;
 }
 #Home{
     grid-area: Home;
     /* background-color: #ff004f; */
-    background-image: url(./Images/portfolio1.webp);
+    background-image: url(./Images/portfolio.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     margin-top: 3.5rem;
     z-index: -1;
+}
+#Home marquee{
+    margin-top: 0.5rem;
+    text-align: center;
+}
+#About{
+    grid-area: About;
+    background-color:#f8fafc;
 }
 #Project{
     grid-area: Project;
     background-color: black;
-}
-#About{
-    grid-area: About;
-    background-color:red;
 }
 #Experience{
     grid-area: Experience;
@@ -155,5 +160,5 @@ main{
 }
 /* ----------------------------------linkedin icon color */
 .social-icons .fa-linkedin{
-    color: #0A66C2;
+    color: #0372e0;
 }
