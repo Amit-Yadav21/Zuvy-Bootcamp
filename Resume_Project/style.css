@@ -1,6 +1,7 @@
 body{
     background: #f8fafc;
     font-family: Karla sans-serif;
+    margin: 0px 0.5rem 0px 0.5rem;
 }
 html{
     scroll-behavior: smooth;
@@ -15,7 +16,7 @@ nav{
     justify-content:space-between;
     flex: wrap;
     background-color:burlywood;
-    height: 3rem;
+    height: 3.5rem;
     border-bottom-left-radius: 2rem;
     border-top-right-radius: 2rem;
 }
@@ -40,6 +41,14 @@ nav ul li a{
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    /* padding: 8px; */
+}
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+    border-bottom-right-radius: 2rem;
+    border-top-left-radius: 2rem;
 }
 nav ul li a::after{
     content: '';
@@ -61,10 +70,11 @@ main{
     grid-template-rows: 60vh 500px 500px 500px 500px 500px 395px;
     grid-gap: 5px;
 }
-/*Home,Project,About,Experience,Bootcamp,Tranning,Contact*/
 #Home{
     grid-area: Home;
     background-color: #ff004f;
+    margin-top: 3.5rem;
+    z-index: -1;
 }
 #Project{
     grid-area: Project;
