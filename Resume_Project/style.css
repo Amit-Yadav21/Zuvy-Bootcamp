@@ -66,7 +66,7 @@ nav ul li a:hover::after{
 main{
     display: grid;
     grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Tranning" "Contact";
-    grid-template-rows: 630px 520px 350px 500px 460px 500px 395px;
+    grid-template-rows: 630px 520px 350px 550px 460px 500px 395px;
     /* grid-gap: 3px; */
 }
 #Home{
@@ -163,7 +163,7 @@ main{
     justify-content:space-around;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 .Project_section img{
     height: 6rem;
@@ -176,14 +176,14 @@ main{
     /* border: 2px solid; */
     gap: 0.5rem;
     width: 26rem;
-    height: 8rem;
+    height: 10rem;
 }
 .Project_section_card h2{
     font-size: 1rem;
     margin: 0px;
 }
 .Project_section_card p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: 0px;
 }
 .Project_social-icons{
@@ -203,7 +203,7 @@ main{
 } */
 #Bootcamp{
     grid-area: Bootcamp;
-    background-color: rgb(128, 94, 159);
+    background-color: black;
 }
 #Bootcamp h1{
     text-align: center;
