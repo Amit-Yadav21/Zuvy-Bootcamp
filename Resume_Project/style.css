@@ -163,6 +163,7 @@ main{
     justify-content:space-around;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 .Project_section img{
     height: 6rem;
@@ -172,7 +173,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid;
+    /* border: 2px solid; */
     gap: 0.5rem;
     width: 26rem;
     height: 8rem;
@@ -185,8 +186,16 @@ main{
     font-size: 0.8rem;
     margin: 0px;
 }
-.Project_section_card .Project_social-icons a{
-  
+.Project_social-icons{
+    margin-top: 0.5rem;
+}
+.Project_social-icons .fa-eye,
+.Project_social-icons .fa-github{
+    color: black;
+}
+.Project_social-icons a{
+    margin-right: 0.5rem;
+    font-size: 1.3rem;
 }
 /* #Experience{
     grid-area: Experience;
