@@ -65,7 +65,7 @@ nav ul li a:hover::after{
 main{
     display: grid;
     grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Experience" "Tranning" "Contact";
-    grid-template-rows: 325px 520px 350px 500px 500px 500px 500px 395px;
+    grid-template-rows: 325px 520px 350px 500px 460px 500px 500px 395px;
     grid-gap: 2px;
 }
 #Home{
@@ -154,6 +154,32 @@ main{
     grid-area: Bootcamp;
     background-color: blueviolet;
 }
+#Bootcamp h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.Bootcamp_sectioin_card{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 12rem;
+    margin: 2rem;
+}
+hr{
+    width: 50rem;
+}
+.Bootcamp_sectioin_card img{
+    border-radius: 1rem;
+    height: 9rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+.Bootcamp_sectioin_card p{
+    font-size: 1.2rem;
+}
+.Bootcamp_sectioin_card h2,
+.Bootcamp_sectioin_card p{
+    color: white;
+}
 #Tranning{
     grid-area: Tranning;
     background-color: aqua;
@@ -178,9 +204,7 @@ main{
     margin: 0px;
 }
 #back-top button{
-    /* display: none; */
     float: right;
-    /* border-radius: 50%; */
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     padding: 0.5rem;
@@ -194,17 +218,12 @@ main{
 #back-top .fa-whatsapp{
     font-size: 28px;
 }
-/* .social-icons{
-    transition: all 0.2s;
-} */
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    /* color:white; */
     display: inline-block;
     transition: all 0.5s;
-
 }
 /* -----------------------------what's app icon color */
 .fa-github{
