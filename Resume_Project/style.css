@@ -1,6 +1,6 @@
 body{
     /* background-color: black; */
-    font-family: Karla sans-serif;
+    font-family: Karla;
     margin: 0px 0.5rem 0 0.5rem;
 }
 html{
@@ -64,8 +64,8 @@ nav ul li a:hover::after{
 
 main{
     display: grid;
-    grid-template-areas: "Home" "About" "Project" "Experience" "Bootcamp" "Tranning" "Contact";
-    grid-template-rows: 325px 500px 500px 500px 500px 500px 395px;
+    grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Experience" "Tranning" "Contact";
+    grid-template-rows: 325px 520px 350px 500px 500px 500px 500px 395px;
     grid-gap: 2px;
 }
 #Home{
@@ -86,10 +86,66 @@ main{
     grid-area: About;
     background-color:#f8fafc;
 }
+.about_section{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 15rem;
+    margin: 0rem 2rem 0rem 2rem;
+}
+#About h2{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+#About img{
+    height: 25rem;
+    margin-top: 3rem;
+    border-radius: 50%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+#About p{
+    font-size: 1.2rem;
+    font-weight:900;
+    text-align: justify;
+    line-height: 1.5rem;
+    padding: 2rem;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 30%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+}
+#Skill{
+    grid-area: Skill;
+    background-color:#b8d7f7;
+}
+#Skill h2{
+    text-align: center;
+    text-decoration: underline;
+}
+#Skill img{
+    height: 5rem;
+    background-color: white;
+    border-radius: 10px;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+.skills__row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
 #Project{
     grid-area: Project;
-    background-color: black;
-}
+    background-color:#e3edf7;}
 #Experience{
     grid-area: Experience;
     background-color:brown;
