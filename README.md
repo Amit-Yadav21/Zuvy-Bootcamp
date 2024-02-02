@@ -29,7 +29,7 @@
 - Day 9 - CSS Grid
     - Recording Link : [Provide By Mentor](https://youtube.com/live/UDWhV4NcLeA?feature=share), [Releted Topic](https://www.youtube.com/watch?v=h7CsJ6x-sI0&list=PL0b6OzIxLPbyTHa8kl8krEvyszCKO1Uml&ab_channel=YahooBaba)
 
-- Day 10 -  
+- Day 10 - 
     - Recording Link : [Provide By Mentor](), [MyRcording]()
 
 - Day 11 -  
@@ -38,8 +38,8 @@
 - Day 12 -  
     - Recording Link : [Provide By Mentor](), [MyRcording]()
 
-- Day 13 -  
-    - Recording Link : [Provide By Mentor](), [MyRcording]()
+- Day 13 - CSS Animations
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=akX6yscvpB4), [MyRcording]()
 
 - Day 14 -  
     - Recording Link : [Provide By Mentor](), [MyRcording]()
