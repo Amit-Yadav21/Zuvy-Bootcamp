@@ -283,7 +283,7 @@ hr {
 form {
     /* padding-left: 25px; */
     /* padding-right: 25px; */
-    padding-top: 60px;
+    padding-top: 2.5rem;
     /* margin: 12px auto; */
     /* border: 2px solid; */
     border-radius: 20px;
@@ -324,7 +324,7 @@ form>textarea {
 }
 
 form>textarea {
-    /* height: 100px; */
+    height: 5rem;
     resize: none;
 }
 
