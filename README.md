@@ -3,7 +3,8 @@
 ## Importent Notes
 - CSS All : [Web Site Link](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-## Day, Topic Name, Recording Link
+## HTML, CSS Topic 
+### Day, Topic Name, Recording Link
 - Day 1 - Introduction of HTML Tag 
 - Day 2 - Forms and Semantic Elements
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=pLkbk4t7iVs) , [MyRcording](https://www.awesomescreenshot.com/video/24103511?key=2bbf757ed2b0f67111935755e7a9b603)
@@ -41,8 +42,9 @@
 - Day 13 - CSS Animations
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=akX6yscvpB4), [MyRcording]()
 
-- Day 14 -  
-    - Recording Link : [Provide By Mentor](), [MyRcording]()
+## JavaScript Topic 
+- Day - 1 (Variables, Data Types, Operators)
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=cfZdsYXAtiw), [MyRcording]()
 
-- Day 15 -  
+- Day 2 - 
     - Recording Link : [Provide By Mentor](), [MyRcording]()
