@@ -31,7 +31,6 @@
                 align-items: center;
                 justify-content: space-between;
                 flex: wrap;
-                background-color: burlywood;
                 height: 3.5rem;
             }
             
@@ -89,7 +88,7 @@
                 display: grid;
                 grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Contact";
                 grid-template-rows: 630px 520px 350px 550px 460px 395px;
-                /* grid-gap: 3px; */
+                grid-gap: 3px;
             }
             
             #Home {
@@ -408,8 +407,14 @@
                 font-size: 1em;
             }
             
-            #About,#Skill,#Bootcamp,#Project{
-                background-image: url(./Images/BgImage.jpg);
+            /* bg Image here*/
+            nav,
+            #About,
+            #Skill,
+            #Bootcamp,
+            #Project{
+                background-image: url("https://i.ibb.co/xm9vVbw/BgImage.jpg");
+                background-size: cover;
             }
 
             /* back top */
