@@ -44,7 +44,7 @@
 
 ## JavaScript Topic 
 - Day - 1 (Variables, Data Types, Operators)
-    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=cfZdsYXAtiw), [MyRcording]()
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=cfZdsYXAtiw)
 
-- Day 2 - 
-    - Recording Link : [Provide By Mentor](), [MyRcording]()
+- Day 2 - Operators, Conditionals, Loops
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=PBoQqPxCvUI)
