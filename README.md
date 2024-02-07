@@ -52,8 +52,8 @@
 - Day 3 - Type Coercion and Strings Methods
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=xL-Zbfam2yw)
 
-- Day 4 -
-    - Recording Link : [Provide By Mentor]()
+- Day 4 - Switch, Array and Functions
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=XaI50wITCCM)
 
 - Day 5 -
     - Recording Link : [Provide By Mentor]()
