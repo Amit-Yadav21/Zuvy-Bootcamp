@@ -48,3 +48,15 @@
 
 - Day 2 - Operators, Conditionals, Loops
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=PBoQqPxCvUI)
+
+- Day 3 - Type Coercion and Strings Methods
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=xL-Zbfam2yw)
+
+- Day 4 -
+    - Recording Link : [Provide By Mentor]()
+
+- Day 5 -
+    - Recording Link : [Provide By Mentor]()
+
+- Day 6 -
+    - Recording Link : [Provide By Mentor]()
