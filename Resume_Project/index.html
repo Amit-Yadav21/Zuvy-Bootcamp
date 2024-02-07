@@ -521,6 +521,139 @@
             #back-top .fa-whatsapp {
                 font-size: 28px;
             }
+
+            @media screen and (max-width: 280px) {
+                header{
+                    width: 25%;
+                }
+                nav{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    height: 3rem;
+                }
+                .logo{
+                    height: 1.5rem;
+                    margin: 0.5rem 0rem 0rem 0rem;
+                }
+                nav ul li{
+                    display: inline;
+                }
+                nav ul li a{
+                    font-size: 0.7rem;
+                    padding: 0px;
+                }
+                nav ul li a:hover {
+                    background-color: red;
+                    color: white;
+                    box-shadow: 0 0 5px white;
+                    border-radius: 5px 0px 5px 0px ;
+                }
+                nav ul li a::after {
+                    content: '';
+                    width: 0px;
+                    height: 2px;
+                    background: #ff004f;
+                    position: relative;       
+                }
+
+                /*Home Section here*/
+                main {
+                    display: grid;
+                    grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Contact";
+                    grid-template-rows: 260px 520px 350px 1620px 850px 850px;
+                    grid-gap: 3px;
+                }
+                #Home {
+                    grid-area: Home;
+                    background-image: url('https://i.ibb.co/DRt6sb3/portfolio.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 17.5rem;
+                } 
+                
+                /*About*/
+                .about_section{
+                    display: block;
+                }
+                #About{
+                    width: 17.5rem; 
+                    text-align: center;                
+                }
+                #About img{
+                    width: 50%;
+                    height:8rem;
+                    object-fit:cover;
+                    margin-top: 1rem;
+                }
+                #About p{
+                    font-size: 0.7rem;
+                    width: 9rem;
+                    line-height: 1rem;
+                }
+
+                /*Skill*/
+                #Skill{
+                    width: 17.5rem; 
+                }
+                #Skill img {
+                    height: 1.1rem;
+                }
+                .Skill{
+                    display:flex;
+                    flex-direction: column;
+                    row-gap: 0rem;
+                    column-gap: 0rem;
+                }
+                /*Project section*/
+                #Project{
+                    grid-area: Project;
+                    width: 17.5rem;                   
+                }
+                .Project_section{
+                    display: block;
+                }
+                .Project_section img{
+                    height:8rem;
+                }
+                .Project_section_card{
+                    display: block;
+                    height: 16rem;
+                }
+                .Project_section_card p{
+                    width: 60%;
+                }
+
+                #Bootcamp{
+                    width: 17.5rem;
+                }
+                .Bootcamp_sectioin_card{
+                    display: block;
+                }
+                .Bootcamp_sectioin_card img{
+                    height: 7rem;
+                    order: 1;
+                }
+                hr{
+                    width: 8rem;
+                }
+
+                /*contact Section*/
+                #Contact{
+                    width: 17.5rem;
+                }
+                .contact_main_div{
+                    display: block;
+                }
+                .contact_section1{
+                    width: 16rem;
+                }
+                form>input,
+                form>textarea{
+                    width: 13rem;
+                }
+            }               
+
         </style>
     </head>
     <body>
@@ -777,12 +910,13 @@
                             <p>Right now, I'm participating in a frontend
                                 bootcamp with a duration of 3-5 months.</p>
                         </div>
-                        <img src="https://i.ibb.co/GFyctxB/Zuvy.png" alt>
+
+                        <img src="https://i.ibb.co/GFyctxB/Zuvy.png" alt="">
                     </div>
                 </div>
             </section>
             <!-- <section id="Experience"></section> -->
-            <section id="Tranning"></section>
+            <!-- <section id="Tranning"></section> -->
             <section id="Contact">
                 <div class="contact_main_div">
                     <div class="contact_section1">
