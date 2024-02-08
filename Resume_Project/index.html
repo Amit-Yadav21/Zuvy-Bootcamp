@@ -521,14 +521,12 @@
             #back-top .fa-whatsapp {
                 font-size: 28px;
             }
-
             @media screen and (max-width: 280px) {
                 header{
-                    width: 25%;
+                    width: 100%;
                 }
                 nav{
                     display: flex;
-                    flex-direction: row;
                     flex-wrap: nowrap;
                     height: 3rem;
                 }
@@ -538,9 +536,10 @@
                 }
                 nav ul li{
                     display: inline;
+                    float: right;
                 }
                 nav ul li a{
-                    font-size: 0.7rem;
+                    font-size: 0.4rem;
                     padding: 0px;
                 }
                 nav ul li a:hover {
@@ -561,97 +560,126 @@
                 main {
                     display: grid;
                     grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Contact";
-                    grid-template-rows: 260px 520px 350px 1620px 850px 850px;
+                    grid-template-rows: 14rem 32rem 15rem 85rem 900px 48rem;
                     grid-gap: 3px;
+
                 }
                 #Home {
                     grid-area: Home;
                     background-image: url('https://i.ibb.co/DRt6sb3/portfolio.png');
                     background-repeat: no-repeat;
-                    background-size: contain;
-                    width: 17.5rem;
-                } 
+                    background-size: cover;
+                    width: 27rem;
+                }
+                .home_section{
+                    padding: 1rem;
+                }
+                    
                 
                 /*About*/
+                #About{
+                    width: 27rem;
+                    text-align: center;                
+                }
                 .about_section{
                     display: block;
                 }
-                #About{
-                    width: 17.5rem; 
-                    text-align: center;                
-                }
                 #About img{
                     width: 50%;
-                    height:8rem;
+                    height:10rem;
                     object-fit:cover;
                     margin-top: 1rem;
                 }
                 #About p{
-                    font-size: 0.7rem;
-                    width: 9rem;
-                    line-height: 1rem;
+                    font-size: 1rem;
+                    width: 19rem;
+                    line-height: 1.2rem;
                 }
 
                 /*Skill*/
                 #Skill{
-                    width: 17.5rem; 
+                    width: 27rem; 
                 }
                 #Skill img {
-                    height: 1.1rem;
+                    height: 2.6rem;
                 }
-                .Skill{
-                    display:flex;
-                    flex-direction: column;
-                    row-gap: 0rem;
-                    column-gap: 0rem;
-                }
+
                 /*Project section*/
                 #Project{
                     grid-area: Project;
-                    width: 17.5rem;                   
+                    width: 27rem;                   
                 }
                 .Project_section{
-                    display: block;
+                    display: inline;
                 }
                 .Project_section img{
-                    height:8rem;
+                    height:10rem;
+                    padding: 0rem;
                 }
                 .Project_section_card{
-                    display: block;
-                    height: 16rem;
+                    display: flex;
+                    height: 8rem;
+                    margin: 5rem 1rem;
+                }
+                .Project_section_card h2{
+                    font-size: 1.4rem;
                 }
                 .Project_section_card p{
-                    width: 60%;
+                    font-size: 1.2rem;
                 }
 
+                /*Bootcamp*/
                 #Bootcamp{
-                    width: 17.5rem;
+                    width: 27rem;
                 }
                 .Bootcamp_sectioin_card{
                     display: block;
                 }
                 .Bootcamp_sectioin_card img{
-                    height: 7rem;
-                    order: 1;
+                    height: 12rem;
                 }
                 hr{
-                    width: 8rem;
+                    width: 18rem;
                 }
 
                 /*contact Section*/
                 #Contact{
-                    width: 17.5rem;
+                    width: 27rem;
                 }
                 .contact_main_div{
                     display: block;
                 }
                 .contact_section1{
-                    width: 16rem;
+                    width: 26rem;
                 }
+               
                 form>input,
                 form>textarea{
-                    width: 13rem;
+                    margin-left: 0rem;
+                    width:23rem;
+                    color: black;
                 }
+
+                .contact-info-content p{
+                    margin-left: 0rem;
+                    font-size: 1.2rem;
+                }
+
+                .MyCV{
+                    margin-top: 3rem;
+                    height: 2rem;
+                }
+                .MyCV:hover{
+                    background-color: red;
+                }
+                .social-icons>a{
+                    float: right;
+                    font-size: 1.5rem;
+                }
+                #back-top{
+                    width: 25rem;
+                }
+                
             }               
 
         </style>
