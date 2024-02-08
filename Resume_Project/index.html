@@ -11,13 +11,12 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
             crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="./style.css"> -->
+        <link rel="stylesheet" href="./style1.css">
         <title>My Resume</title>
 
         <style>
-            body {
+           /* body {
                 font-family: Karla;
-                /* margin: 0px 0.5rem 0 0.5rem; */
                 margin: 0px;
                 padding: 0px;
             }
@@ -26,7 +25,6 @@
                 scroll-behavior: smooth;
             }
             
-            /*Navbar Section here*/
             header {
                 width: 100%;
                 position: fixed;
@@ -42,7 +40,6 @@
             
             .logo {
                 height: 2.5rem;
-                /*opacity: 0.7;*/
                 border-radius: 50%;
                 box-shadow: 2px 3px gold;
                 border: 2px solid greenyellow;
@@ -89,7 +86,6 @@
                 width: 100%;
             }
             
-            /*Home Section here*/
             main {
                 display: grid;
                 grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Contact";
@@ -99,7 +95,6 @@
             
             #Home {
                 grid-area: Home;
-                /* background-color: #ff004f; */
                 background-image: url('https://i.ibb.co/DRt6sb3/portfolio.png');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -135,7 +130,6 @@
                 font-family: "Rubik Glitch Pop";
             }
             
-            /*About Section here*/
             #About {
                 grid-area: About;
             }
@@ -173,7 +167,6 @@
             
             }
             
-            /*Skill Section here*/
             #Skill {
                 grid-area: Skill;
             }
@@ -203,7 +196,6 @@
                 justify-content: center
             }
             
-            /*Project section*/
             #Project {
                 grid-area: Project;
             }
@@ -258,12 +250,7 @@
                 font-size: 1.5rem;
             }
             
-            /* #Experience{
-                grid-area: Experience;
-                background-color:brown;
-            } */
 
-            /*Bootcamp Section*/
             #Bootcamp {
                 grid-area: Bootcamp;
             }
@@ -301,12 +288,7 @@
                 color:black;
             }
             
-            /* #Tranning {
-                grid-area: Tranning;
-                background-color: aqua;
-            } */
             
-            /*contact Section*/
             #Contact {
                 grid-area: Contact;
                 background-color: black;
@@ -425,7 +407,6 @@
                 margin-left: 2rem;
             }
 
-            /*CV*/
             .MyCV{
                 border-radius: 0rem 1rem 0rem 1rem;
                 border: none;
@@ -443,7 +424,6 @@
                 color: white;
             }
 
-            /*Social Icons here*/
             .social-icons a {
                 text-decoration: none;
                 font-size: 30px;
@@ -478,7 +458,6 @@
                 color: transparent;
             }
             
-            /* bg Image here*/
             nav,
             #About,
             #Skill,
@@ -488,7 +467,6 @@
                 background-size: cover;
             }
 
-            /* back top */
             #back-top {
                 height: 3rem;
                 background-color: black;
@@ -556,7 +534,6 @@
                     position: relative;       
                 }
 
-                /*Home Section here*/
                 main {
                     display: grid;
                     grid-template-areas: "Home" "About" "Skill" "Project" "Bootcamp" "Contact";
@@ -576,7 +553,6 @@
                 }
                     
                 
-                /*About*/
                 #About{
                     width: 27rem;
                     text-align: center;                
@@ -596,7 +572,6 @@
                     line-height: 1.2rem;
                 }
 
-                /*Skill*/
                 #Skill{
                     width: 27rem; 
                 }
@@ -604,7 +579,6 @@
                     height: 2.6rem;
                 }
 
-                /*Project section*/
                 #Project{
                     grid-area: Project;
                     width: 27rem;                   
@@ -628,7 +602,6 @@
                     font-size: 1.2rem;
                 }
 
-                /*Bootcamp*/
                 #Bootcamp{
                     width: 27rem;
                 }
@@ -642,7 +615,6 @@
                     width: 18rem;
                 }
 
-                /*contact Section*/
                 #Contact{
                     width: 27rem;
                 }
@@ -678,9 +650,8 @@
                 }
                 #back-top{
                     width: 25rem;
-                }
-                
-            }               
+                }                
+            }*/               
 
         </style>
     </head>
@@ -701,13 +672,11 @@
             </nav>
         </header>
         <main class="container">
-            <section id="Home">
+            <section id="Home" class="home">
                 <div class="home_section">
-                    <marquee scrollamount="4" direction="right"><p
-                            class="p1">Welcome</p></marquee>
+                    <marquee scrollamount="4" direction="right"><p class="p1">Welcome</p></marquee>
                     <marquee behavior="alternate"><p class="p2">To</p></marquee>
-                    <marquee scrollamount="5" direction="left"><p
-                            class="p3">My</p></marquee>
+                    <marquee scrollamount="5" direction="left"><p class="p3">My</p></marquee>
                 </div>
             </section>
             <section id="About">
@@ -733,65 +702,65 @@
                         </div>
                     </div>
                     <div class="skills__row">
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
                                 alt="HTML5">
                         </div>
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
                                 alt="CSS3">
                         </div>
                     </div>
                     <div class="skills__row">
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
                                 alt="Bootstrap">
                         </div>
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                                 alt="JavaScript">
                         </div>
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
                                 alt="ExpressJs">
                         </div>
                     </div>
                     <div class="skills__row">
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
                                 alt="NodeJs">
                         </div>
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
                                 alt>
                         </div>
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
                                 alt>
                         </div>
                     </div>
                     <div class="skills__row">
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg"
                                 alt>
                         </div>
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"
                                 alt>
                         </div>
                     </div>
                     <div class="skills__row">
-                        <div>
+                        <div class="skills-item">
                             <img
                                 src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
                                 alt>
@@ -801,13 +770,13 @@
             </section>
             <section id="Project">
                 <div>
-                    <h1>"My Project"</h1>
+                    <h2>"My Project"</h2>
                     <div class="Project_section">
                         <div class="Project_section_card">
                             <img src="https://i.ibb.co/25np9fB/Dice.webp"
                                 alt="Crud Photo">
                             <div>
-                                <h2>Dice Game</h2>
+                                <h3>Dice Game</h3>
                                 <p>In this project, I created a two-player dice
                                     game and added a click sound to the start
                                     button.</p>
@@ -828,7 +797,7 @@
                             <img src="https://i.ibb.co/rfj6G17/calculator.png"
                                 alt="calculator photo">
                             <div>
-                                <h2>Scientific Calculator</h2>
+                                <h3>Scientific Calculator</h3>
                                 <p>This is a scientific calculator. The
                                     calculator uses a keyboard and a browser;
                                     you can click on buttons to perform
@@ -849,7 +818,7 @@
                             <img src="https://i.ibb.co/SnNY7n1/Drumkit.jpg"
                                 alt="Drumkit Photo">
                             <div>
-                                <h2>DrunKitSound Project</h2>
+                                <h3>DrunKitSound Project</h3>
                                 <p>In this project, I used drumkit sound MP3
                                     files. When I click any alphabetical button,
                                     it produces a different sound each time.</p>
@@ -871,7 +840,7 @@
                             <img src="https://i.ibb.co/G7X99Fj/Blog.png"
                                 alt="Blog Photo">
                             <div>
-                                <h2>Blog App Backend and Frontend</h2>
+                                <h3>Blog App Backend and Frontend</h3>
                                 <p>In this project i used Backend and frontend.
                                     User can add, update, delete etc.</p>
                                 <div class="Project_social-icons">
@@ -887,7 +856,7 @@
                             <img src="https://i.ibb.co/yV0rgsf/News-api.png"
                                 alt="News_API_Photo">
                             <div>
-                                <h2>News Api</h2>
+                                <h3>News Api</h3>
                                 <p>In this project, I fetch data from an API and
                                     display it on the frontend. I can fetch any
                                     type of data.</p>
@@ -904,7 +873,7 @@
                             <img src="https://i.ibb.co/cbmt8V4/Crud.png"
                                 alt="crud_Photo">
                             <div>
-                                <h2>Crud Operation Frontend and Backend</h2>
+                                <h3>Crud Operation Frontend and Backend</h3>
                                 <p>I have completed 2.5 months bootcamp. During
                                     the bootcamp, I learned the Godspeed
                                     framework and the Yaml language </p>
@@ -921,7 +890,7 @@
                 </div>
             </section>
             <section id="Bootcamp">
-                <h1>"Bootcamp"</h1>
+                <h2>"Bootcamp"</h2>
                 <div class="Bootcamp_sectioin">
                     <div class="Bootcamp_sectioin_card">
                         <img src="https://i.ibb.co/w7jzGcB/mindgrep1.png" alt>
