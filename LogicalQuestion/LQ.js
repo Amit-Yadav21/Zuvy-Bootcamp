@@ -1,3 +1,52 @@
+function checkPositiveOrNegative(number) {
+    if (number > 0) {
+        return "positive";
+    } else if (number < 0) {
+        return "negative";
+    } else {
+        return "neither positive nor negative";
+    }
+}
+// console.log(checkPositiveOrNegative(127)); 
+// console.log(checkPositiveOrNegative(-127)); 
+// ..................................................
+// Write a program to check if the given number is multiple of 11 or not. If the given number is multiple of 11 then print the 3rd power of the number else return the number.
+function checkMultipleOf11OrPower(num) {
+    if (num % 11 === 0) {
+        return Math.pow(num, 3);
+    } else {
+        return num;
+    }
+}
+// console.log(checkMultipleOf11OrPower(10));  // Output: 10
+// console.log(checkMultipleOf11OrPower(11));  // Output: 1331
+
+// ......................................
+function reverseEqual(num) {
+    let numStr = num.toString();
+    let sortedNumStr = numStr.split("").sort().join("");
+    
+    if (numStr === sortedNumStr) {
+        return "yes";
+    } else {
+        return "no";
+    }
+}
+// console.log(reverseEqual(123));  
+// console.log(reverseEqual(1221)); 
+
+// ........................................
+function calculateProfitOrLoss(x, y) {
+    if (x < y) {
+        return "profit";
+    } else {
+        return "loss";
+    }
+}
+// console.log(calculateProfitOrLoss(50, 70));
+// console.log(calculateProfitOrLoss(50, 30));
+
+// ...................................
 // Number of Vowels
 function vowels(string) {
     let count = 0;
