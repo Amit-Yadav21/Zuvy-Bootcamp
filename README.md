@@ -58,5 +58,17 @@
 - Day 5 - Functions
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=2vh-dE9sjZs)
 
-- Day 6 -
-    - Recording Link : [Provide By Mentor]()
+- Day 6 - Functions contd., Array methods
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=kVvdv6jPDQ4)
+
+- Day 7 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 8 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 9 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
+
+- Day 10 -  
+    - Recording Link : [Provide By Mentor](), [MyRcording]()
