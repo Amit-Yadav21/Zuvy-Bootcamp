@@ -90,14 +90,14 @@ const takeString = "Javascript";
 const charToRemove = 'a';
 // console.log(removeCharacter(takeString, charToRemove));
 
-function removeAllOccurrences(string, letter) {
-    // Convert both the string and the letter to lowercase (or uppercase)
-    string = string.toLowerCase();
-    letter = letter.toLowerCase();
-    return string.split(letter).join('');
-}
-const str_input = "JAvascript";
-const letterToRemove = 'a';
+// function removeAllOccurrences(string, letter) {
+//     // Convert both the string and the letter to lowercase (or uppercase)
+//     string = string.toLowerCase();
+//     letter = letter.toLowerCase();
+//     return string.split(letter).join('');
+// }
+// const str_input = "JAvascript";
+// const letterToRemove = 'a';
 // console.log(removeAllOccurrences(str_input, letterToRemove));
 // -----------------------------------
 // return the last four characters of the given string. The string length will always be greater than equal to four.
@@ -303,7 +303,7 @@ function capitalizeFirstLetter(str) {
     return `${first.toUpperCase()}${rest.join('')}`;
 
 }
-console.log(capitalizeFirstLetter('This is a title'));
+// console.log(capitalizeFirstLetter('This is a title'));
 
 //............ return the middle character, if the string length is odd, else return the middle two characters.
 function middleChar(str) {
