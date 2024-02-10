@@ -92,6 +92,11 @@ const iString = 'java script';
 // console.log(removeWhitespace(iString)); 
 //--------------------------------------
 // removing all the whitespace
-let str ='java script'
+var str ='java script'
 let rs = str.split('').filter(char => char.trim() !== '').join('');
 // console.log(rs);
+
+// Reveres the given string word by word then return the reversed string
+let ab = 'the name is amit'
+let rs_wordByword = ab.split(' ').reverse().join(' ');
+// console.log(rs_wordByword);
