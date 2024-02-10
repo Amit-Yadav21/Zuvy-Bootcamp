@@ -73,8 +73,7 @@ function upperLower(strings) {
     return result;
 }
 // console.log(upperLower('AirCampus'));
-// -------------------------------------
-// Return the string after removing all the occurence of the given character
+// ------- Return the string after removing all the occurence of the given character
 function removeAllOccurrences(string, letter) {
     return string.split(letter).join('');
 }
@@ -132,6 +131,7 @@ for (let i = 0; i < string.length; i++) {
     }
 }
 // console.log(result);
+
 const tring = 'yadav amit'
 let aa = tring.replace(/\s/g, '').split('');
 // console.log(aa);
@@ -190,6 +190,9 @@ function validEmail(str) {
     } else {
         return false;
     }
+
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // return regex.test(str);
 }
 // console.log(validEmail('amit21nagurukul.org'));
 //-------------------------------
@@ -280,8 +283,7 @@ function palindrome(pali) {
     }
 }
 // console.log(palindrome('arora'));
-
-// capitalize the first letter of each word.
+// .................................... capitalize the first letter of each word.
 function capitalization(str){
     let arr = str.split(' ');
     let newArr = [];
@@ -292,7 +294,18 @@ function capitalization(str){
 }
 // console.log(capitalization('This is a title'));
 
-// return the middle character, if the string length is odd, else return the middle two characters.
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+    return `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+    return str[0].toUpperCase() + str.slice(1);
+    return str.replace(/^\w/, match => match.toUpperCase());
+    const [first, ...rest] = str;
+    return `${first.toUpperCase()}${rest.join('')}`;
+
+}
+console.log(capitalizeFirstLetter('This is a title'));
+
+//............ return the middle character, if the string length is odd, else return the middle two characters.
 function middleChar(str) {
     const length = str.length;
     const middleIndex = Math.floor(length / 2);
@@ -304,3 +317,34 @@ function middleChar(str) {
     }
 }
 // console.log(middleChar('testing'));
+//................................................
+function getFirstLetters(sentence) {
+    return sentence.split(' ').map(word => word.charAt(0)); // Using split() and map()
+
+    // Using split() and forEach()
+    const words = sentence.split(' ');
+    const firstLetters = [];
+    words.forEach(word => {
+        firstLetters.push(word.charAt(0));
+    });
+    // return firstLetters;  
+
+    //// Using Regular Expressions and match()
+    const matches = sentence.match(/\b\w/g);
+    // return matches ? matches.map(match => match.toUpperCase()) : []; 
+
+    // Using split() and filter()
+    // return sentence.split(' ').filter(word => word.length > 0).map(word => word[0]);
+
+    // Using split() and a for loop:
+    const Words = sentence.split(' ');
+    const firstL = [];
+    for (const word of Words) {
+        if (word.length > 0) {
+            firstL.push(word.charAt(0));
+        }
+    }
+    // return firstL;
+
+}
+// console.log(getFirstLetters('This is a sample sentence'));
