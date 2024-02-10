@@ -117,7 +117,7 @@ function alphanumeric(str) {
       return false;
     }
 }
-// alphanumeric();
+// alphanumeric(); ❌
 
 // ----------------------------------
 // Given a string, return the middle character, if the string length is odd, else return the middle two characters.
@@ -170,9 +170,11 @@ function charArray(str) {
 // Use template literal ?
 // ------------------------------
 // Given a sentence and a word, add the given word to the end of the string.
-// Using String Concatenation:
 function addWordToEnd(sentence, word) {
-    return sentence + ' ' + word;
+    return sentence + ' ' + word; // // Using String Concatenation:
+    // return `${sentence} ${word}`; //Using Template Literals
+    // return [sentence, word].join(' '); // Using String Concatenation in Array and join()
+    // return sentence.concat(' ', word); // Using concat() Method
 }
 // console.log(addWordToEnd('amit','yadav'));
 
