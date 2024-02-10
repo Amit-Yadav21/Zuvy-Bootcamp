@@ -55,8 +55,8 @@
 - Day 4 - Switch, Array and Functions
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=XaI50wITCCM)
 
-- Day 5 -
-    - Recording Link : [Provide By Mentor]()
+- Day 5 - Functions
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=2vh-dE9sjZs)
 
 - Day 6 -
     - Recording Link : [Provide By Mentor]()

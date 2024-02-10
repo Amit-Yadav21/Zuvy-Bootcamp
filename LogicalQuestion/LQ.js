@@ -52,7 +52,7 @@ function removeAllOccurrences(string, letter) {
 // const inputString = "JAvascript";
 const letterToRemove = 'a';
 // console.log(removeAllOccurrences(inputString, letterToRemove));
-
+// -----------------------------------
 // return the last four characters of the given string. The string length will always be greater than equal to four.
 const inputString = 'javascript';
 const lFCharacters = inputString.slice(-4);
@@ -63,3 +63,35 @@ const lastFourCharacter = inputString.substr(-4);
 
 const lastFourCharacters = inputString.substring(inputString.length - 4);
 // console.log(lastFourCharacters);
+// ----------------------------------------
+// count e in given string 
+function countE(string) {
+    const count = string.split('').filter(char => char === 'e').length;
+    return count;
+}
+var str = 'help';
+// console.log(countE(str));
+// ----------------------------------------------
+// Given a string, add all the characters of the string to an array, excluding whitespaces. Return the character array
+var string = "amit yadav"
+let a =  string.split('').filter(char => char !== ' ');
+// console.log(a);
+
+const result = [];
+for (let i = 0; i < string.length; i++) {
+    if (string[i] !== ' ') {
+        result.push(string[i]);
+    }
+}
+// console.log(result);
+const tring = 'yadav amit'
+let aa  = tring.replace(/\s/g, '').split('');
+// console.log(aa);
+
+const iString = 'java script';
+// console.log(removeWhitespace(iString)); 
+//--------------------------------------
+// removing all the whitespace
+let str ='java script'
+let rs = str.split('').filter(char => char.trim() !== '').join('');
+// console.log(rs);
