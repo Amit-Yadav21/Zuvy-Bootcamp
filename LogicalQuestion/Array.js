@@ -132,7 +132,6 @@ function reverseArray(arr) {
 
 function SecondAndSecondLast(arr) {
     arr.sort((a,b)=>a-b);
-    console.log(arr);
     const result = `${arr[1]}${arr[arr.length - 2]}`;
     return result;
 
@@ -144,7 +143,7 @@ function SecondAndSecondLast(arr) {
     // return result;
 }
 const strings = ['2', '5', '10', '7', '5'];
-console.log(SecondAndSecondLast(strings));
+// console.log(SecondAndSecondLast(strings));
 
 // Return Present if the student is present in the class else return Not Present
 function attendance(studentsInClass, student){
@@ -155,3 +154,38 @@ function attendance(studentsInClass, student){
     }
 }
 // console.log(attendance([1, 2, 3], 2));
+// .....................................................
+function sortArray(arr) {
+    // Replace 'd' with 'b'
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 'd') {
+            arr[i] = 'b';
+        }
+    }
+    return arr.sort((a, b) => a.localeCompare(b));
+}
+// console.log(sortArray(['c', 'a', 'd'])); // Output: ['a', 'b', 'c']
+
+function sortArray(arr) {
+    // Replace 'd' with 'b' in the array
+    arr = arr.map(char => char === 'd' ? 'b' : char);
+    // Sort the modified array
+    return arr.sort();
+}
+// console.log(sortArray(['c', 'a', 'd'])); // Output: ['a', 'b', 'c']
+// ........................................................................
+
+// // Importing sortBy from lodash
+// const _ = require('lodash');
+// // Sample array
+// const arr = [
+//     { name: 'John', age: 30 },
+//     { name: 'Alice', age: 25 },
+//     { name: 'Bob', age: 35 }
+// ];
+
+// // Sorting array of objects by age
+// const sortedArr = _.sortBy(arr, 'age');
+
+// // Logging sorted array
+// console.log(sortedArr);
