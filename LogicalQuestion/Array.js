@@ -1,29 +1,29 @@
 // sum of the first and last element of the array.
 function sumFirstLast(arr) {
     return arr[0] + arr[arr.length - 1];
- }
+}
 //  console.log(sumFirstLast([1, 2, 3 ,4 ,5 ,6, 7]));
 
 // if the length of the array is greater than 5 return “Hello” else return “World”
-function arrayHelloWorld(arr){
+function arrayHelloWorld(arr) {
     let arrayL = arr.length;
-    if (arrayL >=5){
-      return 'Hello'
+    if (arrayL >= 5) {
+        return 'Hello'
     }
-    else{
-      return 'World'
+    else {
+        return 'World'
     }
 }
 // console.log(arrayHelloWorld([1, 2, 3 ,4 ,5 ,6,7]));
 
 // Sum First and Last-1
-function sumFirstLast(arr){
-    return arr[0] + arr[arr.length-1];
+function sumFirstLast(arr) {
+    return arr[0] + arr[arr.length - 1];
 }
 // console.log(sumFirstLast([1, 2, 3 ,4 ,5 ,6,7]));
 
 // Given a variable arr as function parameter, return “YES” if the given variable arr is an array else return “NO” .
-function isArray(arr){
+function isArray(arr) {
     if (Array.isArray(arr)) {
         return "YES";
     } else {
@@ -33,22 +33,22 @@ function isArray(arr){
 // console.log(isArray([1,2,3]));
 
 // If element exist in the array return the index else return "Not Found"
-function elementIndex(arr, element){
+function elementIndex(arr, element) {
     if (Array.isArray(arr)) {
         const index = arr.indexOf(element);
-      if (index !== -1 ){
-        return index;
-      }
-      else{
-        return "Not Found";
-      }
+        if (index !== -1) {
+            return index;
+        }
+        else {
+            return "Not Found";
+        }
     } else {
         return "Not Array";
     }
 }
 // console.log(elementIndex([1,2,3], 3));
 
-function elementIndex(arr, element){
+function elementIndex(arr, element) {
     if (Array.isArray(arr)) {
         const index = arr.indexOf(element);
         return index !== -1 ? index : -1;
@@ -61,7 +61,7 @@ function elementIndex(arr, element){
 
 // Given an array of strings, sort the array and then return concatinating the 2nd and 2nd last element of the array.
 function sortSum(arr) {
-    var sArray = arr.sort((a,b)=>a-b);
+    var sArray = arr.sort((a, b) => a - b);
     console.log(sArray);
     const result = sArray[1] + sArray[arr.length - 2];
     return result;
@@ -131,7 +131,7 @@ function reverseArray(arr) {
 // console.log(reverseArray([1, 2, 3])); // Output: [3, 2, 1]
 
 function SecondAndSecondLast(arr) {
-    arr.sort((a,b)=>a-b);
+    arr.sort((a, b) => a - b);
     const result = `${arr[1]}${arr[arr.length - 2]}`;
     return result;
 
@@ -146,11 +146,11 @@ const strings = ['2', '5', '10', '7', '5'];
 // console.log(SecondAndSecondLast(strings));
 
 // Return Present if the student is present in the class else return Not Present
-function attendance(studentsInClass, student){
-    if (studentsInClass.includes(student)){
-      return 'Present';
+function attendance(studentsInClass, student) {
+    if (studentsInClass.includes(student)) {
+        return 'Present';
     } else {
-      return 'Not Present';
+        return 'Not Present';
     }
 }
 // console.log(attendance([1, 2, 3], 2));
@@ -174,3 +174,14 @@ function sortArray(arr) {
 }
 // console.log(sortArray(['c', 'a', 'd'])); // Output: ['a', 'b', 'c']
 // ........................................................................
+// If arr.length < 5 - Copy the 3rd element to 2nd and then return the updated array
+// If arr.length >= 5 - Copy all the elements from 3rd element to the end of array to 2-nd element.
+function copyElement(arr) {
+    if (arr.length < 5) {
+        arr[1] = arr[2];
+    } else {
+        arr.splice(1, arr.length - 2, ...arr.slice(2));
+    }
+    return arr;
+}
+// console.log(copyElement([1, 2, 3]));    // [1, 3, 3]
