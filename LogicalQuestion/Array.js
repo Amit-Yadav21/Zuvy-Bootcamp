@@ -174,18 +174,3 @@ function sortArray(arr) {
 }
 // console.log(sortArray(['c', 'a', 'd'])); // Output: ['a', 'b', 'c']
 // ........................................................................
-
-// // Importing sortBy from lodash
-// const _ = require('lodash');
-// // Sample array
-// const arr = [
-//     { name: 'John', age: 30 },
-//     { name: 'Alice', age: 25 },
-//     { name: 'Bob', age: 35 }
-// ];
-
-// // Sorting array of objects by age
-// const sortedArr = _.sortBy(arr, 'age');
-
-// // Logging sorted array
-// console.log(sortedArr);
