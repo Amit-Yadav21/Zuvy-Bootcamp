@@ -6,9 +6,11 @@ body {
     overflow-x: hidden;
     /* width: 100%; */
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 /*Bg Image*/
 header,
 #About,
@@ -83,7 +85,6 @@ nav ul li a::after {
 /* Home section styles */
 .home_section {
     text-align: center;
-    margin-top: 2rem;
 }
 
 #Home {
@@ -129,7 +130,8 @@ nav ul li a::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 5rem;
+    padding: 0rem 3rem 0rem 3rem;
 }
 
 .about_section img {
@@ -137,6 +139,13 @@ nav ul li a::after {
     max-width: 300px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.about_section p {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid black;
+    line-height: 1.5rem;
 }
 
 /* Skill section styles */
@@ -205,21 +214,24 @@ nav ul li a::after {
 .Bootcamp_sectioin_card img {
     width: 50%;
 }
-.Bootcamp_sectioin_card .zuvy-image{
+
+.Bootcamp_sectioin_card .zuvy-image {
     height: 12rem;
     float: right;
 }
-hr{
+
+hr {
     display: grid;
     width: 50rem;
     border-color: black;
 }
+
 .Bootcamp_sectioin {
     padding: 1rem;
 }
 
 /* Contact section styles */
-#Contact{
+#Contact {
     background-color: black;
     opacity: 0.8;
     color: white;
@@ -231,19 +243,22 @@ form {
     position: relative;
     z-index: 1;
 }
-.contact_main_div{
+
+.contact_main_div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: 0rem 1rem 0rem 1rem;
     gap: 2rem;
 }
-.contact_section1{
+
+.contact_section1 {
     width: 45rem;
 }
-.contact_section2{
+
+.contact_section2 {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     height: 20rem;
     width: 100%;
@@ -255,7 +270,7 @@ form>div {
     left: 50%;
     padding: 0 20px;
     transform: translate(-50%, -50%);
-    background-color:cornflowerblue;
+    background-color: cornflowerblue;
     border: 2px solid gray;
     border-radius: 20px;
     text-align: center;
@@ -298,59 +313,64 @@ form>input[type="submit"]:hover {
 .contact-info {
     width: 100%;
 }
+
 .contact-info-content p,
 .contact-info-icon i,
-.contact-info h1{
+.contact-info h1 {
     color: white;
 }
-.contact-info h1{
+
+.contact-info h1 {
     text-align: center;
     text-decoration: underline;
 }
-  
+
 .contact-info-item {
     display: flex;
 }
-  
+
 .contact-info-icon {
     text-align: center;
 }
-  
+
 .contact-info-icon i {
     font-size: 1.5rem;
     line-height: 1rem;
 }
-  
+
 .contact-info-content {
     margin-left: 20px;
 }
-  
+
 .contact-info-content h4 {
     color: #1da9c0;
     font-size: 1.4em;
     margin: 0rem;
 }
-  
+
 .contact-info-content p {
     font-size: 1.2em;
     margin-top: 0rem;
     margin-left: 2rem;
 }
 
-.MyCV{
+.MyCV {
     border-radius: 0rem 1rem 0rem 1rem;
     border: none;
     margin: 0rem 1rem 0rem 0rem;
 }
-.MyCV >a{
+
+.MyCV>a {
     color: black;
     text-align: center;
 }
-.MyCV:hover{
+
+.MyCV:hover {
     border-radius: 0rem 0rem 0rem 0rem;
-    background-color: red;    
+    background-color: red;
 }
-.MyCV>a:hover{
+
+.MyCV>a:hover {
     color: white;
 }
 
@@ -361,11 +381,12 @@ form>input[type="submit"]:hover {
     display: inline-block;
     transition: transform 1s ease;
 }
-.social-icons >a:hover {
+
+.social-icons>a:hover {
     transform: rotate(360deg);
 }
 
-.social-icons{
+.social-icons {
     float: right;
 }
 
@@ -382,8 +403,8 @@ form>input[type="submit"]:hover {
     color: #0372e0;
 }
 
-.fa-instagram-square{
-    background: linear-gradient(to right, #f9ce34,#ff00cc,#3333cc);
+.fa-instagram-square {
+    background: linear-gradient(to right, #f9ce34, #ff00cc, #3333cc);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -409,7 +430,8 @@ form>input[type="submit"]:hover {
     padding: 0.5rem;
     font-size: 1rem;
 }
-#back-top button a{
+
+#back-top button a {
     text-decoration: none;
 }
 
