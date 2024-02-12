@@ -61,8 +61,8 @@
 - Day 6 - Functions contd., Array methods
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=kVvdv6jPDQ4)
 
-- Day 7 -  
-    - Recording Link : [Provide By Mentor](), [MyRcording]()
+- Day 7 - Arrow Functions and Array Searching and Transformation
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=NrwzEhppbBc)
 
 - Day 8 -  
     - Recording Link : [Provide By Mentor](), [MyRcording]()
