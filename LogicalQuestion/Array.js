@@ -185,3 +185,7 @@ function copyElement(arr) {
     return arr;
 }
 // console.log(copyElement([1, 2, 3]));    // [1, 3, 3]
+
+let ar = [1,2,3,4,5,6,7,8,9,10];
+let remove=ar.splice(4,ar.length -4);
+// console.log(remove);
