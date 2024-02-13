@@ -261,3 +261,10 @@ function validEmail(str) {
     // return regex.test(str);
 }
 // console.log(validEmail('amit21nagurukul.org'));
+
+// Return the string after removing all the leading and trailing zeroes
+function removeZeroes(str) {
+    let num = parseFloat(str);
+    return num.toString();
+}
+// console.log(removeZeroes(230.00)); 
