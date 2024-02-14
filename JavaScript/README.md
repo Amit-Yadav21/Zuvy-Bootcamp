@@ -25,5 +25,8 @@
 - Day 8 - Objects
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=F7PWVlhmMWE)
 
+- Day 9 - Object methods, this keyword, Constructor function, Optional Chaining
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=hMrf7_xZ7pg)
+
 - Day 9 - 
     - Recording Link : [Provide By Mentor]()
