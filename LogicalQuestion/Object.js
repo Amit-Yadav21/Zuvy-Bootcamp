@@ -217,6 +217,18 @@ function countLettersAndDigits(str) {
     }
     // return { letters: letterCount, digits: digitCount };
 
+    let lCount = 0;
+    let dCount = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if ((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z')) {
+            lCount++;
+        } else if (char >= '0' && char <= '9') {
+            dCount++;
+        }
+    }
+    return {"LETTERS": lCount,"DIGITS": dCount};
+
     const letter = str.match(/[a-zA-Z]/g) || [];
     const digit = str.match(/\d/g) || [];
     // return { letters: letter.length, digits: digit.length };
