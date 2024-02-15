@@ -166,11 +166,28 @@ function extractNames(arr) {
     }, []);
 }
 // console.log(extractNames(arrays));
-  
-function sortByprice(obj,price){
-    obj.sort((a, b) => a.price - b.price);
-    return obj;
+
+// ..................................An object containing all the items greater than price.
+function sortByPrice(obj, price) {
+    // Convert the object into an array of key-value pairs
+    const entries = Object.entries(obj);
+    // Sort the array based on the values
+    const sortedEntries = entries.filter(([key, value]) => value > price);
+    // Convert the sorted array back into an object
+    const sortedObj = Object.fromEntries(sortedEntries);
+    return sortedObj;
 }
-var input_obj = { "a": 3000, "b": 200, "c": 1050 };
-const prices = 1000;
-console.log(sortByprice(input_obj,prices)); // Output: { "a": 3000, "c": 1050 }
+const input_obj = { "a": 3000, "b": 200, "c": 1050 };
+console.log(sortByPrice(input_obj, 1000));  // Output: { "a": 3000, "c": 1050 }
+
+function sortByNunLenght(obj, num) {
+    // Convert the object into an array of key-value pairs
+    const entries = Object.entries(obj);
+    // Sort the array based on the values
+    const sortedEntries = entries.filter(([key, value]) => key.length> num);
+    // Convert the sorted array back into an object
+    const sortedObj = Object.fromEntries(sortedEntries);
+    return sortedObj;
+}
+const input_objs = { "aaaaa": 3000, "bbbb": 200, "ccc": 1050 };
+// console.log(sortByNunLenght(input_objs, 4));
