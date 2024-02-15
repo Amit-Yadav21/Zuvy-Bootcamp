@@ -175,10 +175,20 @@ function sortByPrice(obj, price) {
     const sortedEntries = entries.filter(([key, value]) => value > price);
     // Convert the sorted array back into an object
     const sortedObj = Object.fromEntries(sortedEntries);
-    return sortedObj;
+    // return sortedObj;
+
+    let x ={};
+    for ( i in obj){
+        if(obj[i]>price){
+            console.log('key',i);
+            console.log('value',obj[i]);
+            x[i]  = obj[i]
+        }
+    }
+    // return x;
 }
 const input_obj = { "a": 3000, "b": 200, "c": 1050 };
-console.log(sortByPrice(input_obj, 1000));  // Output: { "a": 3000, "c": 1050 }
+// console.log(sortByPrice(input_obj, 1000));  // Output: { "a": 3000, "c": 1050 }
 
 function sortByNunLenght(obj, num) {
     // Convert the object into an array of key-value pairs
@@ -191,3 +201,30 @@ function sortByNunLenght(obj, num) {
 }
 const input_objs = { "aaaaa": 3000, "bbbb": 200, "ccc": 1050 };
 // console.log(sortByNunLenght(input_objs, 4));
+
+// .........................................count letter and digit
+function countLettersAndDigits(str) {
+    let letterCount = 0;
+    let digitCount = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charAt(i);
+        if (/[a-zA-Z]/.test(char)) {
+            letterCount++;
+        }
+        else if(!isNaN(parseInt(char))){
+            digitCount++;
+        }
+    }
+    // return { letters: letterCount, digits: digitCount };
+
+    const letter = str.match(/[a-zA-Z]/g) || [];
+    const digit = str.match(/\d/g) || [];
+    // return { letters: letter.length, digits: digit.length };
+
+    const letters = str.split('').filter(char => /[a-zA-Z]/.test(char));
+    const digits = str.split('').filter(char => /\d/.test(char));
+    return { letters: letters.length, digits: digits.length };
+}
+const inputString = 'H3ll0 Wor1d';
+const counts = countLettersAndDigits(inputString);
+// console.log(counts);
