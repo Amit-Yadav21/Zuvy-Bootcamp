@@ -28,5 +28,5 @@
 - Day 9 - Object methods, this keyword, Constructor function, Optional Chaining
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=hMrf7_xZ7pg)
 
-- Day 10 - Destructuring Assignment (Array, Object,)
+- Day 10 - Destructuring Assignment (Array, Object, Nested)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=EhIcr7zPdi0)
