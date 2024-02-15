@@ -120,3 +120,57 @@ function keyValues(obj) {
     return swappedObj;
 }
 // console.log(keyValues({ "z": "q", "w": "f" }));
+
+// ......................................................... calculator using Object
+let calculator = {
+    description : 'this is a calculator',
+    sum(a,b){
+        return a+b
+    },
+    subscription(a,b){
+        return a-b
+    },
+    multiplication(a,b){
+        return a*b
+    }
+}
+let ans = calculator.subscription(5,7);
+// console.log(ans);
+
+// ..............Given an array of objects, push all the names to a new array and return the new array
+let arrays = [
+    { name: "John", email: "john@example.com" },
+    { name: "Jason", email: "jason@example.com" },
+    { name: "Jeremy", email: "jeremy@example.com" },
+    { name: "Jacob", email: "jacob@example.com" }
+  ]
+function extractNames(arr) {
+    let names = [];
+    for (let i = 0; i < arr.length; i++) {
+        // console.log(arr[i]);
+      names.push(arr[i].name);
+    }
+    return names;
+}  
+// console.log(extractNames(arrays));
+
+function extractNames(arr) {
+    return arr.map(obj => obj.name);
+}
+// console.log(extractNames(arrays));  
+
+function extractNames(arr) {
+    return arr.reduce((names, obj) => {
+        names.push(obj.name);
+        return names;
+    }, []);
+}
+// console.log(extractNames(arrays));
+  
+function sortByprice(obj,price){
+    obj.sort((a, b) => a.price - b.price);
+    return obj;
+}
+var input_obj = { "a": 3000, "b": 200, "c": 1050 };
+const prices = 1000;
+console.log(sortByprice(input_obj,prices)); // Output: { "a": 3000, "c": 1050 }
