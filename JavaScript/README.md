@@ -30,3 +30,6 @@
 
 - Day 10 - Destructuring Assignment (Array, Object, Nested)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=EhIcr7zPdi0)
+
+- Day 11 - JSON, Rest and Spread, Variable Scope, Closure, Lexical Environment
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Ru97xoMUh4M)
