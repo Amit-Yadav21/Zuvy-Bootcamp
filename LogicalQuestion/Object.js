@@ -12,6 +12,63 @@ formattedString = formattedString + lastTwoDigits;
 
 // console.log(formattedString);
 
+// =====================================================
+let user ={
+    name:"amit",
+    age:24,
+    "first name":"kumar yaddav"
+}
+user["first name"] = user["first name"].slice(0,5);
+// console.log(user);  // { name: 'amit', age: 24, 'first name': 'kumar' }
+// console.log(user["first name"]);    // kumar
+// ..................................................
+let fn = "amit";
+let ln = "yadav";
+let fln = {
+    name:"amit",
+    age:24,
+    [fn + ln]: "Full name",
+}
+// console.log(fln);
+///.................................... Copy object into another object 
+let name = "amit";
+let age = 24;
+var data ={
+    name,
+    age,
+    skills:"HTML",
+    lastname: undefined,
+}
+let admin = data;
+admin.name = 'zuvy'
+// console.log(data);
+// console.log(admin);
+
+var data ={
+    name,
+    age,
+    skills:"HTML",
+    lastname: undefined,
+}
+var newobj = Object.assign({},data);
+newobj.name = "yadav"
+// console.log(data);
+// console.log(newobj);
+
+let obj1 ={
+    name :"amit",
+    age : 24,
+}
+let Newobj = Object.assign({},obj1)
+// console.log(Newobj);
+
+var copy ={};
+for (let key in obj1){
+    copy[key] = user[key];
+}
+// console.log(copy);
+
+// =====================================================
 // .................................That is 50% needs, 30% wants and 20% savings.
 function calculateBudget(salary) {
     const needs = salary * 50/100;
@@ -121,22 +178,6 @@ function keyValues(obj) {
 }
 // console.log(keyValues({ "z": "q", "w": "f" }));
 
-// ......................................................... calculator using Object
-let calculator = {
-    description : 'this is a calculator',
-    sum(a,b){
-        return a+b
-    },
-    subscription(a,b){
-        return a-b
-    },
-    multiplication(a,b){
-        return a*b
-    }
-}
-let ans = calculator.subscription(5,7);
-// console.log(ans);
-
 // ..............Given an array of objects, push all the names to a new array and return the new array
 let arrays = [
     { name: "John", email: "john@example.com" },
@@ -240,3 +281,20 @@ function countLettersAndDigits(str) {
 const inputString = 'H3ll0 Wor1d';
 const counts = countLettersAndDigits(inputString);
 // console.log(counts);
+
+// ......................................................... calculator using Object
+let calculator = {
+    description : 'this is a calculator',
+    sum(a,b){
+        return a+b
+    },
+    subscription(a,b){
+        return a-b
+    },
+    multiplication(a,b){
+        return a*b
+    }
+}
+let ans = calculator.subscription(5,7);
+// console.log(ans);
+
