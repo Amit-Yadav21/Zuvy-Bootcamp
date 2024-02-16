@@ -67,6 +67,53 @@ for (let key in obj1){
     copy[key] = user[key];
 }
 // console.log(copy);
+// ...................................
+const arr = [1,2,[3,4],5];
+const arr2 = structuredClone(arr);
+arr2[1] =10;
+arr2[2][0] = 12;
+// console.log(arr);
+// console.log(arr2);
+//........................................
+var users ={
+    name:"amit",
+    sayHi(){
+        console.log(this.name + " said Hi");
+    }
+}
+// users.sayHi();
+// ..........................................
+function User(id,name,age,role,email){
+    this.id = id;
+    this.name = name;
+    this.age = age;
+    this.role = role;
+    this.email = email;
+}
+let User1  = new User(1,"amit", 25, "user", "amit@gmail.com")
+let User2  = new User(2,"yadavv", 25, "admin", "amit21@gmail.com")
+// console.log(User1);
+// console.log(User2);
+const em = []
+em.push(User1,User2)
+// console.log(em);
+// ......................................... 
+const userData = {
+    firstname : "amit",
+    lastName : "yadav",
+    age : 24,
+    gender : "mele",
+}
+for (let key in userData){  // change every keys values 10
+    userData[key] = 10;
+}
+// console.log(userData);
+
+function changeName(obj){   // change fname
+    obj.firstname = "kumar";
+}
+changeName(userData);
+console.log(userData);
 
 // =====================================================
 // .................................That is 50% needs, 30% wants and 20% savings.
