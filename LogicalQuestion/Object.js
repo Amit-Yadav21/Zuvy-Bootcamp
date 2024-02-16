@@ -112,8 +112,16 @@ for (let key in userData){  // change every keys values 10
 function changeName(obj){   // change fname
     obj.firstname = "kumar";
 }
-changeName(userData);
-console.log(userData);
+// changeName(userData);
+// console.log(userData);
+
+let result = Object.entries(userData).map(item=>{ 
+    item[1] = 10;
+    return item;
+})
+console.log("key-value :",result);
+result = Object.fromEntries(result);
+console.log("object =",result);
 
 // =====================================================
 // .................................That is 50% needs, 30% wants and 20% savings.
