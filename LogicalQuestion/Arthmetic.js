@@ -65,6 +65,7 @@ for (let digit of strNumber) {
 const convertSTR = num.toString();
 var firstD = parseInt(convertSTR[0]);
 var lastDigit = num % 10;
+// let lastDigit =parseInt(convertSTR[convertSTR.length-1]);
 // var lastDigit = parseInt(convertSTR.slice(-1));
 var sumofFL = firstD + lastDigit;
 // console.log(`Number is ${num}, first digit :${firstD}\nNumber is ${num}, lastdigit :${lastDigit}\nsum of F  num is ${firstD} and L  num is ${lastDigit} :- ${sumofFL}`);
@@ -78,3 +79,9 @@ function reverse(a){
   return reversedStr;
 }
 // console.log(reverse(num));   // 6,5,1
+
+// .................. find after and before number 
+let a1 = 100;
+let b1 = 33;
+let c = a1 / b1;
+// console.log(`Output if C :- ${c}\nBefore Decimal :- ${String(c).split('.')[0]}\nAfter Decimal :- ${String(c).split('.')[1]}`);
