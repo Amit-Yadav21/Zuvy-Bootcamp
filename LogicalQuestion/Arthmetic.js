@@ -117,7 +117,7 @@ function days(years, months, days) {
 }
 // console.log(days(0,1,5));
 
-// ..................count of even number ?
+// ..................count of even number 
 function countEvenNumbers(numbers) {
     let count = 0;
     for (let i = 0; i < numbers.length; i++) {
