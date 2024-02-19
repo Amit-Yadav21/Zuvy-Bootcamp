@@ -3,7 +3,7 @@ const CF = 32;
 // console.log((CF*9/5)+32);
 
 //  Fahrenheit to Celsius
-var celsius = (CF - 32) * 5/9;
+var celsius = (CF - 32) * 5 / 9;
 // console.log(celsius);
 
 // ............................ swap two numbers ?
@@ -44,7 +44,7 @@ var fd = parseInt(numAsString[0]);
 
 // Using modulus (%) operator:
 let number = 12345;
-while(number >= 10) {
+while (number >= 10) {
     number = Math.floor(number / 10);
 }
 let firstDigit = number;
@@ -71,12 +71,12 @@ var sumofFL = firstD + lastDigit;
 // console.log(`Number is ${num}, first digit :${firstD}\nNumber is ${num}, lastdigit :${lastDigit}\nsum of F  num is ${firstD} and L  num is ${lastDigit} :- ${sumofFL}`);
 
 // reverse of that number. Return comma seperated value
-function reverse(a){
-  let reversedStr=Math.abs(a).toString().split('').reverse().join(',');
-  if (a < 0) {
-      reversedStr = '-' + reversedStr;
-  }
-  return reversedStr;
+function reverse(a) {
+    let reversedStr = Math.abs(a).toString().split('').reverse().join(',');
+    if (a < 0) {
+        reversedStr = '-' + reversedStr;
+    }
+    return reversedStr;
 }
 // console.log(reverse(num));   // 6,5,1
 
@@ -85,3 +85,66 @@ let a1 = 100;
 let b1 = 33;
 let c = a1 / b1;
 // console.log(`Output if C :- ${c}\nBefore Decimal :- ${String(c).split('.')[0]}\nAfter Decimal :- ${String(c).split('.')[1]}`);
+
+// ...............................reverse number ?
+let reversed = num.toString().split('').reverse().join('');
+// console.log(parseInt(reversed));
+
+// ...........................Area of rectangle ?
+const length = 10;
+const breadth = 2;
+let area = length * breadth;
+// console.log(area);
+
+// ...................................Sum of area and perimeter of a rectangle
+let areas = length * breadth;
+let perimeter = 2 * (length + breadth);
+// console.log(areas + perimeter);
+
+// Given the number of hours,minutes and seconds, return the number of seconds.
+function seconds(hours, minutes, seconds) {
+    let second = hours * 3600 + minutes * 60 + seconds;
+    return second;
+}
+// console.log(seconds(1,2,32));
+
+// Given years,months and days as input, return the number of days as output.
+function days(years, months, days) {
+    // write your code here
+    let totalDays = (years * 365) + (months * 30) + days;
+    // return the number of days
+    return totalDays;
+}
+// console.log(days(0,1,5));
+
+// ..................count of even number ?
+function countEvenNumbers(numbers) {
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            count++;
+        }
+    }
+    // return count;
+
+    // return numbers.filter(num => num % 2 === 0).length;
+
+    // return numbers.reduce((count, num) => {
+    //     if (num % 2 === 0) {
+    //         // console.log(num);
+    //       count++;
+    //     }
+    //     return count;
+    //   },0);
+
+    let countofeven = 0
+    for (const num of numbers) {
+        if (num % 2 === 0) {
+            countofeven++;
+        }
+    }
+    return countofeven;
+
+}
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log("Number of even numbers:", countEvenNumbers(numbers));
