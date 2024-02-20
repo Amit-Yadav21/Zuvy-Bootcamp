@@ -166,3 +166,26 @@ const calculateArea = (radius) => {
     return area_of_a_circle;
 }
 // console.log(calculateArea(4));
+
+// ............................................Area of Triangle ?
+var areaofTriangle = (a, b, c) => {
+    const s = (a + b + c) / 2;
+    return s;
+}
+// console.log(areaofTriangle(3,4,5));
+
+// ................................................Calculate of persent 
+function percent(num, percentage) {
+    let calculateProfit = (num * percentage) / 100;
+    return calculateProfit;
+}
+// console.log(percent(20,5));
+
+// .................Write a code to take time in seconds and convert it into hour, mins and seconds
+function time(seconds){
+    var Hour = Math.floor(seconds / 3600);
+    var Minutes = Math.floor((seconds % 3600) / 60);
+    var second = seconds % 60;
+    return Hour +":"+ Minutes +":"+ second
+}
+// console.log(time(4000));
