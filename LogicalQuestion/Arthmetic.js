@@ -117,7 +117,7 @@ function days(years, months, days) {
 }
 // console.log(days(0,1,5));
 
-// ..................count of even number 
+// .....................................count of even number 
 function countEvenNumbers(numbers) {
     let count = 0;
     for (let i = 0; i < numbers.length; i++) {
@@ -148,3 +148,21 @@ function countEvenNumbers(numbers) {
 }
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // console.log("Number of even numbers:", countEvenNumbers(numbers));
+
+// ................................sum of sqare and cube
+function sum(num) {
+    // write your code here
+    let sqare = num * num;
+    let cube = num * num * num;
+    let result = sqare + cube;
+    // return the answer
+    return result;
+}
+// console.log(sum(10));
+
+// ......................................Area of Circle 
+const calculateArea = (radius) => {
+    let area_of_a_circle = Math.PI * radius * radius;
+    return area_of_a_circle;
+}
+// console.log(calculateArea(4));
