@@ -119,9 +119,9 @@ let result = Object.entries(userData).map(item=>{
     item[1] = 10;
     return item;
 })
-console.log("key-value :",result);
+// console.log("key-value :",result);
 result = Object.fromEntries(result);
-console.log("object =",result);
+// console.log("object =",result);
 
 // =====================================================
 // .................................That is 50% needs, 30% wants and 20% savings.
