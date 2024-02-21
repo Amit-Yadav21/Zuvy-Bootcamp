@@ -189,3 +189,7 @@ function copyElement(arr) {
 let ar = [1,2,3,4,5,6,7,8,9,10];
 let remove=ar.splice(4,ar.length -4);
 // console.log(remove);
+
+const array = [1,2,3,4,5];
+let c= array.find((num)=>num%2==0);
+// console.log(c);
