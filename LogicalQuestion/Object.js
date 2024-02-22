@@ -12,7 +12,69 @@ formattedString = formattedString + lastTwoDigits;
 
 // console.log(formattedString);
 
+// ===============================================
+let user ={
+    name:"amit",
+    print: function(){
+        console.log('hey');
+    },
+    done(){
+        console.log('Hello');
+    },
+    hello(){
+        console.log(user.name);
+    },
+    by(){
+        console.log(this.name);
+    }
+}
+user.sayHi = function(){
+    console.log('say HI');
+}
+// user.print();
+// console.log(user);
+// user.hello();
+
+let admin =user;
+user = {   // change user data
+    age:23,
+}
+// console.log("user data :-",user);
+// console.log("admin data :-",admin);
+// admin.hello();
+// admin.by(); 
+
+function mar(){
+    return {
+        name: "amit",
+        ref:this,
+    };
+}
+let ok = mar();
+// console.log("okoko",ok.ref.name);
+
+let userdata = {
+    name:'amit',
+    makeuser(){
+        return {
+            name:"yadav",
+            ref:this,
+        };
+    }
+}
+// let result = user.makeuser();
+// console.log(result.ref.name);
+
+const User = {
+    name :"kumar",
+    age:23,
+}
+User = {
+    age:30
+}
+console.log('const user:-',User);
 // =====================================================
+
 let user ={
     name:"amit",
     age:24,
@@ -39,10 +101,10 @@ var data ={
     skills:"HTML",
     lastname: undefined,
 }
-let admin = data;
+let Admin = data;
 admin.name = 'zuvy'
 // console.log(data);
-// console.log(admin);
+// console.log(Admin);
 
 var data ={
     name,
