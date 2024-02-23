@@ -185,7 +185,7 @@ let result = Object.entries(userData).map(item => {
 result = Object.fromEntries(result);
 // console.log("object =",result);
 
-// =====================================================
+// ===================================================== Questions
 // .................................That is 50% needs, 30% wants and 20% savings.
 function calculateBudget(salary) {
     const needs = salary * 50 / 100;

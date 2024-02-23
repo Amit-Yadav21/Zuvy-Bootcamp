@@ -18,7 +18,7 @@ const nestedArray = [1, [2, 3], 4];
 const [aa, [bb, c], d] = nestedArray;
 // console.log(aa, bb, c, d); // Output: 1 2 3 4
 
-// =============================================== object
+// =================================== object ==========================
 const userdata = {
     firstname: "amit",
     lastname: "yadav",
@@ -54,3 +54,22 @@ const person = {
 };
 const { name, address: { city, country } } = person;
 // console.log({name,city,country}); 
+
+let objData ={
+    firstname:"amit",
+    lastname:"yadav",
+    age:20,
+    nested : {
+        width : 22,
+        height:[1,2,3,4,5],
+        data:{
+            title:1,
+            description:"this is my data"
+        }
+    }
+}
+// let {nested:{height},...rest} = objData
+let {nested:{data:{description}},...restData} = objData
+// console.log(height);
+// console.log(restData);
+// console.log(description);
