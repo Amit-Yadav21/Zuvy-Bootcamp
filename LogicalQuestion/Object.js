@@ -3,102 +3,102 @@ let formattedString = "";
 let lastTwoDigits = string.slice(-2);
 
 for (let i = string.length - 3; i >= 0; i--) {
-  if ((string.length - i) % 2 === 0) {
-    formattedString = "," + formattedString;
-  }
-  formattedString = string[i] + formattedString;
+    if ((string.length - i) % 2 === 0) {
+        formattedString = "," + formattedString;
+    }
+    formattedString = string[i] + formattedString;
 }
 formattedString = formattedString + lastTwoDigits;
 
 // console.log(formattedString);
 
 // ===============================================
-let user ={
-    name:"amit",
-    print: function(){
+let user = {
+    name: "amit",
+    print: function () {
         console.log('hey');
     },
-    done(){
+    done() {
         console.log('Hello');
     },
-    hello(){
+    hello() {
         console.log(user.name);
     },
-    by(){
+    by() {
         console.log(this.name);
     }
 }
-user.sayHi = function(){
+user.sayHi = function () {
     console.log('say HI');
 }
 // user.print();
 // console.log(user);
 // user.hello();
 
-let admin =user;
+let admin = user;
 user = {   // change user data
-    age:23,
+    age: 23,
 }
 // console.log("user data :-",user);
 // console.log("admin data :-",admin);
 // admin.hello();
 // admin.by(); 
 
-function mar(){
+function mar() {
     return {
         name: "amit",
-        ref:this,
+        ref: this,
     };
 }
 let ok = mar();
 // console.log("okoko",ok.ref.name);
 
 let userdata = {
-    name:'amit',
-    makeuser(){
+    name: 'amit',
+    makeuser() {
         return {
-            name:"yadav",
-            ref:this,
+            name: "yadav",
+            ref: this,
         };
     }
 }
 // let result = user.makeuser();
 // console.log(result.ref.name);
 
-const User = {
-    name :"kumar",
-    age:23,
-}
-User = {
-    age:30
-}
-console.log('const user:-',User);
+// const User = {
+//     name: "kumar",
+//     age: 23,
+// }
+// User = {
+//     age: 30
+// }
+// console.log('const user:-', User);
 // =====================================================
 
-let user ={
-    name:"amit",
-    age:24,
-    "first name":"kumar yaddav"
+var costomer = {
+    name: "amit",
+    age: 24,
+    "first name": "kumar yaddav"
 }
-user["first name"] = user["first name"].slice(0,5);
-// console.log(user);  // { name: 'amit', age: 24, 'first name': 'kumar' }
-// console.log(user["first name"]);    // kumar
+costomer["first name"] = costomer["first name"].slice(0, 5);
+// console.log(costomer);  // { name: 'amit', age: 24, 'first name': 'kumar' }
+// console.log(costomer["first name"]);    // kumar
 // ..................................................
 let fn = "amit";
 let ln = "yadav";
 let fln = {
-    name:"amit",
-    age:24,
+    name: "amit",
+    age: 24,
     [fn + ln]: "Full name",
 }
 // console.log(fln);
 ///.................................... Copy object into another object 
 let name = "amit";
 let age = 24;
-var data ={
+var data = {
     name,
     age,
-    skills:"HTML",
+    skills: "HTML",
     lastname: undefined,
 }
 let Admin = data;
@@ -106,78 +106,78 @@ admin.name = 'zuvy'
 // console.log(data);
 // console.log(Admin);
 
-var data ={
+var data = {
     name,
     age,
-    skills:"HTML",
+    skills: "HTML",
     lastname: undefined,
 }
-var newobj = Object.assign({},data);
+var newobj = Object.assign({}, data);
 newobj.name = "yadav"
 // console.log(data);
 // console.log(newobj);
 
-let obj1 ={
-    name :"amit",
-    age : 24,
+let obj1 = {
+    name: "amit",
+    age: 24,
 }
-let Newobj = Object.assign({},obj1)
+let Newobj = Object.assign({}, obj1)
 // console.log(Newobj);
 
-var copy ={};
-for (let key in obj1){
+var copy = {};
+for (let key in obj1) {
     copy[key] = user[key];
 }
 // console.log(copy);
 // ...................................
-const arr = [1,2,[3,4],5];
+const arr = [1, 2, [3, 4], 5];
 const arr2 = structuredClone(arr);
-arr2[1] =10;
+arr2[1] = 10;
 arr2[2][0] = 12;
 // console.log(arr);
 // console.log(arr2);
 //........................................
-var users ={
-    name:"amit",
-    sayHi(){
+var users = {
+    name: "amit",
+    sayHi() {
         console.log(this.name + " said Hi");
     }
 }
 // users.sayHi();
 // ..........................................
-function User(id,name,age,role,email){
-    this.id = id;
-    this.name = name;
-    this.age = age;
-    this.role = role;
-    this.email = email;
-}
-let User1  = new User(1,"amit", 25, "user", "amit@gmail.com")
-let User2  = new User(2,"yadavv", 25, "admin", "amit21@gmail.com")
+// function User(id, name, age, role, email) {
+//     this.id = id;
+//     this.name = name;
+//     this.age = age;
+//     this.role = role;
+//     this.email = email;
+// }
+// let User1 = new User(1, "amit", 25, "user", "amit@gmail.com")
+// let User2 = new User(2, "yadavv", 25, "admin", "amit21@gmail.com")
 // console.log(User1);
 // console.log(User2);
-const em = []
-em.push(User1,User2)
+// const em = []
+// em.push(User1, User2)
 // console.log(em);
 // ......................................... 
 const userData = {
-    firstname : "amit",
-    lastName : "yadav",
-    age : 24,
-    gender : "mele",
+    firstname: "amit",
+    lastName: "yadav",
+    age: 24,
+    gender: "mele",
 }
-for (let key in userData){  // change every keys values 10
+for (let key in userData) {  // change every keys values 10
     userData[key] = 10;
 }
 // console.log(userData);
 
-function changeName(obj){   // change fname
+function changeName(obj) {   // change fname
     obj.firstname = "kumar";
 }
 // changeName(userData);
 // console.log(userData);
 
-let result = Object.entries(userData).map(item=>{ 
+let result = Object.entries(userData).map(item => {
     item[1] = 10;
     return item;
 })
@@ -188,9 +188,9 @@ result = Object.fromEntries(result);
 // =====================================================
 // .................................That is 50% needs, 30% wants and 20% savings.
 function calculateBudget(salary) {
-    const needs = salary * 50/100;
-    const wants = salary * 30/100;
-    const savings = salary * 20/100;
+    const needs = salary * 50 / 100;
+    const wants = salary * 30 / 100;
+    const savings = salary * 20 / 100;
     return { "Needs": needs, "Wants": wants, "Savings": savings };
     return { Needs: needs, Wants: wants, Savings: savings };
 
@@ -231,7 +231,7 @@ function calculateFoodItems(obj) {
 
     const smallValue = Object.values(obj).reduce((min, val) => Math.min(min, val), Infinity);
     return smallValue;
-    
+
     for (const ingredient in obj) {
         if (obj[ingredient] < minQuantity) {
             minQuantity = obj[ingredient];
@@ -272,14 +272,14 @@ function sortItemsByPrice(items) {
     return items;
 }
 const input = [
-    {name: "lemonade", price: 50},
-    {name: "lime", price: 10}
+    { name: "lemonade", price: 50 },
+    { name: "lime", price: 10 }
 ];
 const sortedItems = sortItemsByPrice(input);
 // console.log(sortedItems);
 
 // Return an array where each element represent key value
-function array(obj){
+function array(obj) {
     return Object.entries(obj)
 }
 // console.log(array({ a: 1, b: 2 })); // [["a", 1], ["b", 2]]
@@ -301,15 +301,15 @@ let arrays = [
     { name: "Jason", email: "jason@example.com" },
     { name: "Jeremy", email: "jeremy@example.com" },
     { name: "Jacob", email: "jacob@example.com" }
-  ]
+]
 function extractNames(arr) {
     let names = [];
     for (let i = 0; i < arr.length; i++) {
         // console.log(arr[i]);
-      names.push(arr[i].name);
+        names.push(arr[i].name);
     }
     return names;
-}  
+}
 // console.log(extractNames(arrays));
 
 function extractNames(arr) {
@@ -335,12 +335,12 @@ function sortByPrice(obj, price) {
     const sortedObj = Object.fromEntries(sortedEntries);
     // return sortedObj;
 
-    let x ={};
-    for ( i in obj){
-        if(obj[i]>price){
-            console.log('key',i);
-            console.log('value',obj[i]);
-            x[i]  = obj[i]
+    let x = {};
+    for (i in obj) {
+        if (obj[i] > price) {
+            console.log('key', i);
+            console.log('value', obj[i]);
+            x[i] = obj[i]
         }
     }
     // return x;
@@ -352,7 +352,7 @@ function sortByNunLenght(obj, num) {
     // Convert the object into an array of key-value pairs
     const entries = Object.entries(obj);
     // Sort the array based on the values
-    const sortedEntries = entries.filter(([key, value]) => key.length> num);
+    const sortedEntries = entries.filter(([key, value]) => key.length > num);
     // Convert the sorted array back into an object
     const sortedObj = Object.fromEntries(sortedEntries);
     return sortedObj;
@@ -369,7 +369,7 @@ function countLettersAndDigits(str) {
         if (/[a-zA-Z]/.test(char)) {
             letterCount++;
         }
-        else if(!isNaN(parseInt(char))){
+        else if (!isNaN(parseInt(char))) {
             digitCount++;
         }
     }
@@ -385,7 +385,7 @@ function countLettersAndDigits(str) {
             dCount++;
         }
     }
-    return {"LETTERS": lCount,"DIGITS": dCount};
+    return { "LETTERS": lCount, "DIGITS": dCount };
 
     const letter = str.match(/[a-zA-Z]/g) || [];
     const digit = str.match(/\d/g) || [];
@@ -401,17 +401,40 @@ const counts = countLettersAndDigits(inputString);
 
 // ......................................................... calculator using Object
 let calculator = {
-    description : 'this is a calculator',
-    sum(a,b){
-        return a+b
+    description: 'this is a calculator',
+    sum(a, b) {
+        return a + b
     },
-    subscription(a,b){
-        return a-b
+    subscription(a, b) {
+        return a - b
     },
-    multiplication(a,b){
-        return a*b
+    multiplication(a, b) {
+        return a * b
     }
 }
-let ans = calculator.subscription(5,7);
+let ans = calculator.subscription(5, 7);
 // console.log(ans);
 
+// ------------------------------ how to use map/forEach method in object ?
+const originalObject = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+// Using Object.keys()
+const mappedObject = {};
+Object.keys(originalObject).forEach(key => {
+    mappedObject[key] = originalObject[key] * 2; // perform your operation here
+});
+// console.log(mappedObject); // Output: { a: 2, b: 4, c: 6 }
+
+function sum(){
+    let name="amit"
+    function j(){
+        console.log(name);
+    }
+    return j;
+}
+let y = sum()
+// y()
