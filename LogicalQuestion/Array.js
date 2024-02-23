@@ -186,6 +186,7 @@ function copyElement(arr) {
 }
 // console.log(copyElement([1, 2, 3]));    // [1, 3, 3]
 
+// =================================================== practice Question 
 let ar = [1,2,3,4,5,6,7,8,9,10];
 let remove=ar.splice(4,ar.length -4);
 // console.log(remove);
@@ -193,3 +194,16 @@ let remove=ar.splice(4,ar.length -4);
 const array = [1,2,3,4,5];
 let c= array.find((num)=>num%2==0);
 // console.log(c);
+
+// ........................ sum of Array elements
+function sumOfArrayItem(a,b, ...rest){
+    // console.log({a,b, rest});
+    let result = a + b;
+    result = rest.reduce((sum, item) =>{
+        return sum+item;
+    },result)
+    return result;
+}
+let arr = [1,2,3,4,5,6,7,8,9]
+let result = sumOfArrayItem(...arr)
+// console.log(result);
