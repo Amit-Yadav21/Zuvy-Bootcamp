@@ -207,3 +207,54 @@ function sumOfArrayItem(a,b, ...rest){
 let arr = [1,2,3,4,5,6,7,8,9]
 let result = sumOfArrayItem(...arr)
 // console.log(result);
+
+// ................................................... slice method
+let my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Slice from the 4th element from the end to the 2nd element from the end
+let sliced_list = my_list.slice(-4, -1);
+// console.log(sliced_list); // Output: [7, 8, 9]
+
+// Slice from the 3rd element from the end to the end of the list
+sliced_list = my_list.slice(-3);
+// console.log(sliced_list); // Output: [8, 9, 10]
+
+// Slice from the beginning of the list to the 5th element from the end
+sliced_list = my_list.slice(0, -5);
+// console.log(sliced_list); // Output: [1, 2, 3, 4, 5]
+
+// Slice from the 5th element from the end to the 2nd element from the end, skipping every other element
+sliced_list = my_list.slice(-5, -1).filter((_, index) => index % 2 === 0);
+// console.log(sliced_list); // Output: [6, 8]
+
+// Slice from the end of the list to the beginning, reversing the list
+let reversed_list = my_list.slice().reverse();
+// console.log(reversed_list); // Output: [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+// ....................................................... splice method
+let fruits = ['apple', 'banana', 'cherry', 'date'];
+// Remove one element at index 2
+let removedItem = fruits.splice(2, 1);
+// console.log('Array after removing one element:', fruits); // Output: ['apple', 'banana', 'date']
+// console.log('Removed element:', removedItem); // Output: ['cherry']
+
+let colors = ['red', 'green', 'blue'];
+// Replace one element at index 1
+colors.splice(1, 1, 'yellow');
+// console.log('Array after replacing one element:', colors); // Output: ['red', 'yellow', 'blue']
+
+let animals = ['cat', 'dog', 'elephant'];
+// Insert two elements starting from index 1
+animals.splice(1, 0, 'bird', 'fish');
+// console.log('Array after adding elements:', animals); // Output: ['cat', 'bird', 'fish', 'dog', 'elephant']
+
+let languages = ['JavaScript', 'Python', 'Java', 'C++'];
+// Remove all elements starting from index 0
+languages.splice(0);
+// console.log('Array after removing all elements:', languages); // Output: []
+
+let numbers = [1, 2, 3, 4, 5];
+// Remove three elements starting from index 1
+let removedItems = numbers.splice(1, 3);
+// console.log('Array after removing three elements:', numbers); // Output: [1, 5]
+// console.log('Removed elements:', removedItems); // Output: [2, 3, 4]
