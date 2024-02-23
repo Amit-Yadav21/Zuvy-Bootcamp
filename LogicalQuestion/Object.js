@@ -13,6 +13,34 @@ formattedString = formattedString + lastTwoDigits;
 // console.log(formattedString);
 
 // ===============================================
+
+var myName = "amit";
+midil_name = "kumar";
+function printMane(){
+    var myName = "yadav"
+    // console.log('inner name', myName); // yadav
+    midil_name = "shah";
+    // console.log('inner midil name', midil_name); // shah
+}
+// printMane();
+// console.log('outer name', myName); // amit
+// console.log('outer midil name', midil_name); // shah
+
+// ................. add value using for in loop 
+let salarys = {
+    Rohan:1000,
+    Shohan:500
+}
+let sumOfSalary = salarys.Rohan + salarys.Shohan
+// console.log('sum of salarys :',sumOfSalary);
+
+let sums = 0;
+for (let key in salarys){
+    sums += salarys[key];
+}
+// console.log('sum of salary :', sums);
+
+// ................................... create method here 
 let user = {
     name: "amit",
     print: function () {
@@ -44,6 +72,7 @@ user = {   // change user data
 // admin.hello();
 // admin.by(); 
 
+// ...........................................
 function mar() {
     return {
         name: "amit",
@@ -53,6 +82,7 @@ function mar() {
 let ok = mar();
 // console.log("okoko",ok.ref.name);
 
+// ......................................
 let userdata = {
     name: 'amit',
     makeuser() {
@@ -65,6 +95,7 @@ let userdata = {
 // let result = user.makeuser();
 // console.log(result.ref.name);
 
+// ..................................
 // const User = {
 //     name: "kumar",
 //     age: 23,
@@ -73,8 +104,8 @@ let userdata = {
 //     age: 30
 // }
 // console.log('const user:-', User);
-// =====================================================
 
+// ..........................................
 var costomer = {
     name: "amit",
     age: 24,
@@ -184,6 +215,63 @@ let result = Object.entries(userData).map(item => {
 // console.log("key-value :",result);
 result = Object.fromEntries(result);
 // console.log("object =",result);
+
+// ......................................................... calculator using Object
+let calculator = {
+    description: 'this is a calculator',
+    sum(a, b) {
+        return a + b
+    },
+    subscription(a, b) {
+        return a - b
+    },
+    multiplication(a, b) {
+        return a * b
+    }
+}
+let ans = calculator.subscription(5, 7);
+// console.log(ans);
+
+// ------------------------------ how to use map/forEach method in object ?
+const originalObject = {
+    a: 1,
+    b: 2,
+    c: 3
+};
+
+// Using Object.keys()
+const mappedObject = {};
+Object.keys(originalObject).forEach(key => {
+    mappedObject[key] = originalObject[key] * 2; // perform your operation here
+});
+// console.log(mappedObject); // Output: { a: 2, b: 4, c: 6 }
+
+function sum_sum(){
+    let name="amit"
+    function j(){
+        console.log(name);
+    }
+    return j;
+}
+let y = sum_sum();
+// y()
+
+// ........................ structuredClone 
+let userObject = {
+    10:1,
+    name:'rama',
+    two_birds:true,
+    nested : {
+        height:{
+            title:"Height"
+        },
+        width:20
+    }
+};
+// console.log(userObject);
+let clone = structuredClone(userObject);
+clone.nested.height.title = "width";
+// console.log(clone);
 
 // ===================================================== Questions
 // .................................That is 50% needs, 30% wants and 20% savings.
@@ -398,43 +486,3 @@ function countLettersAndDigits(str) {
 const inputString = 'H3ll0 Wor1d';
 const counts = countLettersAndDigits(inputString);
 // console.log(counts);
-
-// ......................................................... calculator using Object
-let calculator = {
-    description: 'this is a calculator',
-    sum(a, b) {
-        return a + b
-    },
-    subscription(a, b) {
-        return a - b
-    },
-    multiplication(a, b) {
-        return a * b
-    }
-}
-let ans = calculator.subscription(5, 7);
-// console.log(ans);
-
-// ------------------------------ how to use map/forEach method in object ?
-const originalObject = {
-    a: 1,
-    b: 2,
-    c: 3
-};
-
-// Using Object.keys()
-const mappedObject = {};
-Object.keys(originalObject).forEach(key => {
-    mappedObject[key] = originalObject[key] * 2; // perform your operation here
-});
-// console.log(mappedObject); // Output: { a: 2, b: 4, c: 6 }
-
-function sum(){
-    let name="amit"
-    function j(){
-        console.log(name);
-    }
-    return j;
-}
-let y = sum()
-// y()
