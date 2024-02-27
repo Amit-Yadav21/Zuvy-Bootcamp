@@ -4,6 +4,15 @@ function sumFirstLast(arr) {
 }
 //  console.log(sumFirstLast([1, 2, 3 ,4 ,5 ,6, 7]));
 
+// Given an array of strings, sort the array and then return concatinating the 2nd and 2nd last element of the array.
+function sortSum(arr) {
+    var sArray = arr.sort((a, b) => a - b);
+    console.log(sArray);
+    const result = sArray[1] + sArray[sArray.length - 2];
+    return result;
+}
+// console.log(sortSum(['2', '5', '10', '7', '5']));
+
 // if the length of the array is greater than 5 return “Hello” else return “World”
 function arrayHelloWorld(arr) {
     let arrayL = arr.length;
@@ -16,11 +25,6 @@ function arrayHelloWorld(arr) {
 }
 // console.log(arrayHelloWorld([1, 2, 3 ,4 ,5 ,6,7]));
 
-// Sum First and Last-1
-function sumFirstLast(arr) {
-    return arr[0] + arr[arr.length - 1];
-}
-// console.log(sumFirstLast([1, 2, 3 ,4 ,5 ,6,7]));
 
 // Given a variable arr as function parameter, return “YES” if the given variable arr is an array else return “NO” .
 function isArray(arr) {
@@ -57,16 +61,6 @@ function elementIndex(arr, element) {
     }
 }
 // console.log(elementIndex([1,2,3], 3));
-
-
-// Given an array of strings, sort the array and then return concatinating the 2nd and 2nd last element of the array.
-function sortSum(arr) {
-    var sArray = arr.sort((a, b) => a - b);
-    console.log(sArray);
-    const result = sArray[1] + sArray[arr.length - 2];
-    return result;
-}
-// console.log(sortSum(['2', '5', '10', '7', '5']));
 
 // Given an array and a number, add the number to the end of the array.
 function addToEnd(arr, num) {
