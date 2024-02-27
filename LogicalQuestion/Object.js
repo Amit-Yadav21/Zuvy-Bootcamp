@@ -324,7 +324,8 @@ function calculateVolume(obj) {
 
 const CVolume = ({ width, length, height }) => width * length * height;
 // console.log(CVolume({ width: 7, length: 2, height: 1 })); // Output: 14
-// ...............................
+
+// ........................................................ find min value ?
 function calculateFoodItems(obj) {
     const minQuantity = Math.min(...Object.values(obj));
     return minQuantity;
@@ -341,6 +342,7 @@ function calculateFoodItems(obj) {
 }
 // console.log(calculateFoodItems({"salt": 23,"oil": 12,"ketchup": 10})); // Output: 10
 
+// .....................................................
 function isFreeDeliveryEligible(obj) {
     const toa = Object.values(obj).reduce((total, price) => total + price, 0);
     return toa > 50.00;
@@ -356,7 +358,7 @@ function isFreeDeliveryEligible(obj) {
 }
 // console.log(isFreeDeliveryEligible({ "Shampoo": 5.99, "Rubber Ducks": 15.99 })); // true,false
 
-// Return keys and values of object as seperate arrays
+// ............................Return keys and values of object as seperate arrays
 function keyValue(obj) {
     let ky = Object.keys(obj);
     let vl = Object.values(obj);
@@ -366,7 +368,7 @@ function keyValue(obj) {
 }
 // console.log(keyValue({ a: 1, b: 2, c: 3 }));    // [["a", "b", "c"], [1, 2, 3]]
 
-// Return array such that drinks object is in sorted order on the basis of their price.
+// .......................Return array such that drinks object is in sorted order on the basis of their price.
 function sortItemsByPrice(items) {
     items.sort((a, b) => a.price - b.price);
     return items;
@@ -378,13 +380,13 @@ const input = [
 const sortedItems = sortItemsByPrice(input);
 // console.log(sortedItems);
 
-// Return an array where each element represent key value
+// ........................Return an array where each element represent key value
 function array(obj) {
     return Object.entries(obj)
 }
 // console.log(array({ a: 1, b: 2 })); // [["a", 1], ["b", 2]]
 
-// Return an obj such that keys becomes value and values become keys
+// ........................Return an obj such that keys becomes value and values become keys
 function keyValues(obj) {
     const swappedObj = {};
     for (const key in obj) {
