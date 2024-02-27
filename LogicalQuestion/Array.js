@@ -150,7 +150,8 @@ function attendance(studentsInClass, student) {
     }
 }
 // console.log(attendance([1, 2, 3], 2));
-// .....................................................
+
+// ..................................................... Sort and Replace ?
 function sortArray(arr) {
     // Replace 'd' with 'b'
     for (let i = 0; i < arr.length; i++) {
@@ -185,11 +186,14 @@ function copyElement(arr) {
 // =================================================== practice Question 
 let ar = [1,2,3,4,5,6,7,8,9,10];
 let remove=ar.splice(4,ar.length -4);
-// console.log(remove);
+// console.log(remove); // [ 5, 6, 7, 8, 9, 10 ]
 
-const array = [1,2,3,4,5];
+const array = [1,2,3,4,5,6];
 let c= array.find((num)=>num%2==0);
 // console.log(c);
+
+const count = array.filter(num => num % 2 === 0).length;
+// console.log(count); // Output: 3
 
 // ........................ sum of Array elements
 function sumOfArrayItem(a,b, ...rest){
