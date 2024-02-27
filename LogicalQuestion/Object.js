@@ -92,8 +92,8 @@ let userdata = {
         };
     }
 }
-// let result = user.makeuser();
-// console.log(result.ref.name);
+// let results = user.makeuser();
+// console.log(results.ref.name);
 
 // ..................................
 // const User = {
@@ -146,7 +146,7 @@ var data = {
 var newobj = Object.assign({}, data);
 newobj.name = "yadav"
 // console.log(data);
-// console.log(newobj);
+// console.log(newobj); // { name: 'yadav', age: 24, skills: 'HTML', lastname: undefined }
 
 let obj1 = {
     name: "amit",
@@ -232,7 +232,7 @@ let calculator = {
 let ans = calculator.subscription(5, 7);
 // console.log(ans);
 
-// ------------------------------ how to use map/forEach method in object ?
+// ------------------------------ how to use forEach method in object ?
 const originalObject = {
     a: 1,
     b: 2,
@@ -246,6 +246,18 @@ Object.keys(originalObject).forEach(key => {
 });
 // console.log(mappedObject); // Output: { a: 2, b: 4, c: 6 }
 
+const multipliedObject = {};
+for (let key in originalObject) {
+    multipliedObject[key] = originalObject[key] * 3;
+}
+// console.log(multipliedObject);
+
+const multipliedObjects = Object.fromEntries(
+    Object.entries(originalObject).map(([key, value]) => [key, value * 5])
+);
+// console.log(multipliedObjects);
+
+// ...................................
 function sum_sum(){
     let name="amit"
     function j(){
