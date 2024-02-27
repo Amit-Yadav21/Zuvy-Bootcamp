@@ -13,6 +13,21 @@ function sortSum(arr) {
 }
 // console.log(sortSum(['2', '5', '10', '7', '5']));
 
+function SecondAndSecondLast(arr) {
+    arr.sort((a, b) => a - b);
+    const result = `${arr[1]}${arr[arr.length - 2]}`;
+    return result;
+
+    // const result = arr[1] + arr[arr.length - 2];
+    // return result;
+
+    // var sArray = arr.sort();
+    // const result = sArray[1] + sArray[arr.length - 2];
+    // return result;
+}
+const strings = ['2', '5', '10', '7', '5'];
+// console.log(SecondAndSecondLast(strings));
+
 // if the length of the array is greater than 5 return “Hello” else return “World”
 function arrayHelloWorld(arr) {
     let arrayL = arr.length;
@@ -112,7 +127,9 @@ function arrayToString(arr) {
 // console.log(arrayToString([1, 2, 3])); // Output: '1,2,3'
 
 function reverseArray(arr) {
-    return arr.reverse();
+    // return arr.reverse();
+
+    // return [...arr].reverse();
 
     // const reversedArr = [];
     // for (let i = arr.length - 1; i >= 0; i--) {
@@ -120,24 +137,9 @@ function reverseArray(arr) {
     // }
     // return reversedArr;
 
-    // return [...arr].reverse();
 }
 // console.log(reverseArray([1, 2, 3])); // Output: [3, 2, 1]
 
-function SecondAndSecondLast(arr) {
-    arr.sort((a, b) => a - b);
-    const result = `${arr[1]}${arr[arr.length - 2]}`;
-    return result;
-
-    // const result = arr[1] + arr[arr.length - 2];
-    // return result;
-
-    // var sArray = arr.sort();
-    // const result = sArray[1] + sArray[arr.length - 2];
-    // return result;
-}
-const strings = ['2', '5', '10', '7', '5'];
-// console.log(SecondAndSecondLast(strings));
 
 // Return Present if the student is present in the class else return Not Present
 function attendance(studentsInClass, student) {
