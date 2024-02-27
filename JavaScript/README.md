@@ -33,3 +33,13 @@
 
 - Day 11 - JSON, Rest and Spread, Variable Scope, Closure, Lexical Environment
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Ru97xoMUh4M)
+
+- Day 12 - Object revision
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=E65BJ4-Xp-o)
+
+- Day 13 - Object Methods and this keyword revision
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=mUYAhMaCE8s)
+
+- Day 14 - DOM(Document Object Model)
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=_rEFRNLuS6I)
+    
