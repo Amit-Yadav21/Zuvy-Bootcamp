@@ -42,4 +42,6 @@
 
 - Day 14 - DOM(Document Object Model)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=_rEFRNLuS6I)
-    
+
+- Day 15 - Searching the DOM
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Db7bHuGYrLw)
