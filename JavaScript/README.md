@@ -45,3 +45,9 @@
 
 - Day 15 - Searching the DOM
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Db7bHuGYrLw)
+
+- Day 16 - DOM Manipulation
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=GbjF1UTc9jc)
+
+- Day 17 - 
+    - Recording Link : [Provide By Mentor]()
