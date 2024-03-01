@@ -52,5 +52,5 @@
 - Day 17 - Modifying the Document
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=rpqUVSIN1WI)
 
-- Day 18 - 
-    - Recording Link : [Provide By Mentor]()
+- Day 18 - Styles and Classes
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=gKfBEzDBqnY)
