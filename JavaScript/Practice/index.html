@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write an interface to create a list from user input.
+    For every list item:
+    ● Ask a user about its content using prompt.
+    ● Create the <li> with it and add it to <ul>.
+    ● Continue until the user cancels the input (by pressing Esc or via an empty 
+    entry).
+    ● All elements should be created dynamically.
+    If a user types HTML-tags, they should be treated like a text. -->
+
+    <h1>Create a List</h1>
+    <!-- <input type="text" id="itemInput" placeholder="Enter list item"> -->
+    <button onclick="addItem()">Add Item</button>
+    <ul id="list_ul"></ul>
+
+    <script>
+        function addItem() {
+            var itemValue = prompt("Enter the content of the item:");
+        
+           
+            if (!itemValue) {
+                alert("Please enter a valid list item.");
+
+            }
+
+            var listItem = document.createElement("li");
+ 
+            listItem.textContent = itemValue;
+
+            var list = document.getElementById("list_ul");
+
+            list.appendChild(listItem);
+        }
+    </script>
+
+</body>
+</html>
