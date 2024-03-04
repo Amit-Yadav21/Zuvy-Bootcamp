@@ -54,3 +54,6 @@
 
 - Day 18 - Styles and Classes
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=gKfBEzDBqnY)
+
+- Day 18 - Event handling, Event Object
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=4aTQishwktE)
