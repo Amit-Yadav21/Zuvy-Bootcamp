@@ -340,3 +340,35 @@ function middleChar(str) {
     }
 }
 // console.log(middleChar('testingAmkit'));
+
+// ... You are given a string, add a space before every capital letter, then uncapitalize the entire string.
+function capitalSplit(str) {
+    let result = '';
+    for (let i = 0; i < str.length; i++) {
+        const char = str[i];
+        if (char === char.toUpperCase()) {
+            result += ' ' + char.toLowerCase();
+        } else {
+            result += char;
+        }
+    }
+    result = result.trim();    
+    return result;
+}
+// console.log(capitalSplit("JavaScriptIsFun")); // Output: java script is fun
+
+// You are given two numbers in an array of integer, return the sum of all the alternate numbers between the two number.
+// Both the numbers are inclusive.
+function alternateSum(arr) {
+    const start = arr[0];
+    const end = arr[1];
+    let sum = 0;
+    for (let i = start; i <= end; i++) {
+        if (i % 2 !== 0) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+const numbers = [1, 5];
+// console.log(alternateSum(numbers)); // Output: 9

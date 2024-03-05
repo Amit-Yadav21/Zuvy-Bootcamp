@@ -183,6 +183,17 @@ function copyElement(arr) {
 }
 // console.log(copyElement([1, 2, 3]));    // [1, 3, 3]
 
+// Given a array containing both strings and numbers, remove all the numbers and concat all the strings.
+// Return the resulting string
+function createString(arr) {
+    const strings = arr.filter(item => typeof item === 'string').join(' ');
+    return strings;
+}
+
+// Example usage:
+const input = ['Hello', 'World', 123];
+// console.log(createString(input)); // Output: Hello World
+
 // =================================================== practice Question 
 let ar = [1,2,3,4,5,6,7,8,9,10];
 let remove=ar.splice(4,ar.length -4);
