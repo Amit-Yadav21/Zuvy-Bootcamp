@@ -501,46 +501,6 @@ const inputString = 'H3ll0 Wor1d';
 const counts = countLettersAndDigits(inputString);
 // console.log(counts);
 
-// ..........................find Max value of notes 
-function getGoodNotes(arrObj) {
-    const goodNotes = [];
-    arrObj.forEach(student => {
-        const highestNote = Math.max(...student.notes);
-        goodNotes.push({ name: student.name, goodNote: highestNote });
-    });
-    return goodNotes;
-}
-const arrObj = [
-    { name: "Bob", notes: [3, 5, 4] },
-    { name: "Rary", notes: [1, 4, 6] },
-    { name: "Jack", notes: [1, 2, 3] }
-];
-// console.log(getGoodNotes(arrObj)); // Output: [ { name: 'Bob', goodNote: 5 } ]
-
-// ..............move all the zeroes present in the array to the end, without changing the order of other elements.
-function moveToEnd(arr) {
-    const zeros = [];
-    const nonZeros = [];
-    arr.forEach(num => {
-        if (num === 0) {
-            zeros.push(num);
-        } else {
-            nonZeros.push(num);
-        }
-    });
-    return nonZeros.concat(zeros);
-}
-const arrs = [1, 2, 0, 0, 4, 0, 5];
-// console.log(moveToEnd(arrs)); // Output: [1, 2, 4, 5, 0, 0, 0]
-
-function moveToEnd(arr) {
-    const nonZero = arr.filter(item => item !== 0);
-    const zeros = arr.filter(item => item === 0);
-    return nonZero.concat(zeros);
-}
-const Arr = [1, 2, 0, 0, 4, 0, 5];
-// console.log(moveToEnd(Arr)); // Output: [1, 2, 4, 5, 0, 0, 0]
-
 // You are give an object and a string. Return true if the given string is a key in the object else return false.
 function isKeyPresent(obj, key) {
     return key in obj;
