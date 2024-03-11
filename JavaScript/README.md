@@ -55,5 +55,8 @@
 - Day 18 - Styles and Classes
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=gKfBEzDBqnY)
 
-- Day 18 - Event handling, Event Object
+- Day 19 - Event handling, Event Object
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=4aTQishwktE)
+
+- Day 20 - Event bubbling and capturing
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=1qxXLh5UZi0)
