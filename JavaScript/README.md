@@ -60,3 +60,9 @@
 
 - Day 20 - Event bubbling and capturing
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=1qxXLh5UZi0)
+
+- Day 21 - Event Delegation
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=qaHjMrkLJ1g)
+
+- Day 22 - 
+    - Recording Link : [Provide By Mentor]()
