@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
-    <h1>TODO LIST</h1>
-    <button id="add">Add</button>
-    <button id="clear">clear</button>
-    <ul id="todo-items">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="index.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="all-item">
+            <h1>TODO LIST</h1>
+            <input type="text" placeholder="Type your list items...">
+            <button id="add">Add</button>
+            <button id="clear">clear</button>
+            <ul id="todo-items"></ul>
 
-    </ul>
-    <h1>Completed</h1>
-    <ul id="completed-todo">
-
-    </ul>
-</body>
+            <h1>Completed</h1>
+            <ul id="completed-todo"></ul>
+        </div>
+    </body>
 </html>

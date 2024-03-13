@@ -1,0 +1,29 @@
+.all-item{
+    margin-left: 400px;
+    text-align: center;
+    /* border: 2px solid red; */
+    width: 40%;
+    box-shadow: inset 0 0 35px 5px rgba(0,0,0,0.25), inset 0 2px 1px 1px rgba(255,255,255,0.9), inset 0 -2px 1px rgba(0,0,0,0.25);
+}
+input,
+#add,
+#clear{
+    border: none;
+}
+input,
+#add,
+#clear{
+    height: 32px;
+    border-radius: 10px;
+}
+input{
+    padding-left: 16px;
+}
+#add:hover{
+    background-color: green;
+    color: white;
+}
+#clear:hover{
+    background-color: red;
+    color: white;
+}
