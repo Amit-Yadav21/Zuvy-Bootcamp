@@ -8,6 +8,9 @@ let completedUI = document.querySelector('#completed-todo');
 addBtn.addEventListener('click', function () {
     // let todoItem = prompt("Enter todo ?");
     let todoItem = input.value;
+    
+    // Clear the input field after adding the todo
+    input.value = '';
 
     // if add empaty string , not add in ul
     if (todoItem === '') {
@@ -32,7 +35,7 @@ addBtn.addEventListener('click', function () {
     // add Delete and Completed when create li
     // li.innerHTML += `<button class ="delete">Delete</button> <button class ="completed">Completed</button>`
     li.innerHTML += ` <i class="fas fa-trash-alt delete"></i> <i class="fas fa-check-circle completed"></i>`
-    
+
     // select inside li delete and completed icons
     let deleteIcon = li.querySelector('.delete');
     deleteIcon.style.color = "red"
