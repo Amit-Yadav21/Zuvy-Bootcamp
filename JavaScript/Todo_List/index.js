@@ -1,40 +1,49 @@
 let addBtn = document.querySelector('#add');
 let clearBtn = document.querySelector('#clear');
-let ul = document.querySelector('#todo-items');
-let completedUi = document.querySelector('#completed-todo');
+let todoUI = document.querySelector('#todo-items');
+let completedUI = document.querySelector('#completed-todo');
 
 addBtn.addEventListener('click', function () {
     let todoItem = prompt("Enter todo ?");
 
+    // if add empaty string , not add in ul
     if (todoItem === '') {
-        return
+        return;
     }
 
+    // add li under ul
     let li = document.createElement('li')
     li.innerText = todoItem;
-    li.innerHTML = `<button class ="delete">Delete</button><button class ="completed">Completed</button>`
-    ul.append(li);
+
+    // add Delete and Completed when create li
+    li.innerHTML += `<button class ="delete">Delete</button><button class ="completed">Completed</button>`
+    todoUI.append(li);
 });
 
+// All clear
 clearBtn.addEventListener('click', function () {
-    ul.innerHTML = "";
+    todoUI.innerHTML = "";
 })
 
-ul.addEventListener('click', function (event) {
+todoUI.addEventListener('click', function (event) {
+    // Delete one by one
     if (event.target.classList.contains('delete')) {
-        event.target.parentElenent.remove();
+        event.target.parentElement.remove();
     }
     if(event.target.classList.contains('completed')){
-        let completedLi = event.target.parentElenent.cloneNode(true);
+        let completedLi = event.target.parentElement.cloneNode(true);
 
         let completedBtn = completedLi.querySelector('.completed')
         completedBtn.remove();
 
-        completedUi.append(completedLi);
-        event.target.parentElenent.remove();
+        completedUI.append(completedLi);
+        event.target.parentElement.remove();
     }
 })
 
-completedUi.addEventListener('click',function(){
-    
+// Add after completed h1 tag
+completedUI.addEventListener('click',function(event){
+    // add Deleted button
+    if(!event.target.classList.contains('delete')) return;
+    event.target.parentElement.remove();
 })
