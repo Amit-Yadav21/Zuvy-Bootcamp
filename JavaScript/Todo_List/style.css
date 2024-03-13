@@ -1,29 +1,59 @@
-.all-item{
-    margin-left: 400px;
+.all-item {
+    /* margin-left: 400px;
     text-align: center;
-    /* border: 2px solid red; */
+    border-radius: 10px;
     width: 40%;
-    box-shadow: inset 0 0 35px 5px rgba(0,0,0,0.25), inset 0 2px 1px 1px rgba(255,255,255,0.9), inset 0 -2px 1px rgba(0,0,0,0.25);
+    box-shadow: inset 0 0 35px 5px rgba(0,0,0,0.25), inset 0 2px 1px 1px rgba(255,255,255,0.9), inset 0 -2px 1px rgba(0,0,0,0.25); */
+
+    transform: perspective(750px) translate3d(0px, 0px, -250px) rotateX(27deg) scale(0.9, 0.9);
+    border-radius: 20px;
+    border: 5px solid #e6e6e6;
+    box-shadow: 0 70px 40px -60px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease-in-out transform;
+    width: 40%;
+    text-align: center;
+    margin-left: 400px;
+    background-color:whitesmoke;
+
+    &:hover {
+        transform: translate3d(0px, 0px, -250px);
+    }
 }
+
 input,
 #add,
-#clear{
+#clear,
+.clear {
     border: none;
 }
+
 input,
 #add,
-#clear{
+#clear,
+.clear {
     height: 32px;
     border-radius: 10px;
 }
-input{
+
+#add,
+#clear,
+.clear {
+    height: 40px;
+    width: 80px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border: 2PX solid gainsboro;
+}
+
+input {
     padding-left: 16px;
 }
-#add:hover{
+
+#add:hover {
     background-color: green;
     color: white;
 }
-#clear:hover{
+.clear:hover,
+#clear:hover {
     background-color: red;
     color: white;
 }
