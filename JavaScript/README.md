@@ -66,3 +66,6 @@
 
 - Day 22 - Browser Default Actions and Common Events
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=HSyvA8pTtt8)
+
+- Day 23 - Todo List Application
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=V5TgJ95oE7M)
