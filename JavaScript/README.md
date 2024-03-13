@@ -64,5 +64,5 @@
 - Day 21 - Event Delegation
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=qaHjMrkLJ1g)
 
-- Day 22 - 
-    - Recording Link : [Provide By Mentor]()
+- Day 22 - Browser Default Actions and Common Events
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=HSyvA8pTtt8)
