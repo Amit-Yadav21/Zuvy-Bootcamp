@@ -16,5 +16,11 @@
 - Day - 5 Props and Conditional Rendering
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=jRPMJ6SMUE4)
 
-- Day - 6 
+- Day - 6 Rendering List and Keys
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=hALGFU2MDVk)
+
+- Day - 7 Pure Component
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Dqv1lEVJnmg)
+
+- Day - 8
     - Recording Link : [Provide By Mentor]()
