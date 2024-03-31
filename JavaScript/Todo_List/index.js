@@ -1,8 +1,8 @@
+let input = document.querySelector('input')
 let addBtn = document.querySelector('#add');
 let clearBtn = document.querySelector('#clear');
-let clear_completed = document.querySelector('#clear-completed')
-let input = document.querySelector('input')
 let todoUI = document.querySelector('#todo-items');
+let clear_completed = document.querySelector('#clear-completed')
 let completedUI = document.querySelector('#completed-todo');
 
 addBtn.addEventListener('click', function () {
