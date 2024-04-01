@@ -22,5 +22,8 @@
 - Day - 7 Pure Component
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Dqv1lEVJnmg)
 
-- Day - 8
+- Day - 8 Events - 1
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Gt-Zc5X_gXc)
+
+- Day - 9
     - Recording Link : [Provide By Mentor]()
