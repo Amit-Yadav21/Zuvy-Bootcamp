@@ -25,5 +25,8 @@
 - Day - 8 Events - 1
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Gt-Zc5X_gXc)
 
-- Day - 9
+- Day - 9 More on Events
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=XTxdrNL1xyY)
+
+- Day - 10 
     - Recording Link : [Provide By Mentor]()
