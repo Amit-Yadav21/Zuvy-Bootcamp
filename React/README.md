@@ -28,5 +28,11 @@
 - Day - 9 More on Events
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=XTxdrNL1xyY)
 
-- Day - 10 
+- Day - 10 States in React
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=oLHEYVGWkgc)
+
+- Day - 11 State as Snapshot and State updater function
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=SEl_71ITQRI)
+
+- Day - 12 
     - Recording Link : [Provide By Mentor]()
