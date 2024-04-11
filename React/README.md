@@ -34,8 +34,14 @@
 - Day - 11 State as Snapshot and State updater function
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=SEl_71ITQRI)
 
-- Day - 12 
-    - Recording Link : [Provide By Mentor]()
+- Day - 12 Object and Array in states
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=CnkD0jhq0ug)
 
-- Day - 13
+- Day - 13 Things to avoid in states and lifting up states
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=fGsCb-tNOtc)
+
+- Day - 14 useReducer hook
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=rSWHVnyUyaI)
+
+- Day - 15
     - Recording Link : [Provide By Mentor]()
