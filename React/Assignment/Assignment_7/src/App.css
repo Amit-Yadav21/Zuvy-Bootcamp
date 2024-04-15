@@ -1,0 +1,36 @@
+.App {
+  font-family: sans-serif;
+}
+.header {
+  color:white;
+  margin-top:-8px;
+  padding:5px;
+  font-size:20px;
+  background-color: #ffd740;
+  box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+}
+.cards {
+  height: 4rem;
+  width: 15%;
+  padding:5px;
+  margin-left:10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.cards .first{
+  margin-top:0px;
+  margin-bottom:0px;
+  font-weight: bold;
+  letter-spacing:1px;
+}
+.cards .second{
+  margin:0px;
+  width:80%;
+  letter-spacing:1.5px;
+}
+.footer {
+  text-align:center;
+  font-size: 1rem;
+  margin-top: 74vh;
+}
