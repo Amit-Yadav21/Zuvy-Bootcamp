@@ -73,5 +73,8 @@
 - Day 24 - setTimeout, setInterval, Promise
     - Recording Link : [Provide By Mentor]()
 
-- Day 25 - 
+- Day 25 - Promise Chaining, Fetch API
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=1wySzJiMkzM)
+
+- Day 26 -
     - Recording Link : [Provide By Mentor]()
