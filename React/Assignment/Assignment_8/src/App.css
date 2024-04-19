@@ -8,21 +8,20 @@ body{
   background-color: #dfe6e9;
 }
 
+.App {
+  font-family: sans-serif;
+}
+
 .heading {
-  text-align: center;
-  font-size: 2em;
   color: #2d3436;
-  margin: 20px 0 30px;
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 
 .card {
   border-radius: 25px;
   position: relative;
-  padding: 25px 15px;
   background-color: #81ecec;
   margin: 50px 0;
+  width: 350px;
   height: 200px;
   box-shadow: 0 2px 5px #ccc;
   text-align: left;
@@ -38,13 +37,13 @@ body{
 }
 
 .card h2 {
-  font-size: 45px;
-  margin-left: 30px;
+  font-size: 44px;
+  margin: 30px 0px 0px 30px;
   font-weight: bold;
 }
 
 .card p {
-  line-height: 2;
+  line-height: 1;
   margin: 5px 0;
   font-weight: bold;
   color: #008080;
@@ -62,26 +61,7 @@ body{
   justify-content: space-between;
 }
 
-.name {
-  font-size: 2em;
-  color: #2d3436;
-  margin: 10% 20px 0;
-}
-
 .bottom {
-  margin-top: 120px;
-}
-
-.info {
-  margin: 20px 0;
-  color: #1a7e76;
-}
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.bottom {
+  margin-top: 140px;
   margin-left: 10px;
 }
