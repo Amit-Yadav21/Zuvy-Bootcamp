@@ -69,3 +69,9 @@
 
 - Day 23 - Todo List Application
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=V5TgJ95oE7M)
+
+- Day 24 - setTimeout, setInterval, Promise
+    - Recording Link : [Provide By Mentor]()
+
+- Day 25 - 
+    - Recording Link : [Provide By Mentor]()
