@@ -1,0 +1,1 @@
+- Render all the notes inside notes.js as a seperate Note component.
