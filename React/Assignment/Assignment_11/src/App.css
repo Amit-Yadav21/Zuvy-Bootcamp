@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  color: #fff;
+  margin: 0 auto;
+  background-color: #374954;
+  font-size: 2rem;
+}
+h1{
+  margin-bottom: 0px;
+}
+
+button {
+  background-color: #6bbe92;
+  border-radius: 15px;
+  cursor: pointer;
+}
