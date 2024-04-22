@@ -46,5 +46,8 @@
 - Day - 15 createContext and useContext
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=z2eoTD-hOZA)
 
-- Day - 16
+- Day - 16 Reducer and Context together
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=i-S6oq7xZww)
+
+- Day - 17
     - Recording Link : [Provide By Mentor]()
