@@ -49,5 +49,5 @@
 - Day - 16 Reducer and Context together
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=i-S6oq7xZww)
 
-- Day - 17
-    - Recording Link : [Provide By Mentor]()
+- Day - 17 useRef
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=QKJHheGmbTQ)
