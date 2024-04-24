@@ -51,3 +51,6 @@
 
 - Day - 17 useRef
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=QKJHheGmbTQ)
+
+- Day - 18 forwardRef, useEffect
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=TkFwt1MBE-c)
