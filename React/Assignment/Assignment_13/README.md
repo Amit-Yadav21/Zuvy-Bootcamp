@@ -1,0 +1,4 @@
+- When the user types their name in the input box and click submit.
+- The h1 should say Hello {name of user}
+- Example: If I typed Aditya in the input box and clicked on submit. 
+- The h1 that says Hello should change to Hello Aditya
