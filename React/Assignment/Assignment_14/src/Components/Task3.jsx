@@ -10,8 +10,8 @@ function Task3() {
 
   return (
     <div className="container">
-      <h1>{formData.submitted ? Hello `${formData.firstName} ${formData.lastName}` : "Hello"}</h1>
-      {formData.submitted && <p>{formData.email}</p>}
+      <h1>{formData.submitted ? `Hello ${formData.firstName} ${formData.lastName}` : "Hello"}</h1>
+      {formData.submitted && <h1 style={{ fontSize: "20px" }}>{formData.email}</h1>}
       <form onSubmit={handleSubmit}>
         <input
           name="fName"
