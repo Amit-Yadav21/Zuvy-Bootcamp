@@ -89,7 +89,10 @@
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Hb1naEDGdlg)
 
 - Day - React useReducer revision
-    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Xnxe7lbUXJg) (https://www.youtube.com/watch?v=dN-v0H87Qpc)
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Xnxe7lbUXJg) 
+
+- Day - React useReducer revision
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=dN-v0H87Qpc)
 
 - Day - Context API revision
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=pyF3kAKew7c)
