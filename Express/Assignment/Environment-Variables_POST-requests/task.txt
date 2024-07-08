@@ -1,0 +1,6 @@
+1 Create and use environment variables for PORT
+2 Create a user registration route
+3 Create a user Update route
+4 Create a Login Route
+- If login successful, send response Login Successful
+- If Login unsuccessful, send response Login Failed and send appropriate status code.
