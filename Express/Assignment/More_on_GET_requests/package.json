@@ -1,0 +1,15 @@
+{
+  "name": "more_on_get_requests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amit",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

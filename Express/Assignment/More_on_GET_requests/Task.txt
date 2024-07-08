@@ -1,0 +1,6 @@
+Create an API which has the following features
+
+1. Returns the data of all users (route: /users)
+2. Returns data of a single user (route: /users/:id)
+3. Ability to limit the data returned by point number 1 route
+4. Ability to sort the data in ascending and descending order based on name from the data returned in point number 1 route
