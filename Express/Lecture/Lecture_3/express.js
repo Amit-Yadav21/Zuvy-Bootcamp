@@ -1,13 +1,18 @@
 import express from 'express'
+import 'dotenv/config';
+const PORT = process.env.PORT
+
 const app = express();
 app.use(express.json());
 
 const users = [
-    { id: 1, name: 'Ajay kumar', email: 'ajaykumar@navgurukul.com', age: 21 },
-    { id: 2, name: 'Nagendra', email: 'nagendra@navgurukul.com', age: 20 },
-    { id: 3, name: 'Rahul', email: 'rahul@navgurukul.com', age: 22 },
-    { id: 4, name: 'Paras', email: 'paras@navgurukul.com', age: 19 },
-    { id: 5, name: 'Amit', email: 'amit@navgurukul.com', age: 24 }
+    { id: 1, name: 'Arti', email: 'arti@gamil.com', age: 21 },
+    { id: 2, name: 'Samar', email: 'samar@gmail.com', age: 20 },
+    { id: 3, name: 'Amar', email: 'amar@gamil.com', age: 22 },
+    { id: 4, name: 'Sushil', email: 'sushil@gmail.com.com', age: 19 },
+    { id: 5, name: 'Ashok', email: 'ashok@gmail.com', age: 24 },
+    { id: 6, name: 'Avdhesh', email: 'avdhesh@gmail.com', age: 28 },
+    { id: 7, name: 'Ajay', email: 'ajay@ajay.com', age: 22 }
 ];
 
 // READ - GET all users
@@ -31,16 +36,16 @@ app.post('/postUser', (req, res) => {
 });
 
 // UPDATE - PUT update user by id
-app.put('/updateUser/:id', (req, res) => {
-    const id = req.params.id
-    const index = users.findIndex(item => item.id === id);
-    if (index === -1) {
-        return res.status(404).json({ msg: 'User does not exist' });
+app.put('/updateUser', (req, res) => {
+    const id = Number(req.body.id)
+    const userIndex = users.findIndex(item => item.id === id);
+    if (userIndex === -1) {
+        return res.status(404).json({ msg: 'User not found' });
     }
-    users[index] = { ...users[index], ...req.body };
-    res.json(users[index]);
+    users[userIndex] = { ...users[userIndex], ...req.body };
+    res.json(users[userIndex]);
 });
 
-app.listen(3004, function () {
-    console.log("Server is is runnig port 3004");
+app.listen(PORT, function () {
+    console.log(`Server is is runnig on ${PORT}`);
 })
