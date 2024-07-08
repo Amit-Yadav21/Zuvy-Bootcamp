@@ -19,41 +19,6 @@ app.get('/users', (req, res) => {
     res.json(users);
 });
 
-// READ - GET sorted users
-// localhost:3004/users?sort=desc
-app.get('/users/sort', (req, res) => {
-    const sort = req.query.sort;
-    if (sort === 'asc') {
-        users.sort((a, b) => a.name.localeCompare(b.name));
-    } else if (sort === 'desc') {
-        users.sort((a, b) => b.name.localeCompare(a.name));
-    }
-    res.json(users)
-});
-
-// READ - GET limited users
-// localhost:3004/users/limit?limit=1
-app.get('/users/limit', function (req, res) {
-    const limit = req.query.limit
-
-    if (limit > 0 && limit <= users.length) {
-        return res.json(users.slice(0, limit));
-    } else {
-        return res.status(404).json({ message: "data not found" });
-    }
-});
-
-// READ - GET user by id
-// localhost:3004/user/1
-app.get('/user/:id', function (req, res) {
-    const id = req.params.id;
-    const user = users.filter(item => item.id == id)
-    if (user.length === 0) {
-        return res.status(404).json({ msg: 'users does not exist ?' })
-    }
-    res.json(user)
-})
-
 // CREATE - POST a new user
 app.post('/postUser', (req, res) => {
     const newUser = req.body;
@@ -74,17 +39,6 @@ app.put('/updateUser/:id', (req, res) => {
     }
     users[index] = { ...users[index], ...req.body };
     res.json(users[index]);
-});
-
-// DELETE - DELETE user by id
-app.delete('/deleteUser/:id', (req, res) => {
-    const id = req.params.id
-    const index = users.findIndex(item => item.id === id);
-    if (index === -1) {
-        return res.status(404).json({ msg: 'User does not exist' });
-    }
-    const deletedUser = users.splice(index, 1);
-    res.json(deletedUser);
 });
 
 app.listen(3004, function () {
