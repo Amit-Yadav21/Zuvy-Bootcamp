@@ -43,6 +43,31 @@ app.get('/users/limit', function (req, res) {
     }
 });
 
+// Get all, sort and limit 
+// localhost:3004/user?sort=desc&limit=1
+app.get('/user', (req, res) => {
+    const sort = req.query.sort;
+    if (sort === 'asc') {
+        users.sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sort === 'desc') {
+        users.sort((a, b) => b.name.localeCompare(a.name));
+    }
+
+    const limit = Number(req.query.limit);
+    if (limit > 0 && limit <= users.length) {
+        return res.json(users.slice(0, limit));
+    }
+    else if (limit > users.length) {
+        return res.status(404).json({ message: "Limit exceeds the number of users available" });
+    }
+
+    // If no sort parameter provided and no limit. return all users
+    if (users.length === 0) {
+        return res.status(404).json({ msg: 'Users not found' });
+    }
+    res.json(users);
+});
+
 // READ - GET user by id
 // localhost:3004/user/1
 app.get('/user/:id', function (req, res) {
