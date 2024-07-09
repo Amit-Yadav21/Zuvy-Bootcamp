@@ -80,7 +80,7 @@ app.get('/user/:id', function (req, res) {
 })
 
 // CREATE - POST a new user
-app.post('/postUser', (req, res) => {
+app.post('/pos', (req, res) => {
     const newUser = req.body;
     if (!newUser.name || !newUser.email || !newUser.age) {
         return res.status(400).json({ msg: 'Please include name, email, and age' });
@@ -91,7 +91,7 @@ app.post('/postUser', (req, res) => {
 });
 
 // UPDATE - PUT update user by id
-app.put('/updateUser/:id', (req, res) => {
+app.put('/update/:id', (req, res) => {
     const id = req.params.id
     const index = users.findIndex(item => item.id === id);
     if (index === -1) {
@@ -102,22 +102,13 @@ app.put('/updateUser/:id', (req, res) => {
 });
 
 // DELETE - DELETE user by id
-app.delete('/deleteUser/:id', (req, res) => {
-    const id = req.params.id
+app.delete('/delete/:id', (req, res) => {
+    const id = Number(req.params.id)
     const index = users.findIndex(item => item.id === id);
     if (index === -1) {
-        return res.status(404).json({ msg: 'User does not exist' });
+        return res.status(404).json({ msg: 'User does not exist...' });
     }
     const deletedUser = users.splice(index, 1);
-    res.json(deletedUser);
-});
-
-app.delete('/deleteUser/:id', (req, res) => {
-    const id = Number(req.params.id);
-    users = users.filter(item => item.id != id);
-    if (index === -1) {
-        return res.status(404).json({ msg: 'User does not exist' });
-    }
     res.json(deletedUser);
 });
 
