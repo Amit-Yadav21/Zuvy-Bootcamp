@@ -2,7 +2,7 @@ import express from 'express'
 const app = express();
 app.use(express.json());
 
-const users = [
+let users = [
     { id: 1, name: 'Ajay kumar', email: 'ajaykumar@navgurukul.com', age: 21 },
     { id: 2, name: 'Nagendra', email: 'nagendra@navgurukul.com', age: 20 },
     { id: 3, name: 'Rahul', email: 'rahul@navgurukul.com', age: 22 },
@@ -110,6 +110,17 @@ app.delete('/delete/:id', (req, res) => {
     }
     const deletedUser = users.splice(index, 1);
     res.json(deletedUser);
+});
+
+app.delete('/deleteByID/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const initialLength = users.length;
+    users = users.filter(item => item.id != id);
+    // console.log('After deleted item :',users);
+    if (users.length === initialLength){
+        return res.status(404).json({ msg: 'User does not exist...' });
+    }
+    res.json({msg:"User successfully deleted"});
 });
 
 app.listen(3004, function () {
