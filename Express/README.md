@@ -18,3 +18,6 @@
 
 - lecture - 4 PUT, DELETE and handling routes
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=JAqJeB4gs6k&authuser=0)
+
+- lecture - 5 Middlewares
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=wvP1qS2_T8k&authuser=0)
