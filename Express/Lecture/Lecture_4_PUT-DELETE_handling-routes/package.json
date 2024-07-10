@@ -1,0 +1,16 @@
+{
+  "name": "lecture_4_put-delete_handling-routes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "card.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amit Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
