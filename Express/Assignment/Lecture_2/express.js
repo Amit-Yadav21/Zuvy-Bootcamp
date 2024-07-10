@@ -80,7 +80,7 @@ app.get('/user/:id', function (req, res) {
 })
 
 // CREATE - POST a new user
-app.post('/pos', (req, res) => {
+app.post('/post', (req, res) => {
     const newUser = req.body;
     if (!newUser.name || !newUser.email || !newUser.age) {
         return res.status(400).json({ msg: 'Please include name, email, and age' });
