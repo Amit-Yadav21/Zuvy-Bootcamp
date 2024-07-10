@@ -15,3 +15,6 @@
 
 - lecture - 3 Environment Variables and POST requests
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=8VFJEl0_23w&authuser=0)
+
+- lecture - 4 PUT, DELETE and handling routes
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=JAqJeB4gs6k&authuser=0)
