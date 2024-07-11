@@ -62,13 +62,13 @@ router.get('/GetByID/:id', function (req, res) {
     res.json(user)
 })
 
-router.post('/Login', (req, res) => {
+router.post('/Login', (req, res, next) => {
     const { email, password } = req.body;
     const user = users.find(item => item.email === email && item.password === password);
     if (user) {
         res.json({ msg: 'Login Successful' });
     } else {
-        const err = new Error("Login Failed")
+        const err = new Error("Login Failed. check email and password...!")
         err.status = 401;
         return next(err)
     }
@@ -76,8 +76,13 @@ router.post('/Login', (req, res) => {
 
 
 // CREATE - POST a new user
-router.post('/Register', (req, res) => {
+router.post('/Register', (req, res, next) => {
     const { name, email, age, password } = req.body;
+    if (!name || !email || !age || !password) {
+        const err = new Error("naem, eamil, age, password. Missing required fields");
+        err.status = 400; // Bad Request
+        return next(err);
+    }
     const id = users.length + 1;
     const newUser = { id, name, email, age, password };
     users.push(newUser);
@@ -85,11 +90,11 @@ router.post('/Register', (req, res) => {
 });
 
 // UPDATE - PUT update user by id
-router.put('/updateByID/:id', (req, res) => {
+router.put('/updateByID/:id', (req, res, next) => {
     const id = Number(req.params.id)
     const index = users.findIndex(item => item.id === id);
     if (index === -1) {
-        const err = new Error("User does not exist")
+        const err = new Error("User does not exist. Not update by ID!")
         err.status = 404;
         return next(err)
     }
@@ -98,13 +103,13 @@ router.put('/updateByID/:id', (req, res) => {
 });
 
 // DELETE - DELETE user by id
-router.delete('/deleteByID/:id', (req, res) => {
+router.delete('/deleteByID/:id', (req, res, next) => {
     const id = Number(req.params.id)
     const initialLength = users.length;
     users = users.filter(item => item.id != id);
     // console.log('After deleted item :',users);
     if (users.length === initialLength){
-        const err = new Error("User does not exist")
+        const err = new Error("User does not exist. Not deleted by ID!")
         err.status = 404;
         return next(err)
     }
