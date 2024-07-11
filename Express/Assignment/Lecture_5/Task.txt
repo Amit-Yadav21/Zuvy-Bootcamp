@@ -1,0 +1,6 @@
+1. Create logger middleware which shows 
+METHOD DOMAIN NAME or HOSTNAME and PATH
+Example: GET http://localhost:3000/users
+
+2. Add errorHandler middleware to the Cart API that you created in last assignment.
+3. If user goes on not existing path instead of a HTML response show a JSON response using middleware.
