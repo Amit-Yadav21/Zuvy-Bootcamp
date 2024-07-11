@@ -21,6 +21,3 @@
 
 - lecture - 5 Middlewares
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=wvP1qS2_T8k&authuser=0)
-
-**Lecture 5 Notes**
-<iframe src="./TopicWise_PDF/Middlewares.pdf" style="width:100%; height:600px;" frameborder="0"></iframe>
