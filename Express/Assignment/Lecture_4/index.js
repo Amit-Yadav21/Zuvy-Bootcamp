@@ -1,6 +1,6 @@
 import express from 'express'
 import 'dotenv/config';
-import CartItem from './router/card.js'
+import CartItem from './router/cart.js'
 
 const app = express();
 const port = process.env.PORT;
