@@ -30,13 +30,15 @@ router.post('/create', (req, res) => {
 
 // UPDATE - PUT update user by id
 router.put('/update/:id', (req, res) => {
-    const id = Number(req.params.id)
-    const index = cartItem.findIndex(item => item.id === id);
-    if (index === -1) {
-        return res.status(404).json({ msg: 'Cart Item does not exist' });
+    const id = Number(req.params.id);
+    const item = cartItem.find(item => item.id === id);
+
+    if (item) {
+        Object.assign(item, req.body);
+        res.json({ msg: `Cart item with ID ${id} successfully updated.`, cartItem: item });
+    } else {
+        res.status(404).json({ message: 'Item not found' });
     }
-    cartItem[index] = { ...cartItem[index], ...req.body };
-    res.json({msg:`Cart item with ID ${id} successfully updated.`, cartItem:cartItem[index]});
 });
 
 // DELETE - DELETE user by id
