@@ -24,3 +24,6 @@
 
 - lecture - 6 Controllers and Express Validator
     - Recording Link : [Provide By Mentor](https://youtube.com/live/LFBvk05Cf6s?feature=share&authuser=0)
+
+- lecture - 7 Cookies
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=P-QqfysU0KY&authuser=0)
