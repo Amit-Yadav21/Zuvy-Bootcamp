@@ -1,0 +1,7 @@
+Create route to handle a Cart
+The routes should be created in a seperate file and should use express.Router()
+
+1. GET /cart
+2. POST /cart/create
+3. PUT /cart/update
+4. DELETE /cart/delete 
