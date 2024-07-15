@@ -1,5 +1,4 @@
 import { body, param } from 'express-validator';
-import cartItem from '../cartItem/cartItem.js';
 
 const cartValidationGetall = {
     sort: {
@@ -14,8 +13,8 @@ const cartValidationGetall = {
         in: ['query'],
         optional: true,
         isInt: {
-            options: { min: 1, max: cartItem.length },
-            errorMessage: `Limit must be a positive integer and cannot exceed ${cartItem.length}`,
+            options: { min: 1 },
+            errorMessage: 'Limit must be a positive integer',
         },
     },
 };
