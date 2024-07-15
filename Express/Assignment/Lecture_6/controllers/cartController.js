@@ -29,7 +29,7 @@ const getAllCartItems = (req, res) => {
         return res.json(cartItem.slice(0, limit));
     }
     else if (limit > cartItem.length) {
-        return res.status(400).json({ msg: 'Limit exceeds the number of cartItem available' });
+        return res.status(400).json({ msg: `Limit exceeded: ${cartItem.length} cart items available.` });
     }
 
     // If no sort parameter provided and no limit. return all cartItem
