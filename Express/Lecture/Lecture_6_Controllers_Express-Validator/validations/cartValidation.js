@@ -1,4 +1,3 @@
-// validations/cartValidation.js
 import { body, param } from 'express-validator';
 
 // const cartValidationGetall = {
@@ -37,6 +36,5 @@ const cartValidationCreate = [
 const cartValidationId = [
     param('id').isNumeric().withMessage('ID must be a number')
 ];
-
 
 export { cartValidationGetall, cartValidationCreate, cartValidationId };
