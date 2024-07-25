@@ -13,12 +13,11 @@
 
 import express from 'express'
 import { getAllUser, createUser, updateUser, deleteUser } from '../controller/userController.js'
-import validationHanddler from '../meddleware/validationHandler.js';
 const router = express.Router();
 
-router.get('/',validationHanddler, getAllUser)
-router.post('/create',validationHanddler, createUser)
-router.put('/update/:id',validationHanddler, updateUser)
-router.delete('/delete/:id',validationHanddler, deleteUser)
+router.get('/', getAllUser)
+router.post('/create', createUser)
+router.put('/update/:id', updateUser)
+router.delete('/delete/:id', deleteUser)
 
 export default router;

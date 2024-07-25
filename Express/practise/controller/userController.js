@@ -67,7 +67,7 @@ let users = [
 
 // export { getUserItem, create, update, deleteuser }
 
-const getAllUser = (req, res) => {
+const getAllUser = (req, res, next) => {
     const sort = req.query.sort;
     if (sort === 'asc') {
         users.sort((a, b) => a.name.localeCompare(b.name))
@@ -81,19 +81,25 @@ const getAllUser = (req, res) => {
         return res.json(users.slice(0, limit))
     }
     else if (limit > users.length) {
-        return res.status(404).json({ msg: 'user limi not found...' })
+        const err = new Error("user limi not found...")
+        err.status = 404;
+        return next(err)
     }
 
     if (users.length === 0) {
-        return res.status(404).json({ msg: 'user not found..' })
+        const err = new Error("'user not found..")
+        err.status = 404;
+        return next(err)
     }
     res.json(users)
 }
 
-const createUser = (req, res) => {
+const createUser = (req, res, next) => {
     const { name, email } = req.body;
     if (!name || !email) {
-        return res.status(404).json('name and email frequire...')
+        const err = new Error("name and email frequire...")
+        err.status = 404;
+        return next(err)
     }
     const id = users.length + 1;
     const newData = { id, name, email }
@@ -109,7 +115,9 @@ const updateUser = (req, res) =>{
         res.status(200).json({msg:'update successfully...', updated:userUpdate})
     }
     else{
-        res.status(404).json({msg:`this id ${updateId} not found!`})
+        const err = new Error(`this id ${updateId} not found!`)
+        err.status = 404;
+        return next(err)
     }
 }
 
@@ -118,7 +126,9 @@ const deleteUser = (req, res)=>{
     const initialLength = users.length
     users = users.filter((item)=> item.id !=id);
     if (users.length === initialLength){
-        return res.status(404).json({ msg: `user item with ID ${id} not exist...!`});
+        const err = new Error(`user item with ID ${id} not exist...!`)
+        err.status = 404;
+        return next(err)
     } 
     res.json({msg:`user item with ID ${id} successfully deleted.`});
 }
