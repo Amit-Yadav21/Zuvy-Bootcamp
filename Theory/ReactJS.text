@@ -1,0 +1,533 @@
+What is a React component?
+    a) A JavaScript function that returns JSX ✅
+    b) A built-in React class for creating elements
+    c) A CSS file for styling React elements
+    d) An HTML template used in React applications
+Note :- In React, a component is essentially a JavaScript function (or a class) that returns JSX.
+
+What is the purpose of the React.Component class in React?
+    a) To create class components- ✅
+    b) To create functional components
+    c) To handle component props
+    d) To manage component state
+Note :- In React, the React.Component class is used as a base class to create class components. 
+        Class components are JavaScript classes that extend React.Component and define the behavior and structure of a React component. 
+        They can contain state, lifecycle methods, and other features that functional components cannot. By extending React.Component.
+
+What is the React state?
+    a) A method for handling routing in React
+    b) A way to define component structure
+    c) A global state shared among all components
+    d) A local state specific to a component ✅
+
+How can you update state in React?
+    a) By passing props to the component
+    b) By using the this.setState({}) method ✅
+    c) By directly modifying the state object
+    d) By using the this.state = {} syntax in the component
+Note :- In React, state should not be modified directly. 
+        Instead, you use the setState() method provided by React to update the state of a component. 
+        This method takes an object as an argument, representing the updated state values, and merges it with the current state. 
+        React then re-renders the component with the updated state. 
+
+How do you initialize state in a class component?
+    a) By using the this.state = {} syntax in the constructor ✅
+    b) By using the this setState(()) method
+    c) By using the getinitialState method
+    d) By passing props to the component 
+
+What is the "StrictMode" component in Reactlysed for?
+    a) To ensure that components are rendered with high accuracy
+    b) To identify and highlight potential problems in the application during development ✅
+    c) To enable more secure communication between components
+    d) To define strict rules for component rendering
+Note :- React's StrictMode is a component that helps identify and highlight potential problems in your application during development.
+
+What is the purpose of the "context" API in React?
+    A) To define campotent rendering logic
+    B) To handle Asynchrolous tasks in components
+    C) To manage globle state and share data across components ✅
+    D) To provide a way to create components
+Note :- The Context API in React provides a way to share values, such as global state, across the component tree without having to explicitly pass props down manually at every level.
+
+What is the purpose of the "defaultProps" property in React?
+    a) It manages the component's lifecycle methods
+    b) It sets up event listeners for the component
+    c) It specifies default values for props if not provided ✅
+    d) It defines the initial state of a component
+Note :- In React, the defaultProps property allows you to define default values for props in a component. 
+        If a prop is not provided when the component is used, React will use the default value specified in defaultProps.
+
+What is the purpose of the forwardRef" function in React?
+    a) To forward propertion a child to a parent component
+    b) To pass refs from a parent component to a child component ✅
+    c) To handle event propagation in the component tree
+    d) To create a reference to a component's state
+Note :- The forwardRef function in React allows components to pass refs received from a parent component down to a child component. 
+        This is particularly useful when you need to access the underlying DOM element or instance of a child component from its parent.
+
+What is the purpose of the render method in a React component?
+    a) To update the component's state
+    b) To define the structure of the component's UI ✅ 
+    c) To initialize the component state
+    d) To handle events in the component
+Note :- In React, the render method is responsible for determining what gets displayed on the screen. 
+        It returns a description of what the component should render, typically in the form of JSX (JavaScript XML), which defines the structure and content of the component's UI.
+
+What is the "virtual DOM" in React?
+    a) A simulated DOM for unit testing purposes
+    b) A deprecated feature in React
+    c) A lightweight representation of the actual DOM ✅
+    d) An actual representation of the DOM structure
+Note :- In React, the Virtual DOM is a lightweight, in-memory representation of the actual DOM. 
+        React uses this virtual representation to perform efficient updates to the actual DOM. 
+        When changes are made to the state or props of a component, React first updates the Virtual DOM, then compares it with the previous version to determine the minimal set of changes needed to update the actual DOM.
+
+How can you prevent a component from rendering in React?
+    a) By returning "eulf from the compatient's render method
+    b) By collid prop on the component
+    c)  By removing component from the component tree ✅
+    d) By seing the hidden CRS property
+Note :- In React, you can prevent a component from rendering by simply removing it from the component tree. 
+        This can be done by conditionally rendering the component based on certain conditions, or by not including it in the JSX markup at all. 
+        Once a component is removed from the component tree, it won't be rendered in the output.
+
+Which of the following is used to perform server-side rendering with React?
+    a) ReactSSR
+    b) ReactDOMServer ✅
+    c) React Server
+    d) React Router
+Note :- ReactDOMServer is a package provided by React that includes methods for rendering React components on the server. 
+        It allows you to perform server-side rendering (SSR) with React, where React components are rendered on the server and the resulting HTML is sent to the client.
+
+What is the purpose of the "ErrorBoundary" component in React?
+    a) To catch and handle errors during component rendering ✅
+    b) To create a virtual boundary between different components
+    c) To restrict access to certain components based on user roles
+    d) To define custom error messages for components
+Note :- In React, an ErrorBoundary component is used to catch JavaScript errors that occur during the rendering of a component tree below it in the hierarchy. 
+        It allows you to gracefully handle errors, preventing the entire application from crashing due to an error in a single component.
+
+How can you pass data from a child component to a parent component in React?
+    a) By using the parentData object
+    b) By using a sphten API
+    c) By using the stars Object
+    d) By using the props object ✅
+Note:- In React, data is typically passed from a parent component to a child component via props. 
+       However, to pass data from a child component to a parent component, you generally use a callback function that is passed down from the parent component to the child component as a prop. 
+
+What is the purpose of the "React.Fragment" component in React?
+    a) To create a new root element for the component tree
+    b) To define a virtual DOM for performance optimization
+    c) To group multiple elements without introducing a new DOM node ✅
+    d) To enable CSS-in-JS styling for components
+Note:- In React, the React.Fragment component, often abbreviated as <>...</>, or <React.Fragment>...</React.Fragment>, is used as a wrapper to group multiple elements together without adding an extra DOM node. 
+       This is useful when you want to return multiple elements from a component's render method without introducing additional elements into the DOM structure.
+
+What is the purpose of the React.Fragment component in React?
+    a) To group multiple elements without adding extra nodes to the DOM ✅
+    b) To define the structure of a component's Ul
+    c) To define React components
+    d) To insert comments in the rendered output
+
+In React what is the significance of the "displayName" property?
+    a) it delines the use of the HTML tag used for rendering the component
+    b) It determines the order of rendering components in the component tree
+    c) It is used to provide a more descriptive name for components in debug tools ✅
+    d) It specifies the class name for styling the component
+Note:- The displayName property in React is used primarily for debugging purposes. 
+       When you set the displayName property for a component, it provides a more descriptive name in React developer tools, making it easier to identify components during debugging and inspection. 
+       This property doesn't affect the component's functionality but is useful for improving the readability and maintainability of your codebase during development.
+
+What is the purpose of the "useContext" hook in React?
+    a) To optimize component rendering using memoization
+    b) To share data and state across components without prop drilling ✅
+    c) To handle context switching between components
+    d) To manage asynchronous tasks in functional components
+Note:- The useContext hook in React is used to consume context within functional components. 
+       It allows components to access data and state provided by a context provider higher up in the component tree, without having to pass props through each intermediate component (prop drilling).
+
+How can you conditionally render a component in React based on a certain condition?
+    a) By using ternary operators or logical "&&" operators within the JSX ✅
+    b) By using the swift atement within the JSX
+    c) By using the phidere function from React library
+    d) By using the if-else statements within the USK
+Note:- In React, you can conditionally render a component based on a certain condition by using ternary operators or logical "&&" operators within the JSX. 
+       This allows you to dynamically determine whether a component should be rendered or not based on the result of the condition.
+Example :-
+        {condition ? <Component /> : null}
+        {condition && <Component />}
+
+How can you conditionally render content in a React component?
+a) By using the if statement within the component's JSX
+b) By using the toggleRender prop
+c) By using the renderif method
+d) By using the ternary operator in the component's JSX ✅
+
+What is the "React Router" used for in a React application?
+    a) To manage routing and navigation between components ✅
+    b) To manage component rendering in the application
+    c) To create routes for server-side rendering
+    d) To handle asynchronous tasks using routing logic
+Note:- React Router is a popular library used in React applications for managing the routing and navigation between different components. 
+       It allows developers to define routes in the application, mapping URLs to specific components to render when the URL matches a certain pattern. 
+       React Router provides a declarative way to handle navigation within a single-page application, enabling users to move between different views without requiring a full page reload.
+
+In React, what is the purpose of the "memoization" technique?
+    a) To manage asynchronous tasks in components
+    b) To optimige rendering by preventing unnecessary re-renders ✅
+    c) To modiyabe jitpanel state of components
+Note:- Memoization in React is a technique used to optimize rendering performance by preventing unnecessary re-renders of components. 
+
+What is the purpose of the "PropTypes" library in React?
+    a) To define the shape and types of props that a component should receive ✅
+    b) To handle asynchronous tasks in components
+    c) To define the type of components used in a React application
+    d) To create custom data types for component rendering
+Note:- PropTypes is a library in React used to define the types of props that a component should receive. 
+       It allows you to specify the expected types for each prop, as well as whether a prop is required or optional. 
+       By defining propTypes for your components, you can catch bugs early and provide clear documentation for how your components should be used. 
+       If an invalid prop type is provided during development, React will generate a warning in the console.
+
+What is the role of the "useLayoutEffect" hook in React?
+    a) To create new components in a layout
+    b) To create nen opmponents in layout
+    c) To handia anywtrdous tasks with layout calculations
+    d) To synchronize state changes with component rendering ✅
+Note:- The useLayoutEffect hook in React is used to perform side effects in a component that depend on its rendered output or layout. 
+       It is very similar to the useEffect hook, but it fires synchronously after all DOM mutations. 
+       This makes it useful for tasks such as measuring DOM elements or synchronizing state changes with component rendering, ensuring that any updates to the DOM are reflected before the browser paints the screen.
+
+What is the purpose of the "getDerivedStateFromProps" static method in React?
+    a) To fetch data from Apis before rendering a component
+    b) To modify the components internal state directly
+    c) To compute derived state based on props changes ✅ 
+    d) To update the components state after rendering
+Note :- The getDerivedStateFromProps static method is used in React to compute and return a new state object based on changes in props. 
+        It's a lifecycle method that is invoked right before rendering when new props or state are received, and it allows components to update their internal state based on the new prop values. 
+        This method is primarily used when the new state depends on changes in the props, enabling the component to derive its internal state from the incoming props.
+
+Which lifecycle method is called when a component is first added to the DOM?
+    a) componentWillMount
+    b) render
+    c) componentDidMount ✅
+    d) constructor
+Note:- The componentDidMount lifecycle method is called after a component has been added to the DOM for the first time. 
+       It is commonly used to perform actions that require DOM nodes or measurements to be available, such as fetching data from an API or initializing third-party libraries.
+
+
+What is the purpose of the constructor in a React component?
+    a) To define the component's state ✅
+    b) To initialize the component's props
+    c) To define the component's structure
+    d) To handle events in the component
+Note:- In a React component, the constructor is used to initialize the component's state and to bind event handlers if necessary. 
+       The constructor is a special method that gets called when a new instance of the component is created.
+
+How do you bind event handlers in React class components?
+    a) By using the bind method in the constructor ✅
+    b) By passing props to the component
+    c) By using the addEventListener method
+    d) By using arrow functions in the JSX
+Note:- In React class components, event handlers need to be bound to the component instance to ensure that this refers to the correct context when the handler is called. 
+       This is typically done in the constructor using the bind method. 
+       By binding the event handler in the constructor, you ensure that this.
+       handleClick will always refer to the correct instance of the component when it is called.
+       Alternatively, you can use arrow functions in the JSX, which automatically bind this to the component instance.
+
+How can you prevent default behaviour in a React event handler?
+    a) By using the preventDefault prop in the JSX
+    b) By using the e.preventDefault() method ✅ 
+    c) By using the e.stopPropagation() method
+    d) By returning false from the event handler
+
+What is the purpose of the setState method in React event handlers?
+    a) To prevent default behavior
+    b) To update the component's state ✅
+    c) To handle component rendering
+    d) To access the event object
+Note:- In React, the setState() method is used to update the state of a component. 
+       When called within an event handler, it triggers a re-render of the component with the updated state. 
+
+What is the difference between synthetic events in React and native events in the DOM?
+    a) Synthetic events cannot be used to handle form submissions
+    b) Synthetic events do not bubble up the DOM tree
+    c) Synthetic events are instances of React's Event class, while native events are native browser events ✅
+    d) Synthetic events are faster than native events
+Note:- In React, synthetic events are a wrapper around native browser events. 
+       They are created by React to provide a consistent cross-browser interface for handling events. 
+       Synthetic events are instances of React's Event class, which means they behave similarly across different browsers and provide additional features and optimizations. 
+       On the other hand, native events are events that are directly emitted by the browser and are not modified or wrapped by React.
+
+What is the purpose of the ref attribute in React?
+    a) To define the structure of a component's Ut
+    b) To update the component's state
+    c) To access the DOM node of React element created by a component ✅
+    d) To handle events in a component
+
+How do you create a ref in a class component in React?
+    a) By using the getRef method
+    b) By using the this.refs property
+    c) By using the createRef method ✅
+    d) By using the ref attribute in the JSX
+Note:- In a class component in React, you create a ref using the createRef() method, which is available on the React object. 
+       This method returns a ref object, which can then be attached to a React element using the ref attribute.
+
+What is the purpose of the componentDidMount lifecycle method in React?
+    a) To unmount the component
+    b) To initialize the component's state
+    c) To handle component updates
+    d) To perform actions after the component is inserted into the DOM ✅
+Note:- In React, the componentDidMount lifecycle method is called after a component has been rendered and inserted into the DOM. 
+       This method is commonly used to perform tasks that require access to the DOM, such as fetching data from an API, setting up event listeners, or initializing third-party libraries.
+
+How do you access props in a functional component?
+    a) By using the this props object
+    b) By passing props as an argument to the component function ✅
+    c) By using the props keyword
+    d) By using the getProps method
+
+How can you access props in a class component in React?
+    a) By using the this.props object ✅
+    b) By using the getProps method
+    c) By passing props as arguments to the component's render method
+    d) By using the props keyword
+Note:- In a class component in React, you can access props using the this.props object. 
+       This object contains all the props that are passed to the component. 
+       You can access individual props by their names as properties of this.props
+
+What happens if you try to update props directly in a component?
+    a) The component re-readers with the updated props
+    b) React throws an error
+    c) The component's state is updated
+    d) Nothing happens, props are immutable ✅
+Note :- In React, props are immutable, which means they cannot be modified directly within a component. 
+        Attempting to update props directly within a component will not have any effect. 
+        React components receive props from their parent components and treat them as read-only.
+
+How can you pass props to a component in React?
+    a) By using the props attribute in the component's JSX tag ✅
+    b) By directly modifying the props object
+    c) By using the this props object in the component
+    d) By using the setState method
+
+<MyComponent name="John" age={30} />
+       
+Note:- In this example, the name and age props are passed to the MyComponent component. 
+       Inside the MyComponent, you can access these props using this.props.name and this.props.age if it's a class component, or props.name and props.age if it's a functional component.
+
+What is the purpose of the "render prop" pattern in React?
+    a) To pastinction as a prop to share code
+    b) To optimize rendatang performance
+    c) To render components conditionally
+    d) to define component rendering logic ✅
+Note :- The "render prop" pattern in React involves passing a function as a prop to a component. 
+        This function provides the component with the necessary data or behavior to render its content.
+
+What is the role of the "children" prop in React components?
+    a) It allows dynamic rendering of content within a component ✅
+    b) It defines the child components of a parent component
+    c) It provides access to the child components
+    d) It represents the parent component's state
+Note :- In React, the children prop is a special prop that allows you to pass components or elements as children to another component.
+
+What is the purpose of the children's prop in React?
+    a) To pass content to a component between its opening and closing tags ✅
+    b) To define the structure of a component's UI
+    c) To handle events in a component
+    d) To access the child components of a component
+Note :- In React, the children prop is a special prop that allows you to pass components, elements, or plain text as children to another component. 
+        This enables dynamic rendering of content within a component, as it allows you to define the structure of the component's output within its parent component. 
+        The content passed as children will be accessible within the component via props.children .
+
+Which of the following is true about the prevState argument in the setState method's callback?
+    a) To access the event that triggered the state update
+    b) To access the previous state of the component ✅
+    c) To access the props of the component
+    d) To access the current state of the component
+Note:- In React's setState() method, the second argument of the callback function, commonly named prevState, allows you to access the previous state of the component before the update. 
+       This can be useful if you need to perform state updates based on the current state, ensuring that you're working with the most up-to-date state values. 
+       This pattern is commonly used when the new state depends on the previous state.
+
+What is the purpose of the should Component Update method in React?
+    a) To access the previous props and state
+    b) To update the component's state
+    c) To determine whether the component should re-render ✅
+    d) To add event listeners
+Note :- In React, the shouldComponentUpdate method is a lifecycle method that allows you to control whether a component should re-render when its props or state change. 
+        By default, React re-renders a component whenever its props or state change. 
+        However, you can implement the shouldComponentUpdate method to customize this behavior.
+
+How can you pass arguments to event handlers in React?
+    a) By using the this props object
+    b) By using the bind method in the constructor
+    c) By using arrow functions in the JSX ✅
+    d) By passing arguments directly to the event handler
+
+How can you add CSS to a React component?
+    a) By using CSS modules
+    b) By Importing a CSS file into the component
+    c) By using inline styles with the style attribute
+    d) All of the these ✅
+Note :- 
+    a) By using CSS modules: CSS modules allow you to import CSS files into your JavaScript files and assign unique class names to CSS selectors, ensuring that styles are scoped to the component.
+    b) By importing a CSS file into the component: You can import external CSS files directly into your component file using the import statement.
+    c) By using inline styles with the style attribute: You can apply inline styles directly to JSX elements using the style attribute, passing an object with CSS property-value pairs.
+
+What is the purpose of the className attribute in React?
+    a) To define the class name of a React component
+    b) To add CSS classes to a React component ✅
+    c) To define component props
+    d) To handle component state changes
+Note:- In React, the className attribute is used to specify one or more CSS classes that should be applied to an element. 
+       This attribute is similar to the class attribute in HTML, but since class is a reserved keyword in JavaScript, React uses className instead. 
+       By assigning a value to the className attribute.
+
+How can you conditionally apply CSS classes to a React component?
+    a) By using the className attribute with a ternary operator ✅
+    b) By using the css attribute with a conditional rendering function
+    c) By using the class attribute with a conditional statement
+    d) By using the style attribute with JavaScript expressions
+Note:- In React, you can conditionally apply CSS classes to a component by using JavaScript expressions within the className attribute. 
+       Typically, you would use a ternary operator to conditionally determine which CSS classes to apply based on some condition.
+Example:-  <div className={condition ? 'class1' : 'class2'}>Content</div>
+
+How can you conditionally apply CSS styles in React?
+    a) By using the style attribute with JavaScript expressions ✅
+    b) By using the css attribute with a conditional rendering function
+    c) By using the className attribute with a ternary operator
+    d) By using the class attribute with a conditional statement
+Note:- In React, you can conditionally apply CSS styles by using the style attribute with JavaScript expressions. 
+       You can dynamically generate CSS property-value pairs based on conditions.
+Example:- 
+function MyComponent({ condition }) {
+  return (
+    <div style={{ backgroundColor: condition ? 'green' : 'red' }}>
+      Conditional Styling Example
+    </div>
+  );
+}
+
+
+What is the purpose of the style attribute in React?
+    a) To define the structure of a component's UI
+    b) To define comporient props
+    c) To handle component state changes
+    d) To apply inline CSS styles to a component ✅
+
+How can you apply CSS transitions in React?
+    a) By importing a CSS file with transition styles
+    b) By using the react-transition-group library
+    c) By using the transition property in the style attribute
+    d) All of the these ✅
+Note:- 
+    a) By importing a CSS file with transition styles: You can define CSS transitions in a CSS file and import it into your React components.
+    b) By using the react-transition-group library: This library provides components like CSSTransition and TransitionGroup that enable you to add CSS transitions to components as they mount and unmount.
+    d) By using the transition property in the style attribute: You can apply inline styles to React components and use CSS transitions by defining the transition property within the style attribute
+
+Which method is called immediately after a component is inserted into the DOM in React?
+    a) componentDidMount ✅ 
+    b) render
+    c) componentWillMount
+    d) constructor
+Note :- The componentDidMount method is called immediately after a component is inserted into the DOM in React. 
+        This method is commonly used to perform tasks such as initializing state, fetching data from APIs, or setting up event listeners.
+
+What is the purpose of the componentWillUnmount method in React?
+    a) To perform cleanup before the component is removed from the DOM ✅
+    b) To define the component's structure
+    c) To handle component props
+    d) To update the comportents state
+Note:- The componentWillUnmount method in React is used to perform cleanup operations such as removing event listeners, cancelling network requests, or clearing timeouts before the component is removed from the DOM. 
+       This helps in avoiding memory leaks and ensuring that resources are properly released when the component is unmounted.
+
+What is the purpose of the componentDidUpdate method in React?
+    a) To perform actions after the component is inserted into the DOM
+    b) To unmount the component
+    c) To initialize the component's state
+    d) To handle component updates ✅
+Note:- The componentDidUpdate method in React is invoked immediately after updating occurs. 
+       This method is called after the component's updates have been flushed to the DOM. 
+       It is commonly used to perform actions such as fetching new data based on prop or state changes, updating the DOM in response to prop or state changes, or interacting with other JavaScript libraries.
+
+What is the purpose of the key prop in React?
+    a) To specify the data type of elements in a list
+    b) To provide a unique identifier for each element in a list ✅
+    c) To define the rendering order of elements in a list
+    d) To determine the styling of elements in a list
+Note:- In React, the key prop is used to provide a unique identifier for each element in a list. 
+       When rendering lists of components or elements dynamically, React uses the key prop to efficiently update and reorder elements without re-rendering them unnecessarily.
+
+What is the purpose of the forceUpdate method in React?
+    a) To forcefully re-render a component ✅
+    b) To define the component's structure
+    c) To handle component props
+    d) To update the component's state
+Note:- The forceUpdate() method in React is used to forcefully re-render a component, bypassing the normal lifecycle methods and ignoring any changes in props or state.
+
+How can you create a ref in a functional component in React?
+    a) By using the this.refs property
+    b) By using the ref attribute in the JSX
+    c) By using the createRef method
+    d) By using the useRef hook ✅
+Note:- In a functional component in React, you can create a ref using the useRef hook. 
+       This hook returns a mutable ref object whose current property is initialized to the passed argument (initial value). 
+       You can then attach this ref to a DOM element or any other React component.
+
+What is the purpose of the React.memo function in React?
+    a) To memorize component lifecycle methods
+    b) To memorize the component's render output ✅
+    c) To memorize component props
+    d) To memorize component state
+Note:- The purpose of the React.memo function in React is to memoize the rendered output of a component, similar to how PureComponent works for class components. 
+       It is a higher-order component that you can use to wrap a functional component, and it will only re-render the component if its props have changed.
+
+How can you pass data from a parent component to a child component in React?
+    a) By passing props as arguments to the child component's render method
+    b) By using the props attribute in the parent component's JSX
+    c) By using the this props object in the parent component
+    d) All of the these ✅
+
+How do you include CSS styles in a React component?
+    a) By using inline styles with the style attribute
+    b) By importing an external CSS file
+    c) By using the className attribute
+    d) All of the these ✅
+
+Which of the following is true about React components and HTML elements?
+    a) HTML elements cannot be rendered by React components
+    b) React components can render both HTML elements and other React components ✅
+    c) React components can only render HTML elements
+    d) HTML elements can only be rendered by plain HTML files
+
+What is the purpose of the className attribute in React?
+    a) To add CSS classes to a React component ✅
+    b) To define component props
+    c) To handle component state changes
+    d) To define the class name of a React component
+Note :- The purpose of the className attribute in React is to add CSS classes to a React component. 
+        This allows you to apply styling to the component using CSS.
+
+How can you include an external JavaScript library in a React component?
+    a) By directly linking the library in the HTML file
+    b) By using the require function
+    c) By Importing the library using ES6 module syntax ✅
+    d) By using the script tag in the component's JSX
+Note :- In a React component, you typically include an external JavaScript library by importing it using ES6 module syntax. 
+        This allows you to import specific functions, classes, or objects from the library and use them within your component
+Example :- 
+import ExternalLibrary from 'external-library';
+function MyComponent() {
+  // Use functions, classes, or objects from the imported library
+  return (
+    <div>
+      {/* JSX content */}
+    </div>
+  );
+}
+
+Which CSS property is used to change the color of text in a React component?
+    a) font-color
+    b) text-color
+    c) text-color
+    d) color ✅

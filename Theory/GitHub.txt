@@ -1,0 +1,177 @@
+Basic Commands:
+1. Initialization and Cloning:
+    git init: Initialize a new Git repository in the current directory.
+    git clone <repository URL>: Clone a remote repository to your local machine.
+2. Staging and Committing:
+    git add <file>: Add file changes to the staging area.
+    git commit -m "Commit message": Commit staged changes to the local repository.
+    git commit -am "Commit message": Add and commit all changes in one command.
+3. Branching and Merging:
+    git branch: List all branches in the repository.
+    git branch <branch_name>: Create a new branch.
+    git branch: List all branches in the local repository.
+    git checkout <branch_name>: Switch to a different branch.
+    git checkout -b <branch>: Create a new branch and switch to it.
+    git checkout <branch>: Switch to a different branch.
+    git merge <branch_name>: Merge changes from one branch into the current branch.
+    git merge <branch>: Merge changes from one branch into another
+    git rebase [branch]: Applies commits from one branch on top of another.
+    git rebase -i [commit]: Interactively rewrites commit history before merging.
+    git cherry-pick [commit-hash]: Picks a specific commit from another branch and applies it to the current branch.
+4. Remote Repositories:
+    git remote: Lists remote repositories.
+    git remote -v: List configured remote repositories.
+    git remote add origin <repository URL>: Add a remote repository as the origin.
+    git push -u origin <branch_name>: Push changes to a remote repository and set the upstream branch.
+    git pull origin <branch_name>: Pull changes from a remote repository to your local branch.
+5. Viewing Changes:
+    git status: Check the status of files in the working directory.
+    git diff: Show changes between commits, the staging area, and the working directory.
+6. Collaboration:
+    git fetch: Fetch changes from a remote repository without merging them.
+    git fetch [remote-name]: Retrieves updates from a remote repository.
+    git branch -d <branch>: Delete a branch locally.
+    git push origin --delete <branch>: Delete a remote branch on GitHub.
+7. Git Configuration:
+    git config: Displays Git configuration settings.
+    git config --global user.name "Your Name": Sets the author name to be used for all commits.
+    git config --global user.email "your_email@example.com": Sets the email for all commits.
+
+Advanced Commands:
+1. Undoing Changes:
+    git reset [file]: Removes changes from the staging area for the specified file.
+    git reset HEAD <file>: Unstage changes for a file.
+    git checkout -- <file>: Discard changes in the working directory for a file.
+    git revert <commit>: Create a new commit that undoes changes made in a specific commit.
+2. Interactive Rebase:
+    git rebase -i <base>: Start an interactive rebase to edit, squash, or reorder commits interactively.
+3. Stashing Changes:
+    git stash: Stash changes in the working directory to a stack.
+    git stash apply: Apply the most recent stash to the working directory.
+    git stash pop: Apply and remove the most recent stash from the stack.
+4. Viewing History and Logs:
+    git log: Show commit logs.
+    git log --oneline: Show condensed commit logs in one line.
+    git blame <file>: Show changes made to a file along with commit details and authors.
+5. Cleaning and Maintenance:
+    git clean -n: Preview files that will be removed by git clean -f.
+    git clean -f: Remove untracked files from the working directory.
+
+---------------------------------------------------------------------------------------------------------------
+
+What does the term "GitHub Pages" refer to?
+    A feature for merging changes from one branch to another.
+    A tool for creating and managing pull requests.
+    A feature for hosting and publishing static websites directly from a GitHub repository. ✅
+    A repository's settings page.
+
+What is the purpose of the .gitignore file in a GitHub repository?
+    To list files and directories that should be ignored by version control. ✅
+    To define branch permissions.
+    To store the repository's metadata.
+    To specify the repository's license.
+
+How do you revert a commit in a GitHub repository using Git?
+    git r
+    git commit
+    git revert HEAD ✅
+    git undo commit
+
+What is the command to see the commit history in Git?
+    commits
+    gil show
+    git history
+    git log ✅
+
+How do you stage all changes in your local repository for the next commit using Git?
+    git stage
+    git stage all origin
+    git commit -m "Staging
+    git add. ✅
+
+How do you check the changes in your Git repository?
+    changes
+    git show
+    git status ✅
+    git check statin
+
+What is the purpose of a GitHub repository's README.md file?
+    To store code snippets.
+    To store binary files.
+    To provide information about the repos including usage instructions. ✅
+    To list issues and bugs.
+
+What Git command is used to create a new branch in a GitHub repository?
+    branch
+    git branch branch
+    git checkout -b ✅ 
+    -branch
+    git branch-branch
+
+What Git command is used to create a new branch in a GitHub repository?
+    git branch branch ✅
+    git branch -branch
+    git checkout -b -branch
+    git branch-branch
+
+In GitHub, how do you contribute to a repository by suggesting changes without directly modifying the main branch?
+    Create a new branch and make changes.
+    Use the "Issues" tab to suggest changes.
+    Fork the repository, make changes in the fork, create a pull request. ✅ 
+    Edit files directly in the main branch.
+
+In a GitHub repository, what does the "fork" operation do?
+    Creates a copy of the repository under your GitHub account. ✅ 
+    Deletes the repository.
+    Merges changes from or
+    Submits changes for
+
+/**********How to create repo using termoinal*********************/
+youtub video link :- https://www.youtube.com/watch?v=8Iljd2rZEIA&ab_channel=ThapaTechnical
+1. Got to the GitHub CLI website Download for window/Ubuntu (https://cli.github.com/)
+2. gh auth login
+    ? What account do you want to log into? [Use arrows to move, type to filter]
+        GitHub.com (✔)
+        GitHub Enterprise Server
+    ? What account do you want to log into? GitHub.com
+3. ? You're already logged into github.com. Do you want to re-authenticate? (y/N)
+    ? You're already logged into github.com. Do you want to re-authenticate? Yes
+4. ? What is your preferred protocol for Git operations? [Use arrows to move, type to filter]
+        HTTPS (✔)
+        SSH
+    ? What is your preferred protocol for Git operations? HTTPS 
+    ? Authenticate Git with your GitHub credentials? Yes
+5. ? How would you like to authenticate GitHub CLI? [Use arrons to nove, type to filter]
+        Login with a web browser (✔)
+        Paste an authentication token
+    ! First copy your one-time code: 3116-BE33 Press Enter to open github.com in your browser... 
+    (copy one-time code,paist and continue after click Authries guthub) 
+6.  git init
+    git add .
+    git commit -m"massege"
+7. gh repo new
+    ? What would you like to do? [Use arrows to move, type to filter] 
+        Create a new repository on GitHub from scratch
+        Push an existing local repository to GitHub (✔)
+    ? What would you like to do? Push an existing local repository to GitHub
+    ? Path to local repository(.).
+
+    ? Path to local repository
+    ? Repository name (API) repo_name
+
+    ? Repository name repo_name
+    ? Description (API) ......
+
+    ? Description testing .........
+    ? Visibility [Use arraws to move, type to filter]
+        Public 
+        Private
+        Internal
+
+    ✓ Created repository thapatechnical/thapaapitesting on GitHub
+    ? Add a remote? Yes
+    ? What should the new remote be called? (origin)
+
+    ? What should the new remote be called? origin
+    ✔ Added remote https://github.com/thapatechnical/thapaapitesting.git
+    ? Would you like to push commits from the current branch to "origin"? Yes

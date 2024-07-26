@@ -1,0 +1,1102 @@
+================================== Javasript Questions ?
+    what is javascript ? what is  the role of JS Engine ?
+    let, var and const - when to use? Difference between each .
+    Data Types ? typeof operator ?
+    What is Type Conversion?
+    what is the difference between unary, binary, and ternary operators ? 
+    Arrays :- Initialisation, Traversal, Indexing
+    Strings :- Initialisation, Traversal, Indexing, Conversions, Substrings, Split
+    Object {}, (JSON) :- How to create objects? How to get all keys in object? How to get all value in object? How to loop thru an object? How to add data to object? What is key-value pair?
+    Functions :- How to create functions? How to create async functions? How to create arrow functions? How many types of functions ?
+    Loops :- For, For of, For in, forEach, while - Should have idea on how to use this, when to use this, where to use this.
+    Array functionalities like : .map, .filter, .reduce etc -  Should have idea on how to use this, when to use this, where to use this.
+    Promises :- What is promise? Why/Where do we need this? When does this get returned, examples?
+    Callbacks :- Use of this? When is this used? Where to use this?
+    Then Catch :- When to use this? Alternatives of this? When do you reach try section? When do you reach catch block? Why do you use 2 then during fetch in your third party api calls (music/movie etc apis)?
+    Async Await :- What is it? When to use it? Alternative of this? Can async be used without await? Can await be used without async?
+    Fetch API :- Why is fetch API needed? What does it return? When do you need this? Alternatives of this?
+    Try Catch :- Why/When do we use it? Why is catch useful?
+    Debugging :- When facing any issues, what are the ways in which you can debug it? (Try catch, console log, debugger/breakpoints, error search etc)
+    what is Operator precedence ?
+
+========================= what is javascript ? what is  the role of JS Engine ?
+- Js is a progarmming language that is used for converting  static web-page to interactive and dynamic web page.
+- A js engine is a program persent in web browser that Executes javascript code .
+------------------------------------------------
+|             javascript Engine                |
+------------------------------------------------
+|       browsers     |         js engine       |
+------------------------------------------------
+|       chrome       |          V8             |
+|       FireFox      |     Spider Monkey       |
+|       Safari       |     javascript-core     |
+|       Edge         |         Chakra          |
+------------------------------------------------
+
+=========================== differences between var, let, and const in JavaScript
+In JavaScript, let, var, and const are used to declare variables. These keywords
+1. Scope:
+    var: Variables declared with var have function-level or global scope. They are hoisted to the top of their function scope.
+    let and const: Variables declared with let and const have block-level scope, limited to the block in which they are defined, or within nested blocks. They are not hoisted to the top of their block scope.
+2. Hoisting:
+    var Variables declared with var are hoisted to the top of their function scope, allowing them to be used before their actual declaration in the code (though their value will be undefined until assigned).
+    'let' and 'const' Variables declared with let and const are hoisted to the top of their block scope but are in a "temporal dead zone" until the point where they are declared. Accessing them before their declaration results in a ReferenceError.
+    'let' variables are not hoisted to the top of their block scope and are in a "temporal dead zone" until their declaration point.
+    let, const variables are not hoisted and are in a "temporal dead zone" until their declaration point.
+3. Reassignment:
+    var: Variables declared with var can be redeclared and reassigned.
+    let: Variables declared with let can be reassigned but cannot be redeclared in the same scope.
+    const: Variables declared with const cannot be reassigned after initialization and should be assigned a value upon declaration. They cannot be redeclared or reassigned to a different value.
+
+============================================= Data Types ?
+
+1 .Primitive data types:
+    Number:- Represents numeric values, e.g., 1, 3.14, etc.
+    String:- Represents textual data, e.g., "Hello, World!".
+    Boolean:- Represents true or false values.
+
+    Undefined:- when a variable is declared but has not been assigned a value.
+                In JavaScript, undefined is a primitive value automatically assigned to variables that have been declared but not yet initialized or assigned a value.
+        Type of undefined:- The typeof operator for undefined returns 'undefined'.
+
+    Null:- Represents the absence of a value or a "null" intentional value assignment.
+           The typeof null returning 'object', null is not an object. It is a primitive value in JavaScript .
+        Type of null:- The typeof operator for null returns 'object'.
+
+    Symbol (added in ECMAScript 6):- Represents unique identifiers.
+
+2. Non-primitive data types (also known as reference types):
+    Object:- Represents a collection of key-value pairs. Objects can be created using {} or new Object().
+            Objects in JavaScript are defined by curly braces {}, and properties within the object are written as key-value pairs separated by commas. 
+            The keys are strings or symbols, and the values can be of any data type, including other objects, arrays, functions, primitives, etc.
+        Type of object:- The typeof operator for object returns 'object'.
+
+    Array:- A special type of object used to store a list of elements. Arrays can be created using [] or new Array().
+
+    Function:- A callable object that executes a block of code.
+
+Note :- 
+    - primitive data type can holds only one and single value. Non-primitive data types can holds multiple values (object, array).
+    - primitive data types are immutable, meaning their values one assigned, cannot be changed. But Non-primitive data types are mutable and their values can be changed .
+
+-----------------------------------------------
+1. instanceof operator:-> Checks if an object is an instance of a specific class or constructor function.
+    let arr = [];
+    console.log(arr instanceof Array); // Output will be: true
+2. Object.prototype.toString method: This method returns a string representing the object's type by calling Object.prototype.toString() and passing the object as the method's context (this).
+    let obj = {};
+    console.log(Object.prototype.toString.call(obj)); // Output will be: '[object Object]'
+3. Array.isArray() method: Specifically checks if an object is an array.
+    let arr = [];
+    console.log(Array.isArray(arr)); // Output will be: true
+
+=================================================== typeof operator ?
+    - the typeof operator is used to determine the data type of a variable or an expression. It returns a string representing the data type.
+    -------------------------------------------------------
+    |          typeof       |           return            |
+    -------------------------------------------------------
+    |          "Hello"      |           string            |
+    |           42          |           number            |
+    |          true         |           boolean           |
+    |        undefined      |          undefined          |
+    |           null        |           object            |
+    |           {}          |           object            |
+    |           []          |           object            |
+    |           Math        |           Object            |
+    |        function(){}   |          function           |
+    |           100n        |           bigint            |
+    |         Symbol()      |           symbol            |
+    -------------------------------------------------------
+
+================================= What is Type Conversion?
+    - Type coercion in JavaScript refers to the automatic conversion of values from one data type to another during operations. 
+    - Type coercion can be used during string and number concatination .
+    - Type coercion can be used while using comparision operator .
+    - Type conversion, also known as type casting, refers to the explicit transformation of a value from one data type to another.
+    - In JavaScript, there are two main types of type conversion: implicit coercion and explicit coercion.
+
+    Here are the key rules of type coercion
+        When a numeric value is concatenated with a string using the + operator, JavaScript coerces the number to a string.
+        When a string value is involved in an arithmetic operation, JavaScript attempts to convert it to a numeric value.
+        When comparing values using the == (loose equality) or != (loose inequality) operators, JavaScript performs type coercion to make the values comparable.
+        JavaScript has a concept of truthy and falsy values, where certain values are coerced to true or false in a boolean context.
+        Falsy values include false, 0, “” (empty string), null, undefined, and NaN. All other values are considered truthy when coerced to a boolean.
+
+    - explicit coercion :-
+        In JavaScript, explicit coercion, also known as type casting or type conversion, refers to the process of converting a value from one data type to another explicitly. This is done using built-in functions or operators provided by the language. Here are some common ways to perform explicit coercion in JavaScript:
+
+        Here are a few examples of type conversion
+            - Converting a String to a Number
+                - Number Conversion: You can convert values to numbers using the Number() function or using unary plus (+) operator.
+                - When an operation like subtraction (-), multiplication (*), division (/), or modulus (%) is performed, all the values that are not numbers are converted into the number data type.
+                    let w = 10 - '5';   // 5
+                    let x = 10 * '5';   // 50
+                    let y = 10 / '5';   // 2
+                    let z = 10 % '5';   // 0
+                    var str = "42";
+                    var num = +str; // 42 
+                    var num = Number(str);  // 42
+            - Converting a Number to a String . 
+                - String Conversion: You can convert values to strings using the String() function or the .toString() method.
+                - When any string or non-string value is added to a string, it always converts the non-string value to a string implicitly .
+                - In this case, using the + sign with a number and a string, the number is coerced to a string, then the + sign is used for a concatenation operation.
+                    let x = 10 + '20';  // 1020
+                    let y = '20' + 10;  // 2010
+                    let z = true + '10';    // true10
+                    var num = 42;
+                    var str = String(num);  // "42"
+                    let str = num.toString(); // "10"
+            - Converting a Boolean to a String
+                var bool = true;
+                var str = String(bool); // Conversion: boolean to string
+                console.log(str); // Output: "true"
+
+            - Integer Conversion
+                - You can use parseInt() function to convert a string to an integer.
+                let str = "123";
+                let num = parseInt(str); // 123
+
+            - Floating-Point Conversion
+                - You can use parseFloat() function to convert a string to a floating-point number.
+                let str = "3.14";
+                let num = parseFloat(str); // 3.14
+
+            - Boolean Conversion
+                - You can use Boolean() function to convert a value to a boolean.
+                let num = 0;
+                let bool = Boolean(num); // false
+
+            - Boolean to Number
+                - When a Boolean is added to a Number, the Boolean value is converted to a number .
+                let x = true + 2;   // 3
+                let x = false + 2;  // 2
+
+            - Using Template Literals
+                - Template literals implicitly coerce non-string values to strings.
+                let num = 42;
+                let str = `The number is ${num}`; // "The number is 42"
+            
+            - The Equality Operator 
+                - This is done by coercing a non-number data type to a number. 
+                let x = (10 == '10');   // true
+                let y = (true == 1);    // true
+                let z = (true == 'true');   // false
+            
+            - Comparison Coercion
+                console.log(42 == "42"); // Output: true (coercion: string to number)
+    
+    - Implicit coercion
+        - also known as type coercion, is the automatic conversion of values from one data type to another data types .
+
+====================== What is the difference between unary, binary, and ternary operators ?
+
+- Unary Operators:
+    - Unary operators work with a single operand.
+    - These operators require only one operand to perform an operation.
+    - Examples of unary operators in JavaScript include ++, --, +, -, and !.
+        - Unary Plus (+) - Converts its operand into a number. For example, +5.
+        - Unary Negation (-) - Negates its operand. For example, -5.
+        - Increment (++) - Increments its operand by 1. For example, x++.
+        - Decrement (--) - Decrements its operand by 1. For example, x--.
+        - Logical NOT (!) - Returns the logical negation of its operand. For example, !true.
+- Binary Operators:
+    - Binary operators work with two operands.
+    - These operators require two operands to perform an operation.
+    - Examples of binary operators in JavaScript include +, -, *, /, ==, &&, and ||.
+        - Addition (+) - Adds two operands. For example, 5 + 3.
+        - Subtraction (-) - Subtracts the second operand from the first. For example, 5 - 3.
+        - Multiplication (*) - Multiplies two operands. For example, 5 * 3.
+        - Division (/) - Divides the first operand by the second. For example, 6 / 2.
+        - Assignment (=) - Assigns a value to a variable. For example, x = 5.
+        - Equality (==) - Compares two operands for equality. For example, 5 == 5.
+        - Less than (<) - Checks if the first operand is less than the second. For example, 5 < 10.
+        - Logical AND (&&) - Returns true if both operands are true. For example, true && false.
+- Ternary Operator:
+    - The ternary operator is the only ternary operator in JavaScript.
+    - It's also known as the conditional operator.
+    - It works with three operands.
+    - The ternary operator requires three operands to perform an operation.
+    - It's used for conditional expressions and returns one of two values based on whether a condition is true or false.
+    - The syntax of the ternary operator is condition ? expression1 : expression2.
+    - If the condition is true, expression1 is evaluated; otherwise, expression2 is evaluated.
+    Example: x > 0 ? "Positive" : "Non-positive"
+
+
+============================================== Types of object ?
+1. Built-in Objects:
+    Global Objects: Objects available globally to JavaScript code, like Math, JSON, console, etc.
+    Native Objects: Objects native to JavaScript, such as Object, Array, String, Number, Boolean, Date, RegExp, Function, etc.
+2. Specialized Objects:
+    Array Object: Used for storing multiple values in a single variable.
+    Date Object: Handles date and time-related operations.
+    RegExp Object: Represents regular expressions for pattern matching.
+    Map, Set, WeakMap, WeakSet: Objects providing specialized collections for storing key-value pairs and unique values.
+    Promise: Represents the eventual completion or failure of an asynchronous operation and its resulting value.
+    Proxy: Allows you to create a proxy object that can intercept fundamental operations of another object.
+3. Host Objects:
+    Objects provided by the environment in which JavaScript runs, such as the browser environment (e.g., document, window, etc.) or Node.js environment (e.g., process, Buffer, etc.).
+4. Custom Objects:
+    Objects created by the user or developer, utilizing constructors or literal notation. These can be used to model specific entities or behaviors within a program.
+
+=============================================== Methods of objects ?
+
+1. Object manipulation:
+    Object.keys(): Returns an array of a given object's own enumerable property names.
+    Object.values(): Returns an array of a given object's own enumerable property values.
+    Object.entries(): Returns an array of a given object's own enumerable key-value pairs in the form of [key, value] arrays.
+    Object.assign(): Copies the values of all enumerable own properties from one or more source objects to a target object.
+    Object.defineProperty(), Object.defineProperties(): Defines new or modifies existing properties directly on an object.
+2. Object inspection:
+    Object.hasOwnProperty(): Checks if an object has a specified property as its own property.
+    Object.getOwnPropertyNames(): Returns an array of all properties (enumerable or not) found directly upon a given object.
+    Object.getOwnPropertyDescriptor(): Returns a property descriptor for a named property on an object.
+    Object.getPrototypeOf(): Returns the prototype (internal [[Prototype]] property) of the specified object.
+3. Object iteration:
+    Object.keys(), Object.values(), Object.entries(): These methods can also be used for iterating over object properties.
+    for...in loop: Iterates over the enumerable properties of an object and its prototype chain.
+4. Object conversion:
+    Object.toString(): Returns a string representing the object.
+    Object.toJSON(): Returns a JSON representation of the object, used when serializing to JSON.
+5. Object creation:
+    Object.create(): Creates a new object with the specified prototype object and properties.
+    Object.seal(), Object.freeze(), Object.preventExtensions(): Methods to control object mutability.
+6. Prototype manipulation:
+    Object.setPrototypeOf(): Sets the prototype (i.e., the internal [[Prototype]] property) of an object.
+
+======================================= what is array ?
+    Arrays in JavaScript can contain elements of any data type, including numbers, strings, booleans, objects, functions, other arrays, and even a mix of these types. 
+    JavaScript arrays are dynamic, meaning their size can grow or shrink dynamically as elements are added or removed.
+    Arrays are created using square brackets [] and elements are separated by commas.
+    Arrays: An ordered list of values enclosed in square brackets []. Values can be strings, numbers, objects, arrays, booleans, or null.
+
+================================================ array methods ?
+1. Mutator Methods (modify the original array):
+    push(): Adds one or more elements to the end of an array and returns the new length.
+    pop(): Removes the last element from an array and returns that element.
+    shift(): Removes the first element from an array and returns that element.
+    unshift(): Adds one or more elements to the beginning of an array and returns the new length.
+    splice(): Adds or removes elements from an array.
+2. Accessor Methods (do not modify the original array):
+    concat(): Combines two or more arrays and returns a new array.
+    slice(): Extracts a section of an array and returns a new array.
+    includes(): Checks if an array contains a specific element and returns a boolean.
+    indexOf(), lastIndexOf(): Returns the index of the first/last occurrence of a specified value in an array.
+    find(), findIndex(): Returns the first element or index that satisfies a provided testing function.
+    every(), some(): Checks if all/some elements in an array meet a condition specified by a function.
+3. Iteration Methods:
+    forEach(): Executes a provided function once for each array element.
+    map(): Creates a new array with the results of calling a provided function on every element in the array.
+    filter(): Creates a new array with elements that pass a test provided by a function.
+    reduce(), reduceRight(): Reduces an array to a single value by applying a function to each element.
+    entries(), keys(), values(): Return iterators for key-value pairs, keys, or values of an array.
+4. Sorting and Searching Methods:
+    sort(): Sorts the elements of an array in place and returns the sorted array.
+    reverse(): Reverses the order of the elements in an array.
+    find(), findIndex(): Returns the first element or index that satisfies a provided testing function.
+5. Manipulation and Conversion Methods:
+    join(): Joins all elements of an array into a string.
+    toString(), toLocaleString(): Returns a string representing the array.
+    fill(): Fills all elements of an array with a static value.
+
+================== What is the purpose of the array slice method ?
+    The slice() method returns the selected elements in an array as a new array object. 
+    It selects the elements starting at the given start argument, and ends at the given optional end argument without including the last element. 
+    If you omit the second argument then it selects till the end.
+
+Note: Slice method won't mutate the original array but it returns the subset as a new array.
+    
+    let arrayIntegers = [1, 2, 3, 4, 5];
+    let arrayIntegers1 = arrayIntegers.slice(0, 2); // returns [1,2]
+    let arrayIntegers2 = arrayIntegers.slice(2, 3); // returns [3]
+    let arrayIntegers3 = arrayIntegers.slice(4); //returns [5]
+
+    const numbers = [1, 2, 3, 4, 5];
+    const subset1 = numbers.slice(1, 4); // Extract elements from index 1 to 3 (exclusive)
+    console.log(subset1); // Output: [2, 3, 4]
+
+    const subset2 = numbers.slice(2); // Extract elements from index 2 to the end
+    console.log(subset2); // Output: [3, 4, 5]
+
+    const subset3 = numbers.slice(-3); // Extract last 3 elements
+    console.log(subset3); // Output: [3, 4, 5]
+
+    const shallowCopy = numbers.slice(); // Create a shallow copy of the entire array
+    console.log(shallowCopy); // Output: [1, 2, 3, 4, 5]
+
+=========================== What is the purpose of the array splice method ?
+    The splice() method is used either adds/removes items to/from an array, and then returns the removed item. 
+    The first argument specifies the array position for insertion or deletion whereas the optional second argument indicates the number of elements to be deleted. 
+    Each additional argument is added to the array.
+
+    let arrayIntegersOriginal1 = [1, 2, 3, 4, 5];
+    let arrayIntegersOriginal2 = [1, 2, 3, 4, 5];
+    let arrayIntegersOriginal3 = [1, 2, 3, 4, 5];
+    let arrayIntegers1 = arrayIntegersOriginal1.splice(0, 2); // returns [1, 2]; original array: [3, 4, 5]
+    let arrayIntegers2 = arrayIntegersOriginal2.splice(3); // returns [4, 5]; original array: [1, 2, 3]
+    let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]
+
+===================== What is the difference between slice and splice ?
+    Mutability:-> slice() does not modify the original array; it creates a new array. splice() modifies the original array.
+    Return value:-> slice() returns a new array with the selected elements, while splice() returns an array containing the deleted elements.
+    Parameters:-> slice() takes start and end indices for extraction, while splice() takes start index, count of elements to remove, and optional elements to add.
+
+    In summary, slice() is used to create a new array by extracting elements from an existing array without changing the original array, 
+    whereas splice() is used to modify the original array by adding, removing, or replacing elements within it.
+
+================================ what is Function ?
+    In JavaScript, a function is a block of reusable code designed to perform a specific task or calculation .
+    Functions in JavaScript can be defined using the function keyword, and they can be either named or anonymous. 
+    They can take input parameters (arguments) and can optionally return a value.
+
+================================================ Types of functions ?
+1. Named Functions:-
+    Functions with a name identifier that can be called by that name.
+    // Named function definition
+    function greet(name) {
+        return `Hello, ${name}!`;
+    }
+    // Calling the named function
+    let greeting = greet('John');
+    console.log(greeting); // Output: Hello, John!
+
+2. Anonymous Functions:-
+    Functions defined without a name, often assigned to a variable or used as callbacks.
+    // Anonymous function assigned to a variable
+    let add = function(a, b) {
+        return a + b;
+    };
+    // Using the anonymous function
+    let result = add(3, 5);
+    console.log(result); // Output: 8
+
+3. Arrow Functions (Introduced in ES6):
+    A concise way to write functions, especially for short functions.
+    What are lambda or arrow functions
+    An arrow function is a shorter syntax for a function expression and does not have its own this, arguments, super, or new.target.
+    
+    // Arrow function syntax
+    let multiply = (a, b) => a * b;
+    let product = multiply(4, 6);
+    console.log(product); // Output: 24
+
+4. Immediately Invoked Function Expressions (IIFE):-
+    Functions that are declared and immediately executed.
+    Useful for creating a separate scope and avoiding polluting the global namespace.
+    // IIFE example
+    (function() {
+        console.log('This is an IIFE');
+    })();
+
+5. Higher-Order Functions:-
+    Functions that take other functions as arguments or return functions.
+    A function that accepts an argument that is passed to another function. It is called a higher order function.
+    // Higher-order function example
+    function operateOnNumber(num, operation) {
+        return operation(num);
+    }
+
+    function double(num) {
+        return num * 2;
+    }
+    let result = operateOnNumber(5, double); // Using double as a callback function
+
+6. Callback Function:-
+    A callback function is a function passed into another function as an argument. 
+    // Collback Function Example 
+    Const x = () =>{
+	console.log( “ths my function x”)
+    }
+
+    Const y = (cb) =>{
+        console.log(“this my function y”);
+        cb()
+    }
+    y(x);
+
+7. Constructor Functions:-
+    Functions used with the new keyword to create instances of objects.
+    // Constructor function example
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    let person1 = new Person('Alice', 30);
+
+8. Generator Functions (Introduced in ES6):-
+    Functions that can pause their execution and return multiple values over time.
+    // Generator function example
+    function* generatorFunction() {
+        yield 1;
+        yield 2;
+        yield 3;
+    }
+
+    let generator = generatorFunction();
+    console.log(generator.next().value); // Output: 1
+    console.log(generator.next().value); // Output: 2
+
+====================================================== what is JSON ?
+    JSON (JavaScript Object Notation) is a lightweight data-interchange format .
+    JSON is language-independent, but it originates from JavaScript and shares similar syntax with JavaScript object literal notation.
+    Objects:-> A collection of key-value pairs enclosed in curly braces {}. 
+    Keys must be strings, and values can be strings, numbers, objects, arrays, booleans, or null.
+
+================================== Defference between object and JSON ?
+    In JavaScript objects, keys can be unquoted or single-quoted, and string values don't necessarily need double quotes around them. 
+    However, in JSON, keys and strings must be double-quoted.
+    JSON syntax is a subset of JavaScript object literal notation, but in JSON, keys must be in double quotes and strings must be double-quoted as well, 
+    whereas JavaScript objects allow for more flexibility in key naming and string representation.
+
+================================= JSON methods ?
+1. JSON.stringify():
+    This method converts a JavaScript object or value into a JSON string.
+
+    const person = {
+        name: 'John Doe',
+        age: 30,
+        isStudent: false,
+        hobbies: ['reading', 'hiking', 'photography']
+    };
+    const jsonString = JSON.stringify(person);
+    console.log(jsonString);
+    // Output: '{"name":"John Doe","age":30,"isStudent":false,"hobbies":["reading","hiking","photography"]}'
+
+2. JSON.parse():
+    This method parses a JSON string and converts it into a JavaScript object or value.
+
+    const jsonString = '{"name":"John Doe","age":30,"isStudent":false,"hobbies":["reading","hiking","photography"]}';
+    const person = JSON.parse(jsonString);
+    console.log(person);
+    // Output: { name: 'John Doe', age: 30, isStudent: false, hobbies: ['reading', 'hiking', 'photography'] }
+
+Note :- These methods are commonly used for data serialization (conversion of data into a string format) and deserialization (conversion of a string format back into its original data type) when working with JSON data in JavaScript.
+
+============================================= What is the difference between Call, Apply and Bind ?
+The difference between Call, Apply and Bind can be explained with below examples,
+1. Call: The call() method invokes a function with a given this value and arguments provided one by one
+    var employee1 = { firstName: "John", lastName: "Rodson" };
+    var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+    function invite(greeting1, greeting2) {
+    console.log(
+        greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+    );
+    }
+    invite.call(employee1, "Hello", "How are you?"); // Hello John Rodson, How are you?
+    invite.call(employee2, "Hello", "How are you?"); // Hello Jimmy Baily, How are you?
+
+2. Apply: Invokes the function with a given this value and allows you to pass in arguments as an array
+    var employee1 = { firstName: "John", lastName: "Rodson" };
+    var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+    function invite(greeting1, greeting2) {
+    console.log(
+        greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+    );
+    }
+    invite.apply(employee1, ["Hello", "How are you?"]); // Hello John Rodson, How are you?
+    invite.apply(employee2, ["Hello", "How are you?"]); // Hello Jimmy Baily, How are you?
+
+3. bind: returns a new function, allowing you to pass any number of arguments
+    var employee1 = { firstName: "John", lastName: "Rodson" };
+    var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+    function invite(greeting1, greeting2) {
+    console.log(
+        greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+    );
+    }
+    var inviteEmployee1 = invite.bind(employee1);
+    var inviteEmployee2 = invite.bind(employee2);
+    inviteEmployee1("Hello", "How are you?"); // Hello John Rodson, How are you?
+    inviteEmployee2("Hello", "How are you?"); // Hello Jimmy Baily, How are you?
+
+===================================== What is a first class function ?
+    In Javascript, functions are first class objects. 
+    First-class functions means when functions in that language are treated like any other variable.
+    a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable. 
+    
+    For example, in the below example, handler functions assigned to a listener
+    const handler = () => console.log("This is a click handler function");
+    document.addEventListener("click", handler);
+
+===================================================== What is a first order function ?
+    First-order function is a function that doesn’t accept another function as an argument and doesn’t return a function as its return value.
+    const firstOrder = () => console.log("I am a first order function!");
+
+====================================================== What is a unary function ?
+    a unary function refers to a function that takes only one argument. Specifically in JavaScript, 
+    a unary function is a function that operates on a single operand or argument.
+    Unary functions are commonly used in functional programming .
+
+    // Unary function example
+    function square(num) {
+        return num * num;
+    }
+    console.log(square(5)); // Output: 25
+
+============================================== What is the Temporal Dead Zone(TDZ) ?
+    The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords, but not with var. 
+    In ECMAScript 6, accessing a let or const variable before its declaration (within its scope) causes a ReferenceError .
+    function somemethod() {
+    console.log(counter1); // undefined
+    console.log(counter2); // ReferenceError
+    console.log(counter3); // ReferenceError
+    var counter1 = 1;
+    let counter2 = 2;
+    const counter3 = 3;
+    }
+    somemethod()
+
+========================================= How do you decode or encode a URL in JavaScript?
+In JavaScript, you can use the encodeURIComponent() and decodeURIComponent() functions to encode and decode URLs, respectively.
+1. Encoding a URL:-
+    The encodeURIComponent() function is used to encode a URL component by replacing special characters with their UTF-8 encoding, making it safe for use in a URL.
+    
+    const originalUrl = 'https://example.com/some path?with=query#fragment';
+    const encodedUrl = encodeURIComponent(originalUrl);
+    console.log(encodedUrl);
+    // Output: 'https%3A%2F%2Fexample.com%2Fsome%20path%3Fwith%3Dquery%23fragment'
+
+2. Decoding a URL:-
+    The decodeURIComponent() function is used to decode a URL component that has been previously encoded using encodeURIComponent().
+    
+    const encodedUrl = 'https%3A%2F%2Fexample.com%2Fsome%20path%3Fwith%3Dquery%23fragment';
+    const decodedUrl = decodeURIComponent(encodedUrl);
+    console.log(decodedUrl);
+    // Output: 'https://example.com/some path?with=query#fragment'
+
+========================================== What is Hoisting ?
+    Hoisting in JavaScript is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the actual code execution.
+    a) Hoisting with Variables (var):
+    When using var to declare variables, they are hoisted to the top of their scope. 
+    They are initialized with the value undefined by default if no initial value is assigned during the declaration.
+
+    console.log(myVar); // Output: undefined
+    var myVar = 10;
+
+    var myVar;
+    console.log(myVar); // Output: undefined
+    myVar = 10;
+
+    x = 10;
+    console.log(x);
+    var x;  // 10
+
+    b) Hoisting with Functions:
+    Function declarations are also hoisted in JavaScript. This means that function declarations are fully hoisted, including both the function name and its body.
+
+    sayHello(); // Output: "Hello, there!"
+    function sayHello() {
+        console.log("Hello, there!");
+    }
+    Note :-...........
+    function expressions (where a function is assigned to a variable) are not hoisted in the same way as function declarations. 
+    Only the variable declaration gets hoisted, not the function initialization.
+
+    sayHello(); // Throws a TypeError: sayHello is not a function
+    var sayHello = function() {
+        console.log("Hello, there!");
+    };
+
+================================= What are classes in ES6 ?
+1. Class Declarations:
+    Classes can be declared using the class keyword followed by the class name.
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        greet() {
+            return `Hello, my name is ${this.name} and I'm ${this.age} years old.`;
+        }
+    }
+
+2. Constructor Method:
+    The constructor method is a special method used for initializing objects when a class is instantiated with the new keyword. It is called automatically upon object creation.
+3. Class Methods:
+    Methods can be added to a class without using the function keyword. These methods define behaviors that instances of the class will have.
+4. Class Inheritance:
+    Classes can inherit properties and methods from other classes using the extends keyword. This enables the creation of a hierarchy of classes.
+    class Student extends Person {
+        constructor(name, age, grade) {
+            super(name, age); // Calls the parent class constructor
+            this.grade = grade;
+        }
+
+        study() {
+            return `${this.name} is studying hard!`;
+        }
+    }
+
+5. Static Methods:
+    Static methods are defined on the class itself rather than on the prototype. They can be called directly on the class without needing an instance of the class.
+    class Calculator {
+        static add(a, b) {
+            return a + b;
+        }
+    }
+    Calculator.add(5, 3); // Output: 8
+
+================================ What are the modules ?
+    JavaScript introduced native support for modules using the import and export keywords, 
+    enabling developers to define modules and control the visibility of code within those modules.
+1. Exporting from a module:-
+    The export keyword is used to export functions, variables, or classes from a module, making them accessible to other modules.
+    
+    // Exporting individual functions, variables, or classes
+    export function add(a, b) {
+        return a + b;
+    }
+    export const PI = 3.1416;
+2. Importing into a module:-
+    The import keyword is used to import specific functionalities from other modules into the current module.
+
+    // Importing individual functionalities
+    import { add, PI } from './mathFunctions.js';
+    console.log(add(5, 3)); // Output: 8
+    console.log(PI); // Output: 3.1416
+
+================================================ Closure ? 
+    A closure is an inner function that has access to the variables in the outer (enclosing) function’s scope chain. 
+    The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
+
+======================================== Fatch API calls using the fetch() method
+const fetchAPI = async(URL) => {
+	const response = await fetch(URL);
+	const data = await response.json();
+	console.log(data)
+}
+fetchAPI("https://jsonplaceholder.typicode.com/todos/1")
+
+======================================= What is IndexedDB in js ?
+    IndexedDB is a low-level JavaScript API for storing large amounts of structured data (including files/blobs) in the browser, persistently. 
+    It provides a way for web applications to create, read, write, query, and delete data within the user's browser.
+
+===================================== What is web storage ?
+    Web Storage in web browsers provides a simple key-value storage mechanism that allows web applications to store data locally within the user's browser.
+    
+    There are two types of Web Storage:->
+    1. localStorage:
+        localStorage stores data without an expiration date. The data persists even after the browser is closed and reopened, as long as it is not cleared manually or by the application.
+        It has a larger storage capacity compared to sessionStorage.
+        Data stored in localStorage is specific to the protocol (HTTP or HTTPS) and the domain.
+    2. sessionStorage:
+        sessionStorage stores data for a single session only. The data is cleared when the browser tab or window is closed.
+        Each sessionStorage object is unique to the specific tab or window where it's created. Data stored in one tab/window won't be accessible in another tab/window.
+        Like localStorage, data in sessionStorage is specific to the protocol (HTTP or HTTPS) and the domain.
+
+    Methods for both localStorage and sessionStorage:->
+    1. setItem(key, value):
+        Adds or updates a key-value pair in the storage. If the key already exists, the value is updated.
+        localStorage.setItem('key', 'value');
+    2. getItem(key):
+        Retrieves the value associated with the specified key from the storage.
+        const value = localStorage.getItem('key');
+    3. removeItem(key):
+        Removes the specified key and its associated value from the storage.
+        localStorage.removeItem('key');
+    4. clear():
+        Clears all key-value pairs from the storage, effectively emptying it.
+        localStorage.clear();
+
+    Additional Methods for both localStorage and sessionStorage (not as commonly used):
+    1. key(index):
+        Retrieves the key at the specified numeric index in the storage.
+        const firstKey = localStorage.key(0); // Retrieves the first key in the storage
+    2. length:
+        Property that returns the number of key-value pairs stored in the storage.
+        const numberOfItems = localStorage.length; // Returns the number of items stored in localStorage
+
+    Differences between localStorage and sessionStorage :->
+    Scope :->
+        Data stored in localStorage is scoped to the protocol (HTTP or HTTPS) and the domain. This means that data stored by one website/domain cannot be accessed by another website/domain.
+        sessionStorage is scoped to a particular session or tab/window within a browser. Data stored in sessionStorage is not shared between different tabs/windows or across browser sessions. 
+    Lifespan:->
+        Data stored in localStorage remains until explicitly cleared by the web application or the user.
+        Data stored in sessionStorage is cleared when the specific browser tab or window is closed. It persists only for the duration of that session.
+    Expiration:->
+        The data stored in localStorage persists indefinitely until it is cleared either by the user or the web application.
+        Data stored in sessionStorage is cleared when the tab or window is closed. It persists only for the duration of that particular session.
+    Storage Limit:->
+        It has a larger storage capacity compared to sessionStorage. Typically, it allows around 5MB of data per domain, but the actual limit can vary between browsers.
+        It has a similar storage capacity as localStorage, but the data is isolated to the specific tab or window where it's used.
+    Usage:->
+        It's commonly used to store user preferences, cached data, or any data that needs to persist across browser sessions.
+        It's often used to store temporary session-related data, such as shopping cart information or data needed only for a particular browsing session.
+
+
+========================================================== What is a promise ?
+    a Promise is an object used for asynchronous operations. Promises are commonly used for handling asynchronous operations such as fetching data from a server, reading files, or executing code that takes time to complete.
+
+A Promise can be in one of three states:->
+    Pending: Initial state when the Promise is created, and the asynchronous operation has not yet completed.
+    Fulfilled: The asynchronous operation completed successfully, and the Promise is resolved with a value.
+    Rejected: The asynchronous operation encountered an error or failed, and the Promise is rejected with a reason or an error object.
+
+    In JavaScript Promises, then() and catch() are methods used to handle the results (resolved value) or errors (rejection reasons) of a Promise, respectively.
+
+What is promise.all :->
+    Promise.all is a promise that takes an array of promises as an input (an iterable), and it gets resolved when all the promises get resolved or any one of them gets rejected. For example, the syntax of promise.all method is below,
+
+    Promise.all([Promise1, Promise2, Promise3]) .then(result) => {   console.log(result) }) .catch(error => console.log(`Error in promises ${error}`))
+
+What is the purpose of the race method in promise :->
+    Promise.race() method will return the promise instance which is firstly resolved or rejected. Let's take an example of race() method where promise2 is resolved first
+
+    var promise1 = new Promise(function (resolve, reject) {
+    setTimeout(resolve, 500, "one");
+    });
+    var promise2 = new Promise(function (resolve, reject) {
+    setTimeout(resolve, 100, "two");
+    });
+
+    Promise.race([promise1, promise2]).then(function (value) {
+    console.log(value); // "two" // Both promises will resolve, but promise2 is faster
+    });
+
+methods of promises :->
+    then(): Used to handle the resolved value of a Promise when it's fulfilled.
+    catch(): Used to handle any errors or rejections that occur in a Promise chain.
+
+    finally(): Allows you to execute code after the Promise is settled (fulfilled or rejected), regardless of the outcome. This method is often used for cleanup tasks.
+
+    all(): Accepts an array of Promises and returns a single Promise that resolves when all the Promises in the array have resolved or rejects if any of the Promises reject.
+
+    race(): Accepts an array of Promises and returns a Promise that resolves or rejects as soon as one of the Promises in the array settles (fulfills or rejects), with the value or reason from that Promise.
+
+    allSettled(): Accepts an array of Promises and returns a single Promise that resolves after all the Promises have settled (whether fulfilled or rejected), providing an array of objects describing the outcome of each Promise.
+
+Q. what are client side and server side ?
+    - A client side is a device , application, or softwere component that request and consumes servies or resources from a server.
+    - 
+
+Q. what is the types of variable in js when it is declare without using the Var, let, const keyword ?
+    - var is the implicit type of variable where a variable is declare without var, let, const keyword .
+
+============================== what is Operator precedence ?
+    - Operator precedence in JavaScript determines the order in which operators are evaluated when multiple operators are used in a single expression .
+    - operator precedence in JavaScript, from highest to lowest precedence .
+
+    1 Grouping: () - Parentheses are used to explicitly specify the order of operations within an expression.
+    2 Member Access and Computed Member Access: . and [] - These operators are used to access properties of objects.
+    3 Function Call and Constructor Invocation: () and new - Invoking functions or constructors.
+    4 Increment and Decrement: ++ and -- - Incrementing or decrementing variables.
+    5 Logical NOT: ! - Logical NOT operator.
+    6 Unary Plus and Minus: + and - - Unary plus and minus operators.
+    7 Bitwise NOT: ~ - Bitwise NOT operator.
+    8 Multiplication, Division, and Remainder: *, /, % - Multiplication, division, and remainder operators.
+    9 Addition and Subtraction: + and - - Addition and subtraction operators.
+    10 Bitwise Shift Operators: <<, >>, >>> - Bitwise left shift, bitwise right shift, and unsigned right shift operators.
+    11 Relational Operators: <, >, <=, >=, instanceof, and in - Comparison operators and instance checks.
+    12 Equality Operators: ==, ===, !=, !== - Equality and inequality operators.
+    13 Bitwise AND: & - Bitwise AND operator.
+    14 Bitwise XOR: ^ - Bitwise XOR (exclusive OR) operator.
+    15 Bitwise OR: | - Bitwise OR operator.
+    16 Logical AND: && - Logical AND operator.
+    17 Logical OR: || - Logical OR operator.
+    18 Conditional (Ternary) Operator: ? : - Conditional (ternary) operator.
+    19 Assignment Operators: =, +=, -=, *=, /=, %=, <<=, >>=, >>>=, &=, ^=, |= - Assignment operators.
+
+=========================================================== Optional Question ?
+
+What is NaN? What is its type? How can you reliably test if a value is equal to NaN?
+=> The NaN property represents a value that is “not a number”
+For one thing, although NaN means “not a number”, its type is, believe it or not, Number:
+console.log(typeof NaN === "number");  // true
+Additionally, NaN compared to anything – even itself! – is false:
+console.log(NaN === NaN);  // false
+
+Q. What does the setTimeout() function do in JavaScript?
+    a)) It schedules the execution of a function after a specified delay (this is the right ans) ✅
+    b) It sets the value of a variable after a specified delay
+    c) It pauses the execution of the JavaScript code for a specified duration
+    d) It defines a function that can be executed repeatedly at specified intervals
+
+Q. Which of the following statements is true about arrow functions in JavaScript?
+    a) Arrow functions are longer and more complex than regular functions.
+    b) Arrow functions cannot be used in callbacks
+    c)) Arrow functions do not have a lexical this context. (this is the right) ✅
+    d) Arrow functions cannot be used as methods within objects
+
+What is the purpose of the map() method in JavaScript arrays?
+    a)) To iterate through all elements of an array and return a new array with modified elements (this the right ans) ✅
+    b) To filter out elements that don't match a given condition.
+    c) To remove specific elements from an array based on a condition.
+    d) To sort the elements of an array in descending order.
+
+Q. What does the term "callback function" refer to in JavaScript?
+    a) A function that is called automatically when the page loads
+    b)) A function that is invoked when an event occurs or a task is completed (this is the right ans) ✅
+    c) A function that only accepts callbacks as arguments.
+    d) A function that returns another function
+
+Q. What is the purpose of the querySelector() method in JavaScript?
+    a) To select all elements with a specific tag from the DOM
+    b)) To select the first element with a specific class from the DOM (this is the right ans) ✅
+    c) To create a new DOM element with the specified tag
+    d) To modify the contents of the selected element.
+
+What is the purpose of the localStorage object in JavaScript?
+    a)) To store data in the user's browser for persistent client-side storage. (this is the right ans) ✅
+    b) To store data on the server for long-term persistence.
+    c) To store variables temporarily during the execution of a function.
+    d) To store sensitive information such as passwords.
+
+Q. What does the term "prototype" refer to in JavaScript?
+    a)) An object that is linked as a property to other objects, allowing shared methods and properties ✅
+    b) A special keyword that indicates a function.
+    c) The initial state of an object before modifications.
+    d) A built-in object for creating new objects.
+
+Q. What is the purpose of the Promise object in JavaScript?
+    a) To create and manage multiple threads in a JavaScript application.
+    b)) To manage asynchronous operations and handle their results or errors. ✅
+    c) To optimize code for better performance.
+    d) To control the execution order of synchronous code
+
+Q. Which of the following is a valid way to declare a JavaScript function?
+    a)) function =myFunction() {} ✅
+    b) const myFunction = function() =>{}
+    c) var function= myFunction() =>{}
+    d) def myFunction(){}
+Note :-------------------------
+const myFunction = function() =>{}: This is an arrow function declaration with incorrect syntax. It should be written as either const myFunction = () => {} for an arrow function or function myFunction() {} for a regular function declaration.
+var function = myFunction() =>{}: This attempts to declare a function using an arrow function syntax but also incorrectly tries to assign it to a variable named function, which is a reserved keyword in JavaScript and cannot be used as a variable name.
+def myFunction(){}: The def keyword is not used for function declaration in JavaScript. In JavaScript, the function keyword is used to declare functions, not def.
+
+Q. What does the term "scope" refer to in JavaScript?
+    a)) The set of rules that determine the visibility and accessibility of variables in different parts of the code ✅
+    b) The act of organizing code into separate files for better maintainability
+    c) The physical location of a variable in memory
+    d) The process of minifying JavaScript code for better performance
+
+Q. What is the purpose of the Array.prototype.forEach() method in JavaScript?
+    a)) To loop through the elements of an array and execute a provided function for each element ✅
+    b) To create a new array by applying a function to each element of the original array
+    c) To sort the elements of an array in ascending order
+    d) To filter out elements from an artay that do not match a given condition
+Note:-----------------------------------------------------------------------------
+The forEach() method iterates over each element of an array and allows you to execute a provided function once for each element without creating a new array. It is particularly useful when you want to perform an action or operation on each item in the array without creating a new array based on the return values.
+
+Q. What is the result of the following expression? "Hello" instanceof String:
+    a)  TRUE    b) Error    c) undefined    d)) FALSE ✅
+Note:------------------------------------------------------
+In JavaScript, the instanceof operator checks whether an object is an instance of a particular class or constructor. When you use the instanceof operator with a primitive value like "Hello" and a built-in object like String, it returns false.
+The reason behind this outcome is that "Hello" is a primitive string value, not an instance of the String object. Primitive string values (like "Hello") are not objects; they are automatically converted to a String object when you perform operations or access properties/methods on them, but they don't behave as instances of the String constructor.
+Therefore, "Hello" instanceof String returns false because "Hello" is a primitive string value, not an instance of the String object.
+
+Q. What is the purpose of the Array.prototype.map() method in JavaScript?
+    a)) To iterate through all elements of an array and return a new array with modified elements. ✅
+    b) To remove specific elements from an array based on a condition
+    c) to sort the elements of an array in descending order
+    d)To filter out elements that don't match a given condition
+
+Q. What is the purpose of the Array.isArray() method in JavaScript?
+    a)) To check if a given value is an array ✅
+    b) To sort the elements of an array
+    c) To reverse the elements of an array
+    d) To convert an array to a string
+Note:-
+The Array.isArray() method is used to determine whether a given value is an array or not. It returns true if the value is an array and false if it is not.
+
+Q. What will be the output of the following code? const x = 10;
+    function foo() {
+    console.log(x):
+    const x = 20:
+    foo():
+    a) undefined    b) 10       c) 20       d))ReferenceError ✅
+
+Q. Which of the following methods is used to remove an element from a specific index in an array?
+    a) remove()
+    b)) splice() ✅
+    c) detach
+    d) slice 
+
+Q. What is the purpose of the new keyword when creating objects in JavaScript?
+    a) It is used to define a new variable.
+    b) It is used to import external libraries.
+    c)) It is used to create a new instance of an object constructor or class ✅
+    d) It is used to declare a new function
+Note :--------------------------------------
+In JavaScript, the new keyword is used with constructor functions or classes to create a new instance of an object based on that constructor or class blueprint. When you use new followed by a constructor function or class name, it allocates memory for a new object, sets up a link to its prototype, and calls the constructor function to initialize properties or perform setup tasks if defined within the constructor.
+
+Q . Which of the following statements is true regarding the setTimeout() function in JavaScript?
+    a) It sets the value of a variable after a specified delay.
+    b) It defines a function that can be executed repeatedly at specified intervals.
+    c) It pauses the execution of the JavaScript code for a specified duration.
+    d)) It schedules the execution of a function after a specified delay ✅
+
+Q. What is the purpose of the isNaN() function in JavaScript?
+    a) To check if a value is null or undefined.
+    b)) To check if a value is not a number ✅
+    c) To convert a value to a number data type
+    d) To create a new number with a specified value
+Note:----------------------------------------------
+The isNaN() function is used to determine whether a value is "Not-a-Number" (NaN) or not. It returns true if the provided value is not a valid number or cannot be converted into a number; otherwise, it returns false
+
+Q .What is the purpose of the Object.keys() method in JavaScript?
+    a) To convert an object to an array.
+    b)) To extract all properties from an object. ✅
+    c) To extract keys and values from an object as key-valüe pairs
+    d) To extract all values from an object
+Note:-------------------------------------------
+To extract all keys (property names) from an object and return them as an array.
+The Object.keys() method is used to extract and retrieve the keys (property names) of an object.
+
+Q. What does the term "event delegation" refer to in JavaScript?
+    a) The process of passing an event to multiple elements.
+    b) The process of binding an event listener to a specific element
+    c)) The process of placing a single event listener on a common ancestor of multiple elements ✅
+    d) The process of triggering multiple events simultaneously
+Note:- -----------------------------------------------------------
+Event delegation is a technique used to handle events efficiently, especially when dealing with multiple similar elements within a container or a group. Instead of attaching an event listener to each individual element, you attach a single event listener to a higher-level or common ancestor element that contains these elements.
+
+Q. Which of the following is a correct way to create an empty object in JavaScript?
+    a)) let obj={} ✅
+    b) object.empty()
+    c) new Object()
+    d) empty object()
+Note:----------------------
+object.empty() is not a valid method for creating an empty object. It seems to be a hypothetical or undefined method.
+new Object() is a valid way to create an empty object using the Object constructor. However, using object literal notation ({}) is the more commonly used and preferred method for creating objects.
+empty object() is not a valid syntax in JavaScript for creating an empty object.
+
+Q. What does The fetch() function in JavaScript primarily do?
+    a)) It fetches resources from a network asynchronously ✅
+    b) It fetches data from a database
+    c) It fetches a web page's source code
+    d) It fetches a list of available libraries.
+NOte:-------------------------------------
+The fetch() function is used to make network requests and retrieve resources (such as JSON data, text, HTML, etc.) from a server or an API asynchronously. It is commonly used to perform HTTP requests, such as fetching data from a remote server or sending data to a server.
+This code uses fetch() to make an asynchronous HTTP GET request to https://api.example.com/data and handles the response, parsing it as JSON and logging it to the console.
+
+Q. What is the purpose of the try...catch statement in JavaScript?
+    a)) To handle errors and exceptions that may occur in a block of code ✅
+    b) To execute a block of code repeatedly.
+    c) To define a loop that iterates over an array
+    d) To stop the execution of a program
+Note:---------------------------------
+The try...catch statement allows you to attempt executing a block of code that might potentially throw an error or exception. If an error occurs within the try block, the execution is immediately transferred to the catch block, where you can handle and manage the error gracefully without interrupting the entire script execution.
+The try...catch statement is a crucial part of error handling in JavaScript, allowing developers to manage and handle unexpected errors, preventing them from causing the entire script to fail.
+
+Q. What is the purpose of the Array.prototype.unshift() method in JavaScript?
+    a)) To add elements to the beginning of an array. ✅
+    b) To reverse the order of elements in an array.
+    c) To add elements to the end of an array
+
+Q. Which of the following is true regarding JavaScript's event loop?
+    a)) The event loop manages asynchronous operations and ensures they execute in a single thread ✅
+    b) The event loop is an external library that needs to be imported to handle events
+    c) The event loop allows JavaScript to handle multithreading for better performance
+    d) The event loop is responsible for rendering HTML elements on the web page
+NOte:-----------------------------------------------------------------------
+In JavaScript, the event loop is a mechanism that handles asynchronous operations by managing the execution of code in a single-threaded environment.
+JavaScript is single-threaded, meaning it can execute only one piece of code at a time in a single thread. The event loop allows asynchronous operations, such as setTimeout, Promises, and callback functions, to be executed without blocking the main thread.
+It handles the execution of these asynchronous tasks by placing them in a queue and processing them in the order they were added, once the call stack is empty.
+This mechanism allows JavaScript to efficiently handle asynchronous operations, making it non-blocking and responsive, even though it runs in a single-threaded environment.
+
+Q. What does the term "strict mode" refer to in JavaScript?
+    a) A feature that enables better performance by optimizing code execution
+    b) A way to enable additional logging for debugging purposes.
+    c)) A way to catch common coding mistakes and "unsafe" actions in your code ✅
+    d) A method of enforcing strict security measures in web applications
+Note:--------------------------------------------------------------------
+Strict mode is a feature in JavaScript that helps programmers write more robust and less error-prone code by enforcing stricter rules and generating errors for certain coding practices that might be considered unsafe or problematic. It aims to prevent common mistakes and create a safer environment for writing JavaScript code.
+When strict mode is enabled using the directive "use strict"; at the beginning of a script or a function
+
+Q. Which of the following is true regarding the global this context in JavaScript?
+    a) The global this context always refers to the function that contains it
+    b) The value of this in the global scope depends on how the function is invoked
+    c)) In the global scope, this refers to the global object (eg, window in browsers) ✅
+    d) In the global scope, this is undefined and cannot be used
+
+Q. What is the purpose of the Object.prototype.hasOwnProperty() method in JavaScript?
+    a) It removes a property from an object
+    b)) It checks if an object has a specific property ✅
+    c) None of all
+    d) It creates a new property in an object
+Note:---------------------------------------------------
+The hasOwnProperty() method is used to determine whether an object has a property with a specified key as its own property (not inherited from its prototype chain). It returns a boolean value (true or false) based on whether the object contains the specified property as a direct property of that object.
+const person = {
+     name: 'Alice',
+     age: 25
+ };
+console.log(person.hasOwnProperty('name')); // Output: true
+console.log(person.hasOwnProperty('gender')); // Output: false
+
+Q. What is the Call Stack in the context of the event loop?
+    a)) It is a stack data structure that keeps track of function calls. ✅
+    b) It is a queue that holds asynchronous tasks
+    c) It is a data structure used to store event listeners
+    d) It is a mechanism to prevent infinite loops
+Note :---------------------------------------------
+The Call Stack in JavaScript is a data structure that tracks function calls during the execution of a program. It follows the Last-In-First-Out (LIFO) principle, similar to a stack, where functions are pushed onto the stack when called and popped off the stack when they complete their execution.
+When a function is invoked, a new frame representing that function call is pushed onto the top of the call stack. As functions complete their execution, their frames are removed (popped) from the stack.
+The event loop, another part of JavaScript's runtime environment, works in conjunction with the call stack to handle asynchronous operations, timers, and callbacks by placing certain tasks in different queues (such as the task queue or microtask queue) and executing them once the call stack is empty.
+
+Q. What is the Callback Queue (also known as the Task Queue) in the context of the event loop?
+    a) It is a queue that holds completed HTTP requests
+    b)) It is a queue that holds pending asynchronous tasks and their associated callbacks ✅
+    c) It is a queue that holds the results of asynchronous operations
+    d) It is a queue that holds the arguments passed to event listeners
+Note:------------------------------------------------------------------
+The Callback Queue (or Task Queue) is a queue-like data structure that holds pending asynchronous tasks along with their associated callback functions. When asynchronous tasks (such as setTimeout, I/O operations, or other asynchronous APIs) complete, they are placed in the Callback Queue along with their respective callback functions.
+When the call stack becomes empty (i.e., all synchronous code has been executed), the event loop checks the Callback Queue. If there are tasks waiting in the Callback Queue, the event loop moves them from the Callback Queue to the call stack for execution. This process allows the asynchronous tasks to be executed in the order they were completed.
+The Callback Queue is an essential part of managing the execution order of asynchronous tasks in JavaScript, ensuring that they are executed only when the call stack is empty, preventing blocking of the main thread, and allowing non-blocking asynchronous operations to be handled appropriately.
+
+Q. What is the role of the Event Loop in managing asynchronous operations?
+    a) If ensures that asynchronous tasks are executed in the order they are defined
+    b)) It allows asynchronous tasks to be executed in a single thread, maintaining the order of execution ✅
+    c) Il prevents asynchronous tasks from running concurrently
+    d) It runs asynchronous tasks on a separate thread to achieve parallelism
+Note :-----------------------------------------------------------------------------
+The Event Loop in JavaScript is responsible for handling asynchronous operations in a non-blocking manner within a single-threaded environment. It manages the execution of asynchronous tasks by continuously checking the call stack for pending tasks and processing them accordingly.
+Asynchronous tasks, such as callbacks from setTimeout, AJAX requests, or other asynchronous APIs, are not executed immediately. Instead, they are placed in a queue (Callback Queue or Task Queue) once completed, along with their respective callback functions.
+
+Q. What is the purpose of the microtask queue in the event loop?
+    a) It holds asynchronous tasks that are scheduled to execute after a specified delay.
+    b) It holds tasks with higher priority than those in the callback queue
+    c)) It holds tasks related to promises and other microtasks, ensuring their execution order ✅
+    d) It holds tasks that are processed before the next rendering of the web page
+Note :------------------------------------------------------------------------------
+The microtask queue is a separate queue in the event loop that specifically holds tasks related to microtasks, such as promise callbacks (then(), catch(), finally()), mutation observers, and other similar tasks designated as microtasks.
+Tasks in the microtask queue have higher priority than those in the regular callback queue (macrotasks). When the call stack becomes empty, the event loop checks the microtask queue before handling tasks from the regular callback queue (task queue)
+
+Q. What happens when an asynchronous task is completed and its callback is added to the Callback Queue?
+    a) The callback is executed only if it has a higher priority than other callbacks.
+    b)) The callback is executed once the call stack becomes empty ✅
+    c) The callback is executed only if there are no other tasks in the Callback Queue
+    d) The callback is immediately executed by the event loop 
+
+Q. What does the term "hoisting" refer to in JavaScript?
+    a) Automatically optimizing code for faster execution
+    b) Moving all JavaScript code to the top of the HTML document
+    c)) Declarations are moved to the top of their scope before code execution ✅
+    d) Organizing variables in a hierarchical order for better code readability
+
+Q. How is data stored using sessionStorage different from localStorage?
+    sessionStorage data is accessib page session.
+    sessionStorage data persis sessions.
+    localStorage data is acc page session.
+    localStorage data is closed.
+
+Q. What does the null value represent in JavaScript?
+    A special keyword indicates a
+    A placeholder for an objec
+    An undefined value.
+    The absence of any object value. ✅ 
+
+
+Q. Which array method is used to test whether all elements in the array pass the provided function condition?
+    filter
+    map
+    some
+    every ✅ 
+
+Q. What is the purpose of the querySelector method in JavaScript DOM?
+    It selects all child elements of a sp
+    It selects multiple elements wi
+    It selects the first element CSS selector. ✅ 
+    It selects the first element that matches a specific CSS selector. ✅
+    It selects an element
+    

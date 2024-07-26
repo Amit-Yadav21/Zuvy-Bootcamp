@@ -1,0 +1,131 @@
+How does the css property z-index affect the stacking order of elements?
+
+
+What is the purpose of the CSS property position: sticky;
+    Creates a flexible box layout.
+    Positions the element at the to during scrolling.✅ 
+    Positions the element at the top of the viewport during scrolling until a specified point is reached.✅ 
+
+What is the mobile-first approach in responsive design?
+    Using media queries only for mobile
+    Ignoring desktop devices in styling
+    Starting with mobile styles and adapting screens ✅ 
+    Starting with mobile styles and then progressively enhancing layouts for larger screens. ✅
+
+How can you change the value of a CSS variable dynamically using JavaScript?
+    setProperty ✅
+    document.setVariable()
+    variable.changevalue()
+    element.sty.ertele
+
+What does the CSS selector divp select?
+    All <p> elements that are siblings of a element
+    All <p> elements within the same <div> element
+    All <p> elements that are descendants of a <div> element. ✅
+    The first <p> element after a
+    The last <p> element bel
+
+What is the purpose of the :not() pseudo-class selector in CSS?
+    It selects all elements that do not match a specific condition. ✅ 
+    It targets elements with
+    It represents an elem
+    It selects only the
+
+What does the attribute selector input[type="text"] target?
+    All text elements
+    Input elements with the attribute type set specifically to "text". ✅ 
+    Text elements within an input
+    All input elements
+
+What does the CSS selector a[href^="https://*] target?
+    All <a> elements
+    All <a> elements with an fhref attributes
+    "https://"
+    The first <a> element with an href
+    All links with an https protocol ✅ 
+
+What is the purpose of the :: selection pseudo-element in CSS?
+    It selects the last item in a list
+    It creates a new list item.
+    It applies styles to the selected paragraph.
+    It selects the text content th highlighted. ✅ 
+
+Which statement accurately describes HTML tags?
+    Are not case sensitive
+    Are in uppercase
+    Are case sensitive
+    Are in lowercase
+    Case insensitive✅
+Note :- HTML itself is not case-sensitive. This means that tags can be written in uppercase, lowercase, or a mix of both, and they will still be interpreted the same way by browsers. However, adhering to lowercase tags is considered a best practice for consistency and readability in code.
+        In HTML, tags are case insensitive. This means that whether you write tags in uppercase, lowercase, or a combination of both, the browser will interpret them in the same way.
+
+What are the varieties of unordered lists in HTML5?
+    triangle, circle, disc
+    circle, square, disc ✅ (These represent different types of bullets or markers for unordered lists.)
+    triangle, square, disc
+    All of the above
+
+What does the alpha value in rgba represent?
+    None of the above
+    Opacity value for a color ✅ (RGBA (Red, Green, Blue, Alpha))
+    Both a and b
+    The shade of a color
+
+What is the purpose of the name attribute in HTML form elements?
+    Assign a unique identifier for server-side processing. ✅ 
+    Set the initial value of the form element
+
+Which of the following is NOT a common attribute used in HTML forms?
+    action
+    enctype
+    style ✅ 
+    method
+Note :- action, enctype, and method are commonly used attributes in HTML forms to specify the action URL, form data encoding type, and submission method, respectively. However, style is more commonly used in HTML elements to define inline styles for visual presentation but is not a specific attribute related to forms.
+
+In HTML5, which attribute is used to define the target URL (uniform resource locator). for a hyperlink?
+    target
+    href ✅ 
+    uri
+    link
+
+In the meta tag for viewport, what does initial-scale=1.0 signify?
+    It adjusts the initial brightness of the viewport.
+    It controls the initial zoom level of the viewport. ✅ 
+    It defines the initial width of the viewport
+    It sets the initial font size of the document
+Note :- Setting initial-scale=1.0 means that the viewport will display the webpage at its initial zoom level without any zooming applied, representing a 1:1 ratio between CSS pixels and device pixels, avoiding any initial scaling or zoom.
+
+what is the root element of an HTML page ?
+    The root element of an HTML page is <html>. ✅ 
+Note :- It contains other essential elements such as <head> and <body>, which respectively define the document's metadata and the visible content displayed in a web browser.
+
+Q. what is the defference between href and src in html ?
+    In HTML, href and src are attributes used with different HTML elements
+    1. href (Hypertext Reference): This attribute is primarily used with anchor <a> elements to define the destination or target of a hyperlink.
+    2. src (Source): This attribute is typically used with elements that load external resources, such as images (<img>), audio (<audio>), video (<video>), scripts (<script>), iframes (<iframe>), etc. It specifies the URL or path to the external resource that the element should fetch and display or execute.
+    3. In summary, href is mainly used for defining the target of hyperlinks, while src is used to specify the source location of external resources to be included or displayed within the HTML document.
+
+Q. what is the defference between Absolute URL and Reletive URL ?
+    1. Absolute URL: An Absolute URL provides the complete web address or path to a resource, starting from the root of the web. It includes the protocol (e.g., http:// or https://), domain name (e.g., www.example.com), and often the complete path to the resource. 
+    For example: Absolute URL: https://www.example.com/images/image.jpg
+    2. Relative URL: A Relative URL specifies the path to a resource relative to the current document's location. It does not include the domain name or protocol 
+
+    Relative URL to an image in the same directory: images/image.jpg
+    Relative URL to a stylesheet in a parent directory: ../styles/style.css
+
+    In essence, Absolute URLs provide the full path starting from the root of the web, while Relative URLs define the path in relation to the current document's location .
+
+Q. Semantic Elements ans non-Semantic Elements defference ?
+
+Q. How can you prevent the default behaviour of an anchor (<a>) element when it is clicked?
+    element.stopDefault()
+    element.preventDefault() ✅ 
+    element.preventClick()
+
+Q. why use UTF-8 in meta tag in html ?
+    Using UTF-8 in the meta tag in HTML (<meta charset="utf-8">) is important because it specifies the character encoding used for the document. UTF-8 is a character encoding capable of representing most characters in the Unicode standard .
+
+    1. Using UTF-8 in the meta tag in HTML (<meta charset="utf-8">) is important because it specifies the character encoding used for the document. UTF-8 is a character encoding capable of representing most characters in the Unicode standard .
+    2. Standardized Encoding: UTF-8 is a widely accepted and recommended character encoding standard on the web. It has become the default encoding for HTML5 and is supported by virtually all modern web browsers and platforms.
+    3. Avoids Character Display Issues: Using UTF-8 helps prevent character display issues such as mojibake (garbled text) .
+    4. It's considered a best practice to include this meta tag in the <head> section of HTML documents

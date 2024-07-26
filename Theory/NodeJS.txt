@@ -1,0 +1,23 @@
+=================================== Backend (Nodejs/ExpressJs/Mongo) ?
+    Why is express needed?
+    Different http methods and use of each
+    What is a middleware? How do we use it? Examples of when to use it
+    What is authentication? What is authorisation?
+    What is jwt? How does it work? How to you create and use token?
+    Import/Export Functions
+    What is a request? What is response?
+    How does a request flow from postman thru your node server back to postman?
+    Understanding different status codes, when to use 2xx, 4xx, 5xx etc? meaning and need of mostly used status codes
+    What is a route? How to create route?
+    What is input validation? How do you validate inputs?
+    How do you handle errors? How to debug incase of any issue?
+    You should know how to create any api
+    Mongo db connection - how is connection made?
+    All mongo db operation commands
+    Mongo schema, document, collection and model - What is it? How to write? How to use? Difference between each
+    Idea and use of packages like : jwt, bcrypt and salt, nodemon, formidable, bodyParser, dotenv, axios, fs etc
+    What is package.json file? What can we do using it?
+    How does a request flow inside your node codebase
+    Use of .env file? How to secure sensitive/private variables?
+    Use of JSON.stringify(), JSON.parse()
+    Content type: multipart/formData and application/json mainly
