@@ -8,7 +8,7 @@ let empty = {};
 // console.log(empty);
 
 let [FName, LName, ...rest] = arr;
-// console.log({firstname,lastName,rest});
+// console.log({FName,LName,rest});
 
 const array = [];
 let [fn = "amit", ln = "yadav", ...rests] = array;
