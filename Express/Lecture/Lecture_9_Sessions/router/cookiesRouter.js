@@ -1,0 +1,38 @@
+import express from 'express';
+const router = express.Router();
+
+router.get('/get-cookie', (req, res) => {
+    const cookies = req.headers.cookie;
+    const signedCookies = req.signedCookies;
+    const session = req.session;
+    const sessionID = req.session.id;
+    const sessionUser = req.session.user;
+
+    if (!cookies || signedCookies.length === 0) {
+        res.status(404).json({ msg: "No cookies found." });
+    } else {
+        console.log(cookies); // Get cookies in key and value format
+        console.log(signedCookies); // Get cookies in object format
+        res.status(200).json({ msg: "Successfully retrieved cookies.", cookies: signedCookies, sessionID:sessionID, sessionUser:sessionUser});
+    }
+});
+
+router.get('/set-cookie', (req, res) => {
+    console.log(req.session);
+    console.log(req.session.id);
+    req.session.user = "Amit Yadav"
+    res.cookie("setCookie", "amit yadav", { path: "/cookies", maxAge: 5 * 60 * 1000, httpOnly: true, signed: true }); // 5 minutes
+    res.status(200).json({ msg: "Cookies are set" });
+});
+
+router.get('/verify-cookie', (req, res) => {
+    const { setCookie } = req.signedCookies;
+
+    if (setCookie) {
+        res.status(200).send({msg:'Cookie is verified successfully!', setCookie:setCookie});
+    } else {
+        res.status(401).json({msg:'Invalid Cookie'});
+    }
+});
+
+export default router;
