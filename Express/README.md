@@ -27,3 +27,12 @@
 
 - lecture - 7 Cookies
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=P-QqfysU0KY&authuser=0)
+
+- lecture - 8 Singed Cookies 
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=JSj8d3eXsVU&authuser=0)
+
+- lecture - 9 Sessions
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=KlFUzKp8oSw&authuser=0)
+
+- lecture - 9 Sessions part 2
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=I6myHat47oE&authuser=0)
