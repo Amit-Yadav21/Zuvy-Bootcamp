@@ -1,0 +1,14 @@
+1. Create a login route which will create a session for the user.
+2. Create a endpoint to get Wishlist item for the user and to update the Wishlist items for the logged in user.
+
+{
+    item
+    category
+}
+
+3. Create a endpoint to save liked posts from the user. The data should contain 
+
+{
+    postTitle
+    author
+}
