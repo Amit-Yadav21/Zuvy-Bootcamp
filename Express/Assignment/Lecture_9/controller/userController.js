@@ -66,18 +66,18 @@ const logout = (req, res) => {
 // route to get all session data
 const sessionInfo = (req, res) => {
     const user = req.session.user || {};
-    // const now = new Date();
-    // const expiresAt = req.session.cookie.expires ? new Date(req.session.cookie.expires) : null;
-    // const remainingTime = expiresAt ? Math.max(0, expiresAt - now) : null; // Time in milliseconds
 
     res.json({
         sessionCookie: req.session.cookie,
+        user: {
+            userId: user.id || null,
+            username: user.username || null,
+            likedPosts: user.likedPosts || [],
+            wishlist: user.wishlist || []
+        },
         sessionId: req.session.id,
         createdAt: req.session.createdAt,
-        expiresAt: req.session.cookie.expires,
-        // remainingTime: remainingTime ? `${Math.floor(remainingTime / 1000)} seconds` : 'No expiration set'
     });
 };
-
 
 export { createUser, UserDashboard, loginUser, logout, sessionInfo }
