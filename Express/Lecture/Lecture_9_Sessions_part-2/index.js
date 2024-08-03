@@ -1,6 +1,7 @@
 import express from 'express'
 import cookiesRoute from './router/cookiesRouter.js'
 import userRouter from './router/userRouter.js'
+import cartRouter from './router/cartRouter.js'
 import cookieParser from 'cookie-parser';
 import session from 'express-session';
 
@@ -18,12 +19,13 @@ app.use(session({
     saveUninitialized:false,
     resave:false,
     cookie: {
-        maxAge: 60000 * 1
+        maxAge: 60000 * 40
     }
 }))
 
 app.use('/cookies' , cookiesRoute)
 app.use('/user' , userRouter)
+app.use('/cart' , cartRouter)
 
 app.listen(port, function () {
     console.log(`Server is is runnig on ${port}`);
