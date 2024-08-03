@@ -36,3 +36,6 @@
 
 - lecture - 9 Sessions part 2
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=I6myHat47oE&authuser=0)
+
+- lecture - 10 Introduction to Databases
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ID7L6XrAfo4&authuser=0)
