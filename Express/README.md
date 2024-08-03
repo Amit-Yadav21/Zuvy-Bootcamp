@@ -39,3 +39,6 @@
 
 - lecture - 10 Introduction to Databases
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ID7L6XrAfo4&authuser=0)
+
+- lecture - 11 MongoDB CRUD
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=c2waoMr40ig&authuser=0)
