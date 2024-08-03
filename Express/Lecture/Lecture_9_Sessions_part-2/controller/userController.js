@@ -44,6 +44,36 @@ const getUserData = (req, res, next)=>{
     res.json({msg:'All signup data', userData})
 }
 
+const findAllUsersWithCart = (req, res) => {
+    // Initialize cart if it doesn't exist for any user
+    if (!req.session.cart) {
+        req.session.cart = {};
+    }
+
+    // Prepare the response with user and cart info
+    const usersWithCart = userData.map(user => {
+        const userId = user.id;
+
+        // Ensure cart is initialized for each user
+        if (!req.session.cart[userId]) {
+            req.session.cart[userId] = null; // Explicitly set to null if no cart exists
+        }
+
+        return {
+            user: {
+                id: user.id,
+                username: user.username,
+            },
+            cart: req.session.cart[userId] !== null ? req.session.cart[userId] : null, // Return null if no cart exists
+        };
+    });
+
+    res.status(200).json({
+        msg: "All users with their carts",
+        usersWithCart,
+    });
+};
+
 // Route to log out a user
 const logout = (req, res) => {
     req.session.destroy(err => {
@@ -55,4 +85,4 @@ const logout = (req, res) => {
     });
 };
 
-export { createUser, getUserData, loginUser, logout }
+export { createUser, getUserData, loginUser, logout, findAllUsersWithCart }

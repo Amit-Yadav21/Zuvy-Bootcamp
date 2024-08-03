@@ -21,22 +21,32 @@ const createCart = (req, res) => {
     return res.status(201).json({ msg: "Item added to cart", item });
 };
 
-
-const findCart = (req, res) => {
+const findCartCreatedByLoginUser = (req, res) => {
     if (!req.session.user) {
         return res.status(401).json({ msg: "Unauthorized" });
     }
 
     const userId = req.session.user.id;
+
+    // Initialize cart if it doesn't exist for the user
+    if (!req.session.cart) {
+        req.session.cart = {};
+    }
+
+    if (!req.session.cart[userId]) {
+        req.session.cart[userId] = null; // Explicitly set to null if no cart exists
+    }
+
     res.status(200).json({
         msg: "Cart and User Info",
         user: {
             id: req.session.user.id,
             username: req.session.user.username,
         },
-        cart: req.session.cart && req.session.cart[userId] ? req.session.cart[userId] : [],
+        cart: req.session.cart[userId] !== null ? req.session.cart[userId] : null, // Return null if no cart exists
     });
 };
 
 
-export { createCart, findCart }
+
+export { createCart, findCartCreatedByLoginUser }
