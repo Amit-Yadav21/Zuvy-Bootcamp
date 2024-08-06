@@ -42,3 +42,6 @@
 
 - lecture - 11 MongoDB CRUD
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=c2waoMr40ig&authuser=0)
+
+- lecture - 12 MongoDB Login, Registration, Password Hashing
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ymWAf073E-Y&authuser=0)
