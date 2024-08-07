@@ -48,7 +48,7 @@ const login = async (req, res) => {
     const { username, password } = req.body;
 
     if (!username || !password) {
-        return res.status(400).json({ error: "Username or password is required." });
+        return res.status(400).json({ error: "Username, password both are required." });
     }
 
     try {
@@ -61,7 +61,7 @@ const login = async (req, res) => {
         // Compare the provided password with the stored hash
         const isMatch = await comparePasswordHash(password, user.password);
         if (!isMatch) {
-            return res.status(403).json({ error: "Invalid username or password." });
+            return res.status(403).json({ error: "Invalid password." });
         }
 
         res.status(200).json({ message: "Login successful", user });
