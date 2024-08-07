@@ -40,11 +40,11 @@
 - lecture - 10 Introduction to Databases
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ID7L6XrAfo4&authuser=0)
 
-- lecture - 11 MongoDB CRUD
+- lecture - 11 MongoDB-1 (CRUD)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=c2waoMr40ig&authuser=0)
 
-- lecture - 12 MongoDB Login, Registration, Password Hashing
+- lecture - 12 MongoDB-2 (Login, Registration, Password Hashing)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ymWAf073E-Y&authuser=0)
 
-- lecture - 13 MongoDB session store
+- lecture - 13 MongoDB-3 (session store)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=rdtKViC0f3M&authuser=0)
