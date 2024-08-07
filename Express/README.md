@@ -45,3 +45,6 @@
 
 - lecture - 12 MongoDB Login, Registration, Password Hashing
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ymWAf073E-Y&authuser=0)
+
+- lecture - 13 MongoDB session store
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=rdtKViC0f3M&authuser=0)
