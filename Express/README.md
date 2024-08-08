@@ -48,3 +48,6 @@
 
 - lecture - 13 MongoDB-3 (session store)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=rdtKViC0f3M&authuser=0)
+
+- lecture - 14 MongoDB-4 (Connecting backend with frontend)
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=-de1HuB3Gik&authuser=0)
