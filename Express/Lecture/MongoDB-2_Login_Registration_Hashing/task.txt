@@ -1,0 +1,1 @@
+Create a route for registration and login, where the user data is saved in database and the password is hashed.

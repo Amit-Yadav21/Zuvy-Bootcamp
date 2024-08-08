@@ -1,0 +1,5 @@
+1. Connect to your MongoDB database
+2. Implement database for all the endpoints that you created for cart in previous assignment.
+3. For delete function research yourself how the data can be deleted from Databse
+
+i.e - Data should be saved in databse, Data should be fetched from database, data should be updated in databse.
