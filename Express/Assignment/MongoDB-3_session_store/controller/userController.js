@@ -64,6 +64,7 @@ const login = async (req, res) => {
             return res.status(403).json({ error: "Invalid password." });
         }
 
+        req.session.user = user;
         res.status(200).json({ message: "Login successful", user });
     } catch (error) {
         console.error('Error during login:', error);
@@ -71,4 +72,20 @@ const login = async (req, res) => {
     }
 };
 
-export { createUser, login, findUser };
+const getUserStatus = async (req, res) =>{
+    const user = req.session.user;
+    user ? res.status(200).json(user) : res.status(401).json({msg:"User not login"});
+}
+
+const logoutUser = (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ error: 'Failed to logout' });
+        }
+        // This clears the session cookie
+        res.clearCookie('connect.sid'); 
+        res.status(200).json({ message: 'Logout successful' });
+    });
+};
+
+export { createUser, login, findUser, getUserStatus, logoutUser};
