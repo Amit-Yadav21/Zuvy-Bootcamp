@@ -34,20 +34,20 @@
 - lecture - 9 Sessions
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=KlFUzKp8oSw&authuser=0)
 
-- lecture - 9 Sessions part 2
+- lecture - 10 Sessions part 2
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=I6myHat47oE&authuser=0)
 
-- lecture - 10 Introduction to Databases
+- lecture - 11 Introduction to Databases
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ID7L6XrAfo4&authuser=0)
 
-- lecture - 11 MongoDB-1 (CRUD)
+- lecture - 12 MongoDB-1 (CRUD)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=c2waoMr40ig&authuser=0)
 
-- lecture - 12 MongoDB-2 (Login, Registration, Password Hashing)
+- lecture - 13 MongoDB-2 (Login, Registration, Password Hashing)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=ymWAf073E-Y&authuser=0)
 
-- lecture - 13 MongoDB-3 (session store)
+- lecture - 14 MongoDB-3 (session store)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=rdtKViC0f3M&authuser=0)
 
-- lecture - 14 MongoDB-4 (Connecting backend with frontend)
+- lecture - 15 MongoDB-4 (Connecting backend with frontend)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=-de1HuB3Gik&authuser=0)
