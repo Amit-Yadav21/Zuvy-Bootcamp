@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { postRegister } from './utils/apiHandler';
 
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({
@@ -39,8 +40,12 @@ const RegistrationForm = () => {
 
     const registerAPI = async () => {
         try {
-            const response = await axios.post('http://localhost:3000/createUser', formData);
-            console.log(response);
+            // const response = await axios.post('http://localhost:3000/createUser', formData);
+            // console.log(response);
+
+            const data =await postRegister('createUser', formData)
+            console.log('Registration response:',data);
+            
             toast.success('Registration successful!'); // Success message
             setFormData({ username: '', password: '' }); // Clear form data
         } catch (error) {
