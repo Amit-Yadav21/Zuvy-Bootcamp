@@ -4,25 +4,28 @@ import userRouter from './router/userRouter.js';
 import session from 'express-session';
 import MongoStore from 'connect-mongo'; //store session in database 
 import errorhandler from './Middleware/errorHandler.js';
+import cors from 'cors'
 
 const app = express();
 const PORT = 3000;
 
 const Mongo_Url = 'mongodb://localhost:27017/UserData';
 mongoose.connect(Mongo_Url)
-    .then(() => { 
+    .then(() => {
         console.log('Mongodb connected');
     })
     .catch((error) => {
         console.log('Mongodb did not connect', error);
-    }); 
+    });
+
+app.use(cors())
 
 // middleware to use session
 app.use(session({
-    secret:"amit@21@navgurukul",
-    saveUninitialized:false,    // store session without user data 
-    resave:false,   // Don't save new session and expiry time every req .
-    store: MongoStore.create({  
+    secret: "amit@21@navgurukul",
+    saveUninitialized: false,    // store session without user data 
+    resave: false,   // Don't save new session and expiry time every req .
+    store: MongoStore.create({
         //store session in database 
         client: mongoose.connection.getClient()
     }),
