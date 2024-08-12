@@ -19,6 +19,15 @@
     Debugging :- When facing any issues, what are the ways in which you can debug it? (Try catch, console log, debugger/breakpoints, error search etc)
     what is Operator precedence ?
 
+====================== Is javascript a statically typed or a dynamically typed language? And how?
+JavaScript is a dynamically typed language.
+1. Dynamic Typing:
+In a dynamically typed language, the type of a variable is determined at runtime rather than at compile time.
+You don't need to specify the type of a variable when you declare it. The type of the variable is determined by the value you assign to it.
+
+2. Variable Reassignment:
+In JavaScript, a variable can be reassigned to a value of a different type without any type errors.
+
 ========================= what is javascript ? what is  the role of JS Engine ?
 - Js is a progarmming language that is used for converting  static web-page to interactive and dynamic web page.
 - A js engine is a program persent in web browser that Executes javascript code .
