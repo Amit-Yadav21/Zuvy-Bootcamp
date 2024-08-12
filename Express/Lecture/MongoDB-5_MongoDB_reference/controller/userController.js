@@ -4,7 +4,8 @@ import { hashPassword, comparePasswordHash } from '../passwordHash/passwordHash.
 // Get all signup data function
 const findUser = async (req, res) => {
     try {
-        const users = await User.find({});
+        // const users = await User.find({}).populate('notes'); // find all user with notes info 
+        const users = await User.find({}).populate('notes', {content:1, important:1});
         res.json(users);
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });

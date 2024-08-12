@@ -16,6 +16,17 @@ const userSchema = new mongoose.Schema({
     }]
 });
 
+// delete password, __v
+userSchema.set('toJSON',{
+    transform: (document, returnObject) =>{
+        // returnObject.id = returnObject._id
+        // delete returnObject._id
+
+        delete returnObject.password
+        delete returnObject.__v
+    }
+})
+
 const User = mongoose.model('usercrud', userSchema);
 
 export default User;
