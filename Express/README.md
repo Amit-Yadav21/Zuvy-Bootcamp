@@ -54,3 +54,6 @@
 
 - lecture - 16 MongoDB-5 (MongoDB reference)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=NAYKEoiRxsk&authuser=0)
+
+- lecture - 17 MongoDB-6 (MongoDB JWT)
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=69CmCjMop8E&authuser=0)
