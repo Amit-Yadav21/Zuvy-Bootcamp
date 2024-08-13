@@ -1,0 +1,19 @@
+{
+  "name": "mongodb-5_mongodb_reference",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-mongo": "^5.1.0",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.2"
+  }
+}
