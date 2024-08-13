@@ -12,23 +12,29 @@ const getNotes = (req, res) => {
 // Create a new note
 const createNote = (req, res) => {
     const { content, important } = req.body;
+    try {
+        const authHeader = req.get('Authorization') || req.headers['authorization'];
+        if (!authHeader) {
+            return res.status(401).json({ msg: 'token not found' });
+        }
 
-    const authHeader = req.get('Authorization') || req.headers['authorization'];
-    if (!authHeader) {
-        return res.status(401).json({ msg: 'token not found' });
+        const token = authHeader.split(' ')[1];
+        // console.log(token);
+
+        const decodedToken = jwt.verify(token, 'amityadav222137');
+        const newNote = {
+            content: content,
+            important: important,
+            user: decodedToken.username,
+        };
+        notes.push(newNote);
+        res.status(201).json(newNote);
+    } catch (error) {
+        if(error.name==='JsonWebTokenError'){
+            return res.status(400).json({error:'Invalid Token'})
+        }
+        return res.status(500).json('Internal Server Error.')
     }
-    
-    const token = authHeader.split(' ')[1];
-    // console.log(token);
-    
-    const decodedToken = jwt.verify(token, 'amityadav222137');
-    const newNote = {
-        content: content,
-        important: important,
-        user: decodedToken.username,
-    };
-    notes.push(newNote);
-    res.status(201).json(newNote);
 };
 
 export { getNotes, createNote };

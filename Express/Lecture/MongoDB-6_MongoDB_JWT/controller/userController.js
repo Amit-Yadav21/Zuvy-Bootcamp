@@ -1,4 +1,3 @@
-// import User from '../model/userShema.js';
 import jwt from 'jsonwebtoken'
 
 const users = [];
