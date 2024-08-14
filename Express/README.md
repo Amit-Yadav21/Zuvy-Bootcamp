@@ -57,3 +57,6 @@
 
 - lecture - 17 MongoDB-6 (MongoDB JWT)
     - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=69CmCjMop8E&authuser=0)
+
+- lecture - 18 FullStack JWT
+    - Recording Link : [Provide By Mentor](https://www.youtube.com/watch?v=Le7ExYwoD-k&authuser=0)
