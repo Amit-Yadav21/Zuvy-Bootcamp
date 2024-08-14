@@ -7,6 +7,10 @@ const errorhandler = (err, req, res, next) => {
     return res.status(400).json({ message: 'User already exists' });
   }
 
+  if(err.name === 'JsonWebTokenError'){
+    return res.status(400).send({message:"Invalid Token"})
+  }
+
   if (!err.status) {
     return res.status(500).json({ message: "Internal Server Error" });
   }

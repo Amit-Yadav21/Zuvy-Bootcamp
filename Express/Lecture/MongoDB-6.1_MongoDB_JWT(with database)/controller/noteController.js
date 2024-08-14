@@ -1,17 +1,15 @@
 import Note from '../model/notesShema.js';
 import User from '../model/userShema.js';
-import { login } from './userController.js';
 
 // Get all notes for the logged-in user
 const getNotes = async (req, res, next) => {
     try {
-        if (!req.session.user) {
+        const decodeData = req.jwtData;
+        if (!decodeData) {
             return res.status(401).json({ error: 'User not logged in' });
         }
-        const user = await User.findById(req.session.user._id);
-
-        // const notes = await Note.find({}).populate('user'); // get user with notes
-        const notes = await Note.find({user:user.id}).populate('user',{username:1});
+        
+        const notes = await Note.find({ user: decodeData.tokenData.id }).populate('user', { username: 1 });
         res.status(200).json(notes);
     } catch (err) {
         console.log(err);
@@ -24,11 +22,12 @@ const createNote = async (req, res, next) => {
     const { content, important } = req.body;
 
     try {
-        if (!req.session.user) {
+        const decodeData = req.jwtData;
+        if (!decodeData) {
             return res.status(401).json({ error: 'User not logged in' });
         }
 
-        const user = await User.findById(req.session.user._id);
+        const user = await User.findById(decodeData.tokenData.id);
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
@@ -52,13 +51,14 @@ const createNote = async (req, res, next) => {
 // Update a note
 const updateNote = async (req, res, next) => {
     const { content, important, newContent, newImportant } = req.body;
+    const decodeData = req.jwtData;
     try {
-        if (!req.session.user) {
+        if (!decodeData) {
             return res.status(401).json({ error: 'User not logged in' });
         }
 
         const note = await Note.findOneAndUpdate(
-            { content, important, user: req.session.user._id },
+            { content, important, user: decodeData.id },
             { content: newContent, important: newImportant },
             { new: true }
         );
@@ -76,20 +76,21 @@ const updateNote = async (req, res, next) => {
 // Delete a note
 const deleteNote = async (req, res, next) => {
     const { content } = req.body;
+    const decodeData = req.jwtData;
     try {
-        if (!req.session.user) {
+        if (!decodeData) {
             return res.status(401).json({ error: 'User not logged in' });
         }
 
         // Find the note by content and user ID
-        const note = await Note.findOneAndDelete({ content, user: req.session.user._id });
+        const note = await Note.findOneAndDelete({ content, user: decodeData.tokenData.id });
         if (!note) {
             return res.status(404).json({ error: 'content not found'});
         }
 
         // Remove the note reference from the user's notes array
         await User.updateOne(
-            { _id: req.session.user._id },
+            { _id: decodeData.id },
             { $pull: { notes: note._id } }
         );
 

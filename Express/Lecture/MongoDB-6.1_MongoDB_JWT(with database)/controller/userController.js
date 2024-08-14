@@ -1,11 +1,13 @@
 import User from '../model/userShema.js';
 import { hashPassword, comparePasswordHash } from '../passwordHash/passwordHash.js';
+import jwt from 'jsonwebtoken';
+import { createToken } from '../Middleware/tokenVerify.js';
 
 // Get all signup data function
 const findUser = async (req, res) => {
     try {
         // const users = await User.find({}).populate('notes'); // find all user with notes info 
-        const users = await User.find({}).populate('notes', {content:1, important:1});
+        const users = await User.find({}).populate('notes', { content: 1, important: 1 });
         res.json(users);
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
@@ -23,7 +25,7 @@ const createUser = async (req, res, next) => {
     try {
         // Hash the password
         const hashedPassword = await hashPassword(password);
-    
+
         // Create a new user instance
         const newUser = new User({
             username,
@@ -59,7 +61,18 @@ const login = async (req, res, next) => {
             return res.status(403).json({ error: "Invalid password." });
         }
 
-        req.session.user = user;
+        const tokenData = {
+            id:user._id,
+            username: user.username
+        }
+        // const token = jwt.sign(tokenData, 'amityadav222137')
+        const token = createToken(tokenData)
+        res.cookie('token', token)
+        if (user) {
+            res.status(200).json({ msg: 'Login Successful', user:user, token: token });
+        } else {
+            res.status(401).json({ msg: 'Login Failed' });
+        }
         res.status(200).json({ message: "Login successful", user });
     } catch (err) {
         // console.error('Error during login:', error);
