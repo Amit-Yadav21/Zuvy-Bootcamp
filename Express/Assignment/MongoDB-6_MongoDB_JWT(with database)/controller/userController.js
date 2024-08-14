@@ -5,13 +5,23 @@ import jwt from 'jsonwebtoken';
 // Get all signup data function
 const findUser = async (req, res) => {
     try {
-        // const users = await User.find({}).populate('notes'); // find all user with notes info 
         const users = await User.find({}).populate('notes', { content: 1, important: 1 });
         res.json(users);
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+
+// get logged in user status
+const getUserStatus = async (req, res) => {
+    const user = req.jwtData;
+    if(user){
+        res.status(200).json({id:user.id, username:user.username})
+    }
+    else{
+        res.status(401).json({ msg: "User not login" });
+    }
+}
 
 // Register function
 const createUser = async (req, res, next) => {
@@ -42,63 +52,43 @@ const createUser = async (req, res, next) => {
 // Login function
 const login = async (req, res, next) => {
     const { username, password } = req.body;
-
     if (!username || !password) {
         return res.status(400).json({ error: "Username, password both are required." });
     }
-
     try {
         // Check if user exists
         let user = await User.findOne({ username });
         if (!user) {
             return res.status(403).json({ error: "User not exist." });
         }
-
         // Compare the provided password with the stored hash
         const isMatch = await comparePasswordHash(password, user.password);
         if (!isMatch) {
-            return res.status(403).json({ error: "Invalid password." });
+            return res.status(403).json({ error: "Invalid password.", });
         }
-
         const tokenData = {
             id:user._id,
             username: user.username
         }
-        const token = jwt.sign(tokenData, 'amityadav222137')
+        
+        const token = jwt.sign(tokenData, 'amityadav222137',{ expiresIn: '1m' })
+    
         if (user) {
             res.status(200).json({ msg: 'Login Successful', user:user, token: token });
         } else {
             res.status(401).json({ msg: 'Login Failed' });
         }
-        res.status(200).json({ message: "Login successful", user });
     } catch (err) {
-        // console.error('Error during login:', error);
         return next(err)
     }
-};
-
-const getUserStatus = async (req, res) => {
-    const user = req.session.user;
-    user ? res.status(200).json(user) : res.status(401).json({ msg: "User not login" });
-}
-
-const logoutUser = (req, res) => {
-    req.session.destroy((err) => {
-        if (err) {
-            return res.status(500).json({ error: 'Failed to logout' });
-        }
-        // This clears the session cookie
-        res.clearCookie('connect.sid');
-        res.status(200).json({ message: 'Logout successful' });
-    });
 };
 
 // Update user profile function
 const updateUserProfile = async (req, res, next) => {
     const { username, password } = req.body;
+    const decodedData = req.jwtData;
 
-    // Check if session user is set
-    if (!req.session.user) {
+    if (!decodedData) {
         return res.status(401).json({ error: 'User not logged in' });
     }
 
@@ -107,11 +97,10 @@ const updateUserProfile = async (req, res, next) => {
     }
 
     try {
-        const user = await User.findById(req.session.user._id);
+        const user = await User.findById(decodedData.id);
         if (!user) {
             return res.status(404).json({ error: 'User not found' });
         }
-
         // Hash the new password
         const hashedPassword = await hashPassword(password);
 
@@ -122,12 +111,9 @@ const updateUserProfile = async (req, res, next) => {
         // Save the updated user information
         const updatedUser = await user.save();
 
-        // Update the session with the new user data
-        req.session.user = updatedUser;
-
         res.status(200).json({ message: 'Profile updated successfully', user: updatedUser });
     } catch (err) {
-        return next(err)
+        return next(err);
     }
 };
 
@@ -136,12 +122,13 @@ const updateUserProfile = async (req, res, next) => {
 const changePassword = async (req, res, next) => {
     const { currentPassword, newPassword } = req.body;
 
-    try {
-        if (!req.session.user) {
-            return res.status(404).json({ error: 'User not logged in.' });
-        }
+    const decodedData = req.jwtData;
+    if (!decodedData) {
+        return res.status(401).json({ error: 'User not logged in.' });
+    }
 
-        const user = await User.findById(req.session.user._id);
+    try {
+        const user = await User.findById(decodedData.id);
         if (!user) {
             return res.status(404).json({ error: 'User not found.' });
         }
@@ -155,8 +142,8 @@ const changePassword = async (req, res, next) => {
         await user.save();
         res.status(200).json({ message: 'Password changed successfully.' });
     } catch (err) {
-        next(err);
+        return next(err);
     }
 };
 
-export { createUser, login, findUser, getUserStatus, logoutUser, updateUserProfile, changePassword };
+export { createUser, login, findUser, getUserStatus, updateUserProfile, changePassword };
