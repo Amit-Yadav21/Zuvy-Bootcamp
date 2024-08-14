@@ -1,0 +1,1 @@
+Replace session-based authentication used in your past assignment with JWT based authentication
