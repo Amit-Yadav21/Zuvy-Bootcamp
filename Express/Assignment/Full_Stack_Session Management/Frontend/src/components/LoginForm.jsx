@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { postLogin } from '../utils/apiHandler.jsx';
@@ -25,13 +26,11 @@ const LoginForm = () => {
         return newErrors;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const formErrors = validateForm();
         if (Object.keys(formErrors).length === 0) {
-            // Handle form submission
-            console.log('Form data submitted:', formData);
-            // Optionally, you can send the data to a server here
+            await loginAPI(); // Trigger login API call on form submit
         } else {
             setErrors(formErrors);
         }
@@ -39,11 +38,10 @@ const LoginForm = () => {
 
     const loginAPI = async () => {
         try {
-            const data = await postLogin('login', formData)
-            console.log('Registration response:', data);
-
-            toast.success('Login successful!'); // Success message
-            setFormData({ username: '', password: '' }); // Clear form data
+            const data = await postLogin('login', formData);
+            console.log('Login response:', data);
+            toast.success('Login successful!');
+            setFormData({ username: '', password: '' });
         } catch (error) {
             console.error('There was an error!', error);
             toast.error('Login failed!'); // Error message
@@ -54,7 +52,7 @@ const LoginForm = () => {
         <form onSubmit={handleSubmit}>
             <h1>Login Form</h1>
             <div>
-                <label htmlFor="username">Username : </label>
+                <label htmlFor="username">Username: </label>
                 <input
                     type="text"
                     id="username"
@@ -65,7 +63,7 @@ const LoginForm = () => {
                 {errors.username && <p>{errors.username}</p>}
             </div>
             <div>
-                <label htmlFor="password">Password : </label>
+                <label htmlFor="password">Password: </label>
                 <input
                     type="password"
                     id="password"
@@ -75,7 +73,7 @@ const LoginForm = () => {
                 />
                 {errors.password && <p>{errors.password}</p>}
             </div>
-            <button type="submit" onClick={loginAPI}>Login</button>
+            <button type="submit">Login</button>
         </form>
     );
 };

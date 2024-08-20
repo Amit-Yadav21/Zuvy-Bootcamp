@@ -68,7 +68,7 @@ const login = async (req, res, next) => {
 
         req.session.user = user;
         if (user) {
-            res.status(200).json({ msg: 'Login Successful', user:user });
+            res.status(200).json({ msg: 'Login Successful', user:user, sessionId: req.sessionID });
         } else {
             res.status(401).json({ msg: 'Login Failed' });
         }

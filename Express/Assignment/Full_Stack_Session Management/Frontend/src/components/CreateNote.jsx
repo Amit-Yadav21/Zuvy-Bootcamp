@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { createNote } from '../utils/apiHandler.jsx';
+import axios from 'axios';
 
 const CreateNote = () => {
     const [formData, setFormData] = useState({
@@ -39,14 +40,24 @@ const CreateNote = () => {
 
     const createNoteAPI = async () => {
         try {
-            const data = await createNote('notes/create', formData)
-            console.log('Registration response:', data);
+            // const getCookie = function (name) {
+            //     var cookies = document.cookie.split(';');
+            //     for (var i = 0; i < cookies.length; ++i) {
+            //         var pair = cookies[i].trim().split('=');
+            //         if (pair[0] == name)
+            //             return pair[1];
+            //     }
+            //     return null;
+            // };
 
-            toast.success('Create Note successful!'); // Success message
+            const data = await axios.post('http://localhost:3000/notes/create', formData);
+            console.log('Create Note response:', data);
+
+            toast.success('Create Note successful!');
             setFormData({ content: '', important: '' }); // Clear form data
         } catch (error) {
             console.error('There was an error!', error);
-            toast.error('Create Note failed!'); // Error message
+            toast.error('cookie not found. Please log in again.');
         }
     };
 

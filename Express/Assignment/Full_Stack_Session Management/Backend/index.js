@@ -19,7 +19,13 @@ mongoose.connect(Mongo_Url)
         console.log('Mongodb did not connect', error);
     });
 
-app.use(cors())
+const corsOptions = {
+    origin: 'http://localhost:5173',
+    optionsSuccessStatus: 200,
+    credentials:true
+}
+
+app.use(cors(corsOptions))
 
 // middleware to use session
 app.use(session({
