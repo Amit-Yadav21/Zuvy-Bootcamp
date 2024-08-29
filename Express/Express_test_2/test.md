@@ -19,6 +19,7 @@ Authorization:
 - Regular users can only view available books and manage their own profiles.
 
 Routes:
+
     User Routes:
     - POST /register: Register a new user.
     - POST /login: Log in a user and create a session.
