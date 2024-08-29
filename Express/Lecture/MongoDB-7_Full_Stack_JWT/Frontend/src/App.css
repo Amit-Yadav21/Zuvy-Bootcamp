@@ -1,0 +1,44 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  grid-template-rows: auto auto; /* Adjust height automatically */
+  gap: 20px; /* Space between elements */
+  background-color: rgb(206, 206, 207);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.left {
+  grid-column: 1; /* Occupies the left side */
+  grid-row: 1; /* First row */
+  border: 2px solid white; 
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.right {
+  grid-column: 2; /* Occupies the right side */
+  grid-row: 1; /* First row */
+  border: 2px solid white; 
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.bottom {
+  grid-column: 1 / span 2; /* Spans across both columns */
+  grid-row: 2; /* Second row */
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button{
+  margin-top: 10px;
+}
