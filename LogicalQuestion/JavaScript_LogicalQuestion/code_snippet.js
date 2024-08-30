@@ -7,7 +7,7 @@
 //       a = 6;
 //     })()
 //    })(21);
-// a) 6     b) NaN      c) None of above    d)) 21  
+// a) 6     b) NaN      c) None of above    d) 21 ✅ 
 // -------------------------------------------------------
 
 // var x = 5, y = 1;
@@ -39,33 +39,33 @@
 //     setTimeout(()=> console.log(3),0);
 //     console.log(4);
 //    })();
-// a)) 2 4 3 1   b) 1 2 3 4  c) 2 3 4 1  d ) 4 3 2 1
+// a) 2 4 3 1 ✅  b) 1 2 3 4  c) 2 3 4 1  d ) 4 3 2 1
 // ----------------------------------------------------------
 //  var x=12;
 //  var y=8;
 //  var res=eval("x+y");
 //  document.write(res);
 
-// a)) 20        b) x+y      c) 128      d) None of above
+// a) 20 ✅       b) x+y      c) 128      d) None of above
 // ----------------------------------------------------------------  
 // function Func()  
 // {  
 // document.getElementById("example").innerHTML=Math.sqrt(81);  
 // }  
 
-// a)) 9     b) 81       c) 0        d) Error
+// a) 9 ✅    b) 81       c) 0        d) Error
 // --------------------------------------------------------
 // When an operator’s value is NULL, the typeof returned by the unary operator is:
-// a) Boolean       b) Undefined        c)) Object       d) Integer
+// a) Boolean       b) Undefined        c) Object ✅      d) Integer
 
 // a= null;     // object
 // console.log(typeof(a));
 
 // Which function is used to serialize an object into a JSON string in Javascript?
-// a)) stringify()     b) parse()        c) convert()
+// a) stringify() ✅    b) parse()        c) convert()
 
 // Which of the following are closures in Javascript?
-// a) Variable      b) Function     c) Object       d)) All of the above
+// a) Variable      b) Function     c) Object       d) All of the above ✅
 
 //------------------------------------------------------
 // var a = 1;  
@@ -79,12 +79,12 @@
 // loop will run 3 times, before meeting the exit condition. First value of b will be 2 * 2 = 4, followed by 4 + 3 * 2 = 10, and then value of 10 + 4 * 2 = 18.
 
 // console.log(NaN === NaN);
-// a) true      b)) false        c) undefined        d)  Error
+// a) true      b) false ✅       c) undefined        d)  Error
 
 // console.log(typeof NaN === "number");  // true
 
 // console.log(typeof(NaN));
-// a) Object    b)) Number       c) String       D) none of above
+// a) Object    b) Number ✅      c) String       D) none of above
 
 // let sum = 0; 
 // const a = [1, 2, 3];
@@ -93,170 +93,186 @@
 // function getSum(ele) {
 //    sum += ele;
 // }
-// a)) 6     b) 1        c) 2        d) None of above
+// a) 6 ✅    b) 1        c) 2        d) None of above
 
 // a = [1, 2, 3, 4, 5];
 // console.log(a.slice(2, 4));
-// a)) 3,4      b) 2, 3      c) 3,4,5    d) 2,3,4
+// a) 3,4 ✅     b) 2, 3      c) 3,4,5    d) 2,3,4
 
 // console.log(+true);           // 1
 // console.log(+false);           // 0
 // console.log(typeof(+true));   // number 
+// console.log(typeof(+false));   // number 
 
 // -----------------------------------------------------
 // console.log(parseInt("123Hello"));
 // console.log(parseInt("Hello123"));
-// a)) 123 NaN       b) 123 123      c) 123Hello Hello123    d) NaN NaN
+// a) 123 NaN ✅      b) 123 123      c) 123Hello Hello123    d) NaN NaN
 
 // ------------------------------------------------
-const example = ({ a, b, c }) => {
-    // console.log(a, b, c);
-   };
-   example(0, 1, 2);
-// a)) Undefined Undefined Undefined    b) 0 1 2    c) 0 Undefined Undefined
+// const example = ( a, b, c ) => {
+//     console.log(a, b, c);
+// };
+// example(0, 1, 2);
+// a) Undefined Undefined Undefined ✅   b) 0 1 2    c) 0 Undefined Undefined
 
 // -------------------------------------------------------
 // const obj1 = {};
 // const obj2 = {};
+// console.log(obj1 == obj2);
 // console.log(obj1 === obj2);
-// a) true      b)) false       c) Undefined 
+// a) true      b) false ✅      c) Undefined 
 
 // const obj1 = [];
 // const obj2 = [];
+// console.log(obj1 == obj2);
 // console.log(obj1 === obj2);
-// a) true      b)) false       c) Undefined 
+// a) true      b) false ✅      c) Undefined 
 
 // ----------------------------------------------------
 // function test(...args) {
 //     console.log(typeof args);
 // }
 // test(12);
-// a) NaN   b) Number   c)) Object   d) Array
+// a) NaN   b) Number   c) Object ✅   d) Array
 
 // ------------------------------------------------------
 // const obj1 = {first: 20, second: 30, first: 50};
 // console.log(obj1);
-// a) {first: 20, second: 30}   b)) {first: 50, second: 30}     c) {first: 20, second: 30, first: 50}
+// a) {first: 20, second: 30}   b) {first: 50, second: 30} ✅    c) {first: 20, second: 30, first: 50}
 
 // -------------------------------------------------------- 
 // for (var i=0; i<3; i++){
 //     setTimeout(() =>console.log(i));
-// }    // 3 3 3
+// }    // 3 3 3 ✅
 
 // for (let i=0; i<3; i++){
 //     setTimeout(() =>console.log(i));
-// }    // 0 1 2
+// }    // 0 1 2 ✅
 
 // ----------------------------------------------------
 // var a = [, , ,].length
-// console.log(a);     // 3
+// console.log(a);     // 3 ✅
 
 // var a = true + false
-// console.log(a);     // 1
+// console.log(a);     // 1 ✅
 
 // var a = false+true
-// console.log(a);     // 1
+// console.log(a);     // 1 ✅
 
 // var a = (NaN === undefined)
-// console.log(a);     // false
+// console.log(a);     // false ✅
 
 // var a = (true == "true") 
-// console.log(a);     // false
+// console.log(a);     // false ✅
 
 // var a = Array.from(Array(3).keys())
-// console.log(a);     // [ 0, 1, 2 ]
+// console.log(a);     // [ 0, 1, 2 ] ✅
 
 // var a=!!""
-// console.log(a);     // false
+// console.log(a);     // false ✅
 
 // var a= [1, 2, 3] + [4, 5, 6]
-// console.log(a);     // 1,2,34,5,6
+// console.log(a);     // 1,2,34,5,6 ✅
 
 // var a= 10 , 2
-// console.log(a); // error
+// console.log(a); // error ✅
 
 // var a =0.2 + 0.1 === 0.3
-// console.log(a); // false
+// console.log(a); //  ✅
 
 
 // let number =5
-// console.log(number++); // 5
-// console.log(--number); // 4
-// console.log(++number);   // 6
+// console.log(number++);  // 5 ✅
+// console.log(number+);   // SyntaxError ✅
+// console.log(--number);  // 5 ✅
+// console.log(-number);   // -5✅
+// console.log(++number);  // 6 ✅
+// console.log(+number);   // 6 ✅
+// console.log(number--);  // 6 ✅
+// console.log(number-);   // SyntaxError: Unexpected token ')'✅
 
 // let sum = eval('10*10+5')
-// console.log(sum);    // 105
+// console.log(sum);    // 105 ✅
 
 // let a= {1:'a', 2:'b', 3:'c'}
-// console.log(a.hasOwnProperty('1'));  // true
-// console.log(a.hasOwnProperty(1));    // true
-// console.log(a.hasOwnProperty('hello'));  // true
+// console.log(a.hasOwnProperty('1'));      // true ✅
+// console.log(a.hasOwnProperty(1));        // true ✅
+// console.log(a.hasOwnProperty('hello'));  // false ✅
+// The method hasOwnProperty is used to check if an object has a specific property as its own (not inherited) property. This method returns true if the object has the specified property, and false if it does not.
+// a.hasOwnProperty('1') and a.hasOwnProperty(1): In JavaScript, object property names (keys) are always strings. Even though you wrote the key as 1 (a number), JavaScript automatically converts it to a string, '1'. So, both '1' and 1 refer to the same property, and that's why both return true.
+// a.hasOwnProperty('hello'): This checks if the object a has a property named 'hello'. Since 'hello' is not a property in the object a, it returns false.
 
 // for(let i=1; i<5; i++){
 //     if(i===3) continue;
-//     console.log(i);          // 1 2 4
+//     console.log(i);          // 1 2 4 ✅
 // }
 
-// console.log(typeof 1);           // number
-// console.log(typeof typeof 1);    // string
+// for(let i=1; i<5; i++){
+//     if(i===3) break;
+//     console.log(i);          // 1 2 ✅
+// }
 
-// console.log(!!null);     // flase
-// console.log(!!'');       // flase
-// console.log(!!1);        // true
+// console.log(typeof 1);           // number ✅
+// console.log(typeof typeof 1);    // string ✅
+
+// console.log(!!null);     // flase ✅
+// console.log(!!'');       // flase ✅
+// console.log(!!1);        // true  ✅
 
 // let a = 7 + null;
-// console.log(a); // 7
+// console.log(a); // 7 ✅
 // let b = 7 * null;
-// console.log(b); // 0
+// console.log(b); // 0 ✅
 // let c = 8 + undefined;
-// console.log(c); //NaN
+// console.log(c); //NaN ✅
 // let d = 8 * undefined;
-// console.log(d); //NaN
+// console.log(d); //NaN ✅
 
 // let a_a =[1,2,3,4]
 // let b_b = a_a
 // b_b[0] = 0
 // b_b = []
-// console.log(a_a); // [ 0, 2, 3, 4 ]
+// console.log(a_a); // [ 0, 2, 3, 4 ] ✅
 
 // Upon encountering empty statements, what does the Javascript Interpreter do?
 // a) None of the above
-// b) Ignores the statements ( this is the right ans )
+// b) Ignores the statements ✅
 // c) Throws an error
 // d) Gives a warning
 
 // Which of the following methods can be used to display data in some form using Javascript?
 // a) console.log()
 // b) document.write()
-// c) All of the above ( this is the right ans )
+// c) All of the above ✅
 // d) window.alert()
 
 // How can a datatype be declared to be a constant type?
 // a) let
 // b) var
-// c) const ( this is the right ans )
+// c) const ✅
 // d) constant
 
 // What will be the output of the following gode snippet? <script type="text/javascript"> a = 5+ "9"; document.write(a): </script>
-// a) 59 ( this is the right ans )
+// a) 59 ✅
 // b) 14
 // c) Runtime Error
 // c) compilation Error
 
 // What will be the output of the following code snippet? <script type="text/javascript language="javascript"> var a= "Scaler": var result = a.substring(2, 4); document.write(result): </script>
-// a) al (this is the right ans)
+// a) al ✅
 // b) ale
 // c) caler
 // d) cal
 
 // What will be the output of the following code snippet? <script type="text/javascript language="javascript"> var a= "Scaler": var result = a.substring(2, 4); document.write(result): var x=12; var y=8; var res=eval("x+y");document.write(res); </script>
-// a) al20 (this is the right ans)
+// a) al20 ✅
 // b) 128
 // c) x+y 
 // d) None of above
 
 // What will be the output of the following code snippet? <script type="text/javascript language="javascript"> var x=12; var y=8; var res=eval("x+y");document.write(res); </script>
-// a) 20 (this is the right ans)
+// a) 20 ✅
 // b) 128
 // c) x+y 
 // d) None of above
