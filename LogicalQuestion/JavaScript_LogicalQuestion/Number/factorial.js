@@ -1,23 +1,26 @@
-// const factorial = 1
-// num = 4
-// for (let i=num; i>=1; i--){
-//     factorial *=i
-// }
+const factorial = 1
+num = 4
+for (let i=num; i>=1; i--){
+    factorial *=i
+}
 // // console.log(factorial);
 
-// var n = 4
-// var ans = 1;
-// for (var i = 2; i <= n; i++)
-//     ans = ans * i;
-// // console.log(ans);
+let n = 5;
+for (let i = 1; i <= n; i++) {
+    let ans = 1;
+    for (let j = 1; j <= i; j++) {
+        ans *= j;
+    }
+    console.log(i + " Factorial: " + ans);
+}
 
-// function Factorial(n) {
-//     var ans=1;
-//     for (var i = 2; i <= n; i++)
-//         ans = ans * i;
-//     return ans;
-// }
-// // console.log(Factorial(5));
+function Factorial(n) {
+    var ans=1;
+    for (var i = 2; i <= n; i++)
+        ans = ans * i;
+    return ans;
+}
+// console.log(Factorial(5));
 
 
 // Sample array
@@ -35,9 +38,9 @@
 // console.log(indices);
 // Output: [0, 1, 2, 3, 4]
 
-const numbers = [1, 2, 3, 4, 5];
-numbers.map((value, index) => {
-  const result = value * 3;
-  console.log(`Index: ${index}, Multiplied Value: ${result}`);
-  return result; // Return the multiplied value if needed
-});
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.map((value, index) => {
+//   const result = value * 3;
+//   console.log(`Index: ${index}, Multiplied Value: ${result}`);
+//   return result; // Return the multiplied value if needed
+// });
