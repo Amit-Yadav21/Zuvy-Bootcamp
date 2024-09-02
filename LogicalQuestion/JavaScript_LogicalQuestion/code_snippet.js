@@ -1,57 +1,48 @@
 // https://www.interviewbit.com/javascript-mcq/
 // https://www.geeksforgeeks.org/javascript-quiz-set-3/
 
-// (function(a){
-//     return (function(){
-//       console.log(a);
-//       a = 6;
-//     })()
-//    })(21);
+(function (a) {
+    return (function () {
+        console.log(a);
+        a = 6;
+    })()
+})(21);
 // a) 6     b) NaN      c) None of above    d) 21 ✅ 
 // -------------------------------------------------------
 
-// var x = 5, y = 1;
-// var obj = { x: 10 };
-// with (obj) {
-//     alert(y);
-// }
-// Answer :- 
-// A. 1 ✅ 
-// B. Error
-// C.10
-// D.5
+var x = 5, y = 1;
+var obj = { x: 10 };
+with (obj) {
+    alert(y);
+}
+// A. 1✅   B. Error    C.10    D.5
 
 // ------------------------------------------------------
 
 // Evaluate the following Java expression, if x=3, y=5, and
-// z=10:
-// ++z + y - y + z + x++
-// Answer :- 
-// A. 24
-// B. 23
-// C.20
-// D.25 ✅ 
+z = 10;
+++z + y - y + z + x++
+// A. 24    B. 23   C.20    D.25 ✅ 
 
 // --------------------------------------------------------
-// (function(){
-//     setTimeout(()=> console.log(1),2000);
-//     console.log(2);
-//     setTimeout(()=> console.log(3),0);
-//     console.log(4);
-//    })();
+(function () {
+    setTimeout(() => console.log(1), 2000);
+    console.log(2);
+    setTimeout(() => console.log(3), 0);
+    console.log(4);
+})();
 // a) 2 4 3 1 ✅  b) 1 2 3 4  c) 2 3 4 1  d ) 4 3 2 1
 // ----------------------------------------------------------
-//  var x=12;
-//  var y=8;
-//  var res=eval("x+y");
-//  document.write(res);
+var x = 12;
+var y = 8;
+var res = eval("x+y");
+document.write(res);
 
 // a) 20 ✅       b) x+y      c) 128      d) None of above
 // ----------------------------------------------------------------  
-// function Func()  
-// {  
-// document.getElementById("example").innerHTML=Math.sqrt(81);  
-// }  
+function Func() {
+    document.getElementById("example").innerHTML = Math.sqrt(81);
+}
 
 // a) 9 ✅    b) 81       c) 0        d) Error
 // --------------------------------------------------------
@@ -68,14 +59,13 @@
 // a) Variable      b) Function     c) Object       d) All of the above ✅
 
 //------------------------------------------------------
-// var a = 1;  
-// var b = 0;  
-// while (a <= 3)  
-// {  
-//    a++;  
-//    b += a * 2;  
-//    console.log(b);  // 4 10 18
-// }
+var a = 1;
+var b = 0;
+while (a <= 3) {
+    a++;
+    b += a * 2;
+    console.log(b);  // 4 10 18
+}
 // loop will run 3 times, before meeting the exit condition. First value of b will be 2 * 2 = 4, followed by 4 + 3 * 2 = 10, and then value of 10 + 4 * 2 = 18.
 
 // console.log(NaN === NaN);
@@ -86,16 +76,16 @@
 // console.log(typeof(NaN));
 // a) Object    b) Number ✅      c) String       D) none of above
 
-// let sum = 0; 
-// const a = [1, 2, 3];
-// a.forEach(getSum);
-// console.log(sum);
-// function getSum(ele) {
-//    sum += ele;
-// }
+let sum = 0;
+const a = [1, 2, 3];
+a.forEach(getSum);
+console.log(sum);
+function getSum(ele) {
+    sum += ele;
+}
 // a) 6 ✅    b) 1        c) 2        d) None of above
 
-// a = [1, 2, 3, 4, 5];
+a = [1, 2, 3, 4, 5];
 // console.log(a.slice(2, 4));
 // a) 3,4 ✅     b) 2, 3      c) 3,4,5    d) 2,3,4
 
@@ -110,10 +100,10 @@
 // a) 123 NaN ✅      b) 123 123      c) 123Hello Hello123    d) NaN NaN
 
 // ------------------------------------------------
-// const example = ( a, b, c ) => {
-//     console.log(a, b, c);
-// };
-// example(0, 1, 2);
+const example = (a, b, c) => {
+    console.log(a, b, c);
+};
+example(0, 1, 2);
 // a) Undefined Undefined Undefined ✅   b) 0 1 2    c) 0 Undefined Undefined
 
 // -------------------------------------------------------
@@ -130,59 +120,59 @@
 // a) true      b) false ✅      c) Undefined 
 
 // ----------------------------------------------------
-// function test(...args) {
-//     console.log(typeof args);
-// }
-// test(12);
+function test(...args) {
+    console.log(typeof args);
+}
+test(12);
 // a) NaN   b) Number   c) Object ✅   d) Array
 
 // ------------------------------------------------------
-// const obj1 = {first: 20, second: 30, first: 50};
+const obj1 = { first: 20, second: 30, first: 50 };
 // console.log(obj1);
 // a) {first: 20, second: 30}   b) {first: 50, second: 30} ✅    c) {first: 20, second: 30, first: 50}
 
 // -------------------------------------------------------- 
-// for (var i=0; i<3; i++){
-//     setTimeout(() =>console.log(i));
-// }    // 3 3 3 ✅
+for (var i = 0; i < 3; i++) {
+    setTimeout(() => console.log(i));
+}    // 3 3 3 ✅
 
-// for (let i=0; i<3; i++){
-//     setTimeout(() =>console.log(i));
-// }    // 0 1 2 ✅
+for (let i = 0; i < 3; i++) {
+    setTimeout(() => console.log(i));
+}    // 0 1 2 ✅
 
 // ----------------------------------------------------
-// var a = [, , ,].length
+var a = [, , ,].length
 // console.log(a);     // 3 ✅
 
-// var a = true + false
+var a = true + false
 // console.log(a);     // 1 ✅
 
-// var a = false+true
+var a = false + true
 // console.log(a);     // 1 ✅
 
-// var a = (NaN === undefined)
+var a = (NaN === undefined)
 // console.log(a);     // false ✅
 
-// var a = (true == "true") 
+var a = (true == "true")
 // console.log(a);     // false ✅
 
-// var a = Array.from(Array(3).keys())
+var a = Array.from(Array(3).keys())
 // console.log(a);     // [ 0, 1, 2 ] ✅
 
-// var a=!!""
+var a = !!""
 // console.log(a);     // false ✅
 
-// var a= [1, 2, 3] + [4, 5, 6]
+var a = [1, 2, 3] + [4, 5, 6]
 // console.log(a);     // 1,2,34,5,6 ✅
 
 // var a= 10 , 2
 // console.log(a); // error ✅
 
-// var a =0.2 + 0.1 === 0.3
+var a = 0.2 + 0.1 === 0.3
 // console.log(a); //  ✅
 
 
-// let number =5
+let number = 5
 // console.log(number++);  // 5 ✅
 // console.log(number+);   // SyntaxError ✅
 // console.log(--number);  // 5 ✅
@@ -192,10 +182,10 @@
 // console.log(number--);  // 6 ✅
 // console.log(number-);   // SyntaxError: Unexpected token ')'✅
 
-// let sum = eval('10*10+5')
-// console.log(sum);    // 105 ✅
+let sumofEvel = eval('10*10+5')
+// console.log(sumofEvel);    // 105 ✅
 
-// let a= {1:'a', 2:'b', 3:'c'}
+let a = { 1: 'a', 2: 'b', 3: 'c' }
 // console.log(a.hasOwnProperty('1'));      // true ✅
 // console.log(a.hasOwnProperty(1));        // true ✅
 // console.log(a.hasOwnProperty('hello'));  // false ✅
@@ -203,15 +193,15 @@
 // a.hasOwnProperty('1') and a.hasOwnProperty(1): In JavaScript, object property names (keys) are always strings. Even though you wrote the key as 1 (a number), JavaScript automatically converts it to a string, '1'. So, both '1' and 1 refer to the same property, and that's why both return true.
 // a.hasOwnProperty('hello'): This checks if the object a has a property named 'hello'. Since 'hello' is not a property in the object a, it returns false.
 
-// for(let i=1; i<5; i++){
-//     if(i===3) continue;
-//     console.log(i);          // 1 2 4 ✅
-// }
+for (let i = 1; i < 5; i++) {
+    if (i === 3) continue;
+    console.log(i);          // 1 2 4 ✅
+}
 
-// for(let i=1; i<5; i++){
-//     if(i===3) break;
-//     console.log(i);          // 1 2 ✅
-// }
+for (let i = 1; i < 5; i++) {
+    if (i === 3) break;
+    console.log(i);          // 1 2 ✅
+}
 
 // console.log(typeof 1);           // number ✅
 // console.log(typeof typeof 1);    // string ✅
@@ -220,19 +210,19 @@
 // console.log(!!'');       // flase ✅
 // console.log(!!1);        // true  ✅
 
-// let a = 7 + null;
+let a = 7 + null;
 // console.log(a); // 7 ✅
-// let b = 7 * null;
+let b = 7 * null;
 // console.log(b); // 0 ✅
-// let c = 8 + undefined;
+let c = 8 + undefined;
 // console.log(c); //NaN ✅
-// let d = 8 * undefined;
+let d = 8 * undefined;
 // console.log(d); //NaN ✅
 
-// let a_a =[1,2,3,4]
-// let b_b = a_a
-// b_b[0] = 0
-// b_b = []
+let a_a = [1, 2, 3, 4]
+let b_b = a_a
+b_b[0] = 0
+b_b = []
 // console.log(a_a); // [ 0, 2, 3, 4 ] ✅
 
 // Upon encountering empty statements, what does the Javascript Interpreter do?
@@ -324,33 +314,33 @@
 
 // ----------------------------------------------------
 
-// var hero = {
-//     _name: 'John Doe',
-//     getSecretIdentity: function (){
-//         return this._name;
-//     }
-// };
-// var stoleSecretIdentity = hero.getSecretIdentity;
+var hero = {
+    _name: 'John Doe',
+    getSecretIdentity: function () {
+        return this._name;
+    }
+};
+var stoleSecretIdentity = hero.getSecretIdentity;
 // console.log(stoleSecretIdentity()); // undefiend 
 // console.log(hero.getSecretIdentity());  // john doe
 // The first console.log prints undefined because we are extracting the method from the hero object, so stoleSecretIdentity() is being invoked in the global context (i.e., the window object) where the _name property does not exist.
 
-// var x = 21;
-// var girl = function () {
-//     console.log(x);
-//     var x = 20;
-// };
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
 // girl ();  // undefine Neither 21, nor 20, the result is undefined . It’s because JavaScript initialization is not hoisted.
 
-// for (let i = 0; i < 5; i++) {
-//     setTimeout(function () { console.log(i); }, i * 1000);
-// } // It will print 0 1 2 3 4, because we use let instead of var here. The variable i is only seen in the for loop’s block scope.
+for (let i = 0; i < 5; i++) {
+    // setTimeout(function () { console.log(i); }, i * 1000);
+} // It will print 0 1 2 3 4, because we use let instead of var here. The variable i is only seen in the for loop’s block scope.
 
 // console.log(1 < 2 < 3); // The first statement returns true which is as expected.
 // console.log(3 > 2 > 1); // The second returns false because of how the engine works regarding operator associativity for < and >. It compares left to right, so 3 > 2 > 1 JavaScript translates to true > 1. true has value 1, so it then compares 1 > 1, which is false.
 
-// var a = [1, 2, 3];
-// a[10] = 99;
+var a = [1, 2, 3];
+a[10] = 99;
 // console.log(a[6]); // It will not crash. The JavaScript engine will make array slots 3 through 9 be “empty slots.” Here, a[6] will output undefined
 
 // typeof undefined == typeof NULL? //The expression will be evaluated to true, since NULL will be treated as any other undefined variable.
@@ -360,68 +350,68 @@
 // console.log(typeof typeof '1'); // string 
 
 // How do you clone an object?
-// var obj = {a: 1 ,b: 2}
-// var objclone = Object.assign({},obj);
+var obj = { a: 1, b: 2 }
+var objclone = Object.assign({}, obj);
 // Now the value of objclone is {a: 1 ,b: 2} but points to a different object than obj.
 
-// let x = true
-// let count =1;
-// setInterval(() => {
-//     if (x) {
-//         console.log(count++)
-//     }
-// }, 200) // 1,2,3 ......
+let x = true
+let count = 1;
+setInterval(() => {
+    if (x) {
+        console.log(count++)
+    }
+}, 200) // 1,2,3 ......
 
-// let x = true;
-// let count = 1;
-// const intervalId = setInterval(() => {
-//     if (x) {
-//         console.log(count++);
-//         if (count > 100) {
-//             clearInterval(intervalId); // Clear the interval when count reaches 100
-//         }
-//     }
-// }, 1000);
+let x = true;
+let counts = 1;
+const intervalId = setInterval(() => {
+    if (x) {
+        console.log(counts++);
+        if (counts > 100) {
+            clearInterval(intervalId); // Clear the interval when count reaches 100
+        }
+    }
+}, 1000);
 
-// let a = 0;
-// let b = false;
+let a = 0;
+let b = false;
 // console.log((a == b));
 // console.log((a === b));
 
-// let x = 6+3 +'3';
+let x = 6 + 3 + '3';
 // console.log(x);
 
-// function runFunc(){
-//     console.log("1" + 1);
-//     console.log("A" - 1);
-//     console.log(2 + "-2" + "2");
-//     console.log("Hello" - "World" + 78);
-//     console.log("Hello"+ "78");
-//   }
-//   runFunc();    // 11 NaN 2-22 NaN Hello78
+function runFunc() {
+    console.log("1" + 1);
+    console.log("A" - 1);
+    console.log(2 + "-2" + "2");
+    console.log("Hello" - "World" + 78);
+    console.log("Hello" + "78");
+}
+runFunc();    // 11 NaN 2-22 NaN Hello78
 
-// let x= {}, y = {name:"Ronny"},z = {name:"John"};
-// x[y] = {name:"Vivek"};
-// x[z] = {name:"Akki"};
+let x = {}, y = { name: "Ronny" }, z = { name: "John" };
+x[y] = { name: "Vivek" };
+x[z] = { name: "Akki" };
 // console.log(x[y]);
 
-// function func1(){
-//     setTimeout(()=>{
-//       console.log(x);
-//       console.log(y);
-//     },3000);
-  
-//     var x = 2;
-//     let y = 12;
-//   }
-//   func1();   // output 2 12
+function func1() {
+    setTimeout(() => {
+        console.log(x);
+        console.log(y);
+    }, 3000);
 
-// function func2(){
-//     for(var i = 0; i < 3; i++){
-//       setTimeout(()=> console.log(i),2000);
-//   }
-//   }
-//   func2();   // output 3 3 3
+    var x = 2;
+    let y = 12;
+}
+func1();   // output 2 12
+
+function func2() {
+    for (var i = 0; i < 3; i++) {
+        setTimeout(() => console.log(i), 2000);
+    }
+}
+func2();   // output 3 3 3
 
 // console.log(1 == '1'); 		// true
 // console.log(1 == [1]); 		// true
@@ -435,84 +425,84 @@
 // console.log(null == undefined); // true
 // console.log(null === undefined); // false
 
-// var a=3;
-// var b=a++;
+var a = 3;
+var b = a++;
 // console.log('b........................',b);
 // var c=++a;
-// console.log('c...........',c);  // 
+// console.log('c...........',c);  //
 // console.log(a,b,c) //5 3 5
 
-// let x = "hello, world!";
-// let y = "string";
+let x = "hello, world!";
+let y = "string";
 // console.log(y === typeof(x)); // true
 
-// let x = [3,3];
-// let y = x[0] + x[1];
+let x = [3, 3];
+let y = x[0] + x[1];
 // console.log(y); // 6
 
-// const num = [1,2,3];
-// num.push(4);
-// num.pop();
-// num.push(4);
+const num = [1, 2, 3];
+num.push(4);
+num.pop();
+num.push(4);
 // console.log(num.length); // 4
 
-// let x = 'lerem';
-// let y = x[3].toUpperCase();
+let x = 'lerem';
+let y = x[3].toUpperCase();
 // console.log(y); // E
 
-// const print = console.log;
+const print = console.log;
 // print('amit yadav'); // amit yadav
 
-// let count =5;
-// count += ++count;
-// console.log(count); // 11
+let count3 = 5;
+count3 += ++count3;
+// console.log(count3); // 11
 
-// var a = "Scaler";
-// var result = a.substring(2, 4);
+var a = "Scaler";
+var result = a.substring(2, 4);
 // console.log(result); // al
 
-// (function(){
-//     setTimeout(()=> console.log(1),2000);
-//     console.log(2);
-//     setTimeout(()=> console.log(3),0);
-//     console.log(4);
-//    })(); // 2 4 3 1
+(function () {
+    setTimeout(() => console.log(1), 2000);
+    console.log(2);
+    setTimeout(() => console.log(3), 0);
+    console.log(4);
+})(); // 2 4 3 1
 
-// console.log(0.1 + 0.2 === 0.3); // false 
+// console.log(0.1 + 0.2 === 0.3); // false
 // console.log(typeof NaN === "number"); // true
 
-// let x = "abc";
-// let y = [...x]
+let x = "abc";
+let y = [...x]
 // console.log(y);      // [ 'a', 'b', 'c' ]
 
-// let a = 10;
-// if (a === 10){
-//     let a =20;
-//     console.log('inner output :',a);    // inner output : 20
-// }
+let a = 10;
+if (a === 10){
+    let a =20;
+    console.log('inner output :',a);    // inner output : 20
+}
 // console.log('outer output :',a);        // outer output : 10
 
-// var a = 10;
-// if (a === 10){
-//     var a =20;
-//     console.log('inner output :',a);    // inner output : 20
-// }
+var a = 10;
+if (a === 10){
+    var a =20;
+    console.log('inner output :',a);    // inner output : 20
+}
 // console.log('outer output :',a);     // outer output : 20
 
-// let x = [1,2,3]
-// x.push(...[4,5])
+let x = [1,2,3]
+x.push(...[4,5])
 // console.log(x);      // [ 1, 2, 3, 4, 5 ]
 
-// let arr = [1, 2, 3, 3, 4, 5, 5, 6];
-// let uniqueArr = Array.from(new Set(arr));
+let arr = [1, 2, 3, 3, 4, 5, 5, 6];
+let uniqueArr = Array.from(new Set(arr));
 // console.log(uniqueArr);
 
-// let x = true
+let x = true
 // console.log(!x);    // false
 // console.log(!!x); // true
 
-// let x = (a,b) => a%b;
-// let y = x(9,3);
+let x = (a,b) => a%b;
+let y = x(9,3);
 // console.log(y);     // 0
 
 // console.log(user); //undefined
@@ -521,13 +511,13 @@
 // console.log(user); //undefined
 // var user =10; // Value is undefined, type-++- is undefined
 
-// var user = null;
+var user = null;
 // console.log(typeof user); //object
 
-// let a = new Set([1,2,3])
+let a = new Set([1,2,3])
 // console.log(a.size);
 
-// let x=0
+let x=0
 // console.log(x++) // 0
 // console.log(++x)  // 0 2
 
@@ -559,8 +549,8 @@
 // foo();   //  ReferenceError: Cannot access 'x' before initialization
 
 // What will be the output of the following code? console.log(3 === 3 === 3);
-// a) Error    b) true     c)) false       d) undifine 
-// Note :- 
+// a) Error    b) true     c)) false       d) undifine
+// Note :-
 // 3 === 3 is evaluated first. This comparison 3 === 3 is true because 3 is strictly equal to itself.
 // Then, the expression becomes true === 3.
 // However, JavaScript's comparison operators follow left-to-right associativity and evaluate operands one at a time.
