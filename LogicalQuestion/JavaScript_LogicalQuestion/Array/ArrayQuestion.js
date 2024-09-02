@@ -116,43 +116,6 @@ let res = a.map((ele, index, array) => {
 })
 // console.log(res);   // output :-  [ 'd', 'c', 'b', 'a' ]
 
-
-// ============================================== array convert into object
-//  array me jo value hai vah object ka value aur array ka index key ke formate ho ?
-
-const array_ = [1, 2, 3];
-const obj = { ...array_ };
-// console.log(obj);    // { 0: 1, 1: 2, 2: 3 }
-
-
-const arrays = [1, 2, 3];
-let n = {}
-for (i in arrays) {
-    n[i] = arrays[i]
-}
-// console.log(n);
-
-// =================================== neated array data find output single array  ?
-const nest_arr = [1, 2, [3, 4, [5, 6, [1, 2]], 4, 3], 2, 4]
-const resu = nest_arr.flat(Infinity)
-a = resu.sort()
-// console.log(a);         // output :- [1, 1, 2, 2, 2, 3, 3, 4, 4, 4, 5, 6 ]
-
-// ============================= find string/boolean/number in array ?
-
-const array4 = [["jay", [90, 85, 95]], ["amit", [70, 60, 50, false]], ["aniket", [20, 50, 40, true]]];
-const resul = array4.flat(Infinity).filter((element) => typeof element === "number")  // string/boolean/number
-// console.log(resul);   // [ 90, 85, 95, 70, 60,50, 20, 50, 40 ] 
-
-// ------------------------------ find float value array ?
-const array5 = ["amit", "kumar", "yadav", 1, 3, 5, 6, true, false, 1.8, 3.5, 0.4];
-const floatArr = array5.filter((value) => typeof value === "number" && Number.isFinite(value) && !Number.isInteger(value));
-// console.log("Float values in array: ", floatArr);
-// ------------------------------------------------------
-a = [2, 4.5, 7, 6, 5, 0.4, "dygf", 6, [7, 6, 12, "dafag", 0.6, "sg", 7.6,], 62, "fsgw", 6, 5.6, "wgyw", 5]
-let ARR = a.flat().sort((a, b) => a - b).filter(ele => typeof ele === 'number');
-// console.log(ARR)
-
 // ==============================================================  spread operator ?
 let z = [1, 2, 3, 4, 5]
 // console.log(...z); // 1 2 3 4 5
@@ -228,64 +191,10 @@ const interval = setInterval(() => {
     if (coun++ === 10) clearInterval(interval);
 }, 1000);
 
+// --------------------------------------------
 for (var i = 0; i < 10; i++) {
     //   setTimeout(() => console.log(a[i]), 1000);
 }       // 10 time undefine
-
-// ======================================================= How to convert an Object {} into an Array [] in JavaScript?
-
-let obj_ = { id: "1", name: "Test User", age: "25", profession: "Developer" };
-
-// Method 1: - Object.keys()
-// console.log(Object.keys(obj_)); 
-
-// Method 2: - Object.values()
-// console.log(Object.values(obj_)); 
-
-// Method 3: - Object.entries()
-// console.log(Object.entries(obj));
-
-
-// ======================================== count dublicate values from array ?
-let arr_1 = [1, 2, 4, 5, 2, 8, 5, 9, 0, -2,]
-let obj_1 = {};
-for (let i of arr_1) {
-    if (!obj_1[i]) {
-        obj_1[i] = 0
-    }
-    obj_1[i] += 1
-}
-// console.log(obj_1);
-
-// ------------------------------------ OR ?
-Str = ['a', 'b', 'c', 'd', 'd', 'e', 'a', 'h', 'e', 'a'];
-var obje = {}
-for (var i = 0; i < Str.length; i++) {
-    if (obje[Str[i]] != null) {
-        obje[Str[i]] += 1;
-    } else {
-        obje[Str[i]] = 1;
-    }
-}
-// console.log(obj);
-
-const allStudentsAge = [
-    [1, 19],
-    [3, 4],
-    [5, 19],
-    [7, 8, 19],
-    [10, 11, 12, 13, 14, 15],
-    [19, 22, 18, 19, 12, 18, 19, 12, 24]
-];
-let target = 19;
-let counter = 0;
-for (studentAge of allStudentsAge.flat()) {
-    if (studentAge == target) {
-        counter++;
-    }
-};
-
-// console.log(counter); // 6
 
 // ---------------------------------------------------- ?
 
@@ -307,17 +216,6 @@ for (i = 0; i < fLen; i++) {
     text_ += fruits[i] + "\n";
 }
 // console.log(text);
-
-// -------------------------------------------------------- add element in end ?
-const phal = ["Banana", "Orange", "Apple", "Mango"];
-phal[phal.length] = "Kiwi";
-// console.log(phal);
-
-// --------------------- OR
-
-const myArray = ["Emil", "Tobias", "Linus"];
-const myChildren = myArray.concat("Peter");
-// console.log(myChildren);
 
 // -------------------------------------------- multiply by six 
 let arrs = [5, 1, 30, 2, 6, 21, 18];
