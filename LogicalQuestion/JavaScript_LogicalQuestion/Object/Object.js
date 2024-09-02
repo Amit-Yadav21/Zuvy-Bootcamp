@@ -464,19 +464,6 @@ const input_objs = { "aaaaa": 3000, "bbbb": 200, "ccc": 1050 };
 
 // .........................................count letter and digit
 function countLettersAndDigits(str) {
-    let letterCount = 0;
-    let digitCount = 0;
-    for (let i = 0; i < str.length; i++) {
-        const char = str.charAt(i);
-        if (/[a-zA-Z]/.test(char)) {
-            letterCount++;
-        }
-        else if (!isNaN(parseInt(char))) {
-            digitCount++;
-        }
-    }
-    // return { letters: letterCount, digits: digitCount };
-
     let lCount = 0;
     let dCount = 0;
     for (let i = 0; i < str.length; i++) {

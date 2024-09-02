@@ -1,52 +1,49 @@
-// const obj = {name:'amit', age:24, name:'yadav'}
+const obj = {name:'amit', age:24, name:'yadav'}
 // console.log(Object.values(obj));
 
-// const person = { name: 'John', age: 30 };
-// for (let key in person) {
-//     console.log(key + ': ' + person[key]);
-// }
+const person = { name: 'John', age: 30 };
+for (let key in person) {
+    // console.log(key + ': ' + person[key]);
+}
 
-// const person = { name: 'John', age: 30 };
-// const entries = Object.keys(person);
-// console.log(entries); // Output: ['name', 'age']
+const keys = Object.keys(person);
+// console.log(keys); // Output: ['name', 'age']
 
-// const person = { name: 'John', age: 30 };
-// const values = Object.values(person);
+const values = Object.values(person);
 // console.log(values); // Output: ['John', 30]
 
-// const person = { name: 'John', age: 30 };
-// const entries = Object.entries(person);
+const entries = Object.entries(person);
 // console.log(entries); // Output: [['name', 'John'], ['age', 30]]
 
 // ************************************************* object ?
-var obj = {
+var obj2 = {
 	a: "hello world", // property
 	b: 42,
 	c: true
 };
 
-obj.a;		// "hello world", accessed with doted notation
-obj.b;		// 42
-obj.c;		// true
-// console.log(obj.a,',',obj.b,',',obj.c);
+obj2.a;		// "hello world", accessed with doted notation
+obj2.b;		// 42
+obj2.c;		// true
+// console.log(obj2.a,',',obj2.b,',',obj2.c);
 
-obj["a"];	// "hello world", accessed with bracket notation
-obj["b"];	// 42
-obj["c"];	// true
-// console.log(obj["a"],',',obj["b"],',',obj["c"]);
+obj2["a"];	// "hello world", accessed with bracket notation
+obj2["b"];	// 42
+obj2["c"];	// true
+// console.log(obj2["a"],',',obj2["b"],',',obj2["c"]);
 
 // ----------------------------------------------------------
 
-var obj = {
+var obj3 = {
 	a: "hello world",
 	b: 42
 };
 
 var b = "a";
-// obj[b];		// "hello world"
-// obj["b"];		// 42
+// obj3[b];		// "hello world"
+// obj3["b"];		// 42
 
-// console.log(obj[b],',',obj["b"]);
+// console.log(obj3[b],',',obj3["b"]);
 
 // ========================================================================== concat / marge ?
 // // marge karte samy updated value leta hai ...
@@ -81,7 +78,7 @@ const objB = { a: 15 }
 
 // -------------------------------------------------
 
-const person = {
+const person2 = {
     name: 'John Doe', 
     age: 24,
     location: "U.S.A"
@@ -90,7 +87,7 @@ const job = {
     title: "Full stack developer",
     location: "Remote"
 }
-const employee = Object.assign(person, job);
+const employee = Object.assign(person2, job);
 // console.log(employee);
 
 // ------------ output here -
@@ -116,86 +113,14 @@ const job_name = {
 const employees = {...persons, ...job_name};
 // console.log(employees.location === persons.location);	// true
 
-// ------------------------------------------------------
-
-// const input =require('readline-sync')
-// const n = input.question('Type your text -:')
-// function countPhoneNumbers(obj) {
-// 	let count = 1;
-// 	for (const key in obj) {
-// 		if (obj.hasOwnProperty(key)) {
-// 			const value = obj[key];
-// 			if (typeof value === 'string' && /\d{3}-\d{3}-\d{4}/.test(value)) {
-// 				count++;
-// 			}
-// 		}
-// 	}
-
-// 	return count;
-// }
-// console.log(countPhoneNumbers(n));
-
-// ============================= searching any data here ?
-
-const data = [
-	{
-		"Employee_ID": 1,
-		"Name": "amit ok",
-		"Email": "amitok@gmail.com",
-		"Address": "amit ok nagar, mohla gali, machhi market",
-		"Phone_Number": "1234567890"
-	},
-	{
-		"Employee_ID": 2,
-		"Name": "amit kumar",
-		"Email": "amitk@gmail.com",
-		"Address": "amit kumar nagar, mohla gali, machhi market",
-		"Phone_Number": "1234567891"
-	},
-	{
-		"Employee_ID": 3,
-		"Name": "yadav",
-		"Email": "yadav@gmail.com",
-		"Address": "yadav nagar, mohla gali, machhi market",
-		"Phone_Number": "1234567892"
-	},
-	{
-		"Employee_ID": 4,
-		"Name": "papa",
-		"Email": "papa@gmail.com",
-		"Address": "papa nagar, mohla gali, machhi market",
-		"Phone_Number": "9651025253"
-	}
-];
-
-const input = require('readline-sync')
-const num = input.question('Enter your number -:')
-const searchTerm = num; // The term you want to search for
-// // console.log('what is serach :-',searchTerm);
-
-const searchData = data.filter((item) => {
-	const name = item.Name.toLowerCase();
-	const email = item.Email.toLowerCase();
-	const address = item.Address.toLowerCase();
-	const phone = item.Phone_Number;
-
-	return (
-		name.includes(searchTerm.toLowerCase()) ||
-		email.includes(searchTerm.toLowerCase()) ||
-		address.includes(searchTerm.toLowerCase()) ||
-		phone.includes(searchTerm)
-	);
-});
-// console.log(searchData);
-
 // --------------------------------------- output :- 7 4 1
-var obj =[
+var obj4 =[
     {"a":7},
     {"c":1},
     {"e":4}
 ]
 let res = []
-for(i of obj){
+for(i of obj4){
     // console.log(i)
     let v = Object.values(i)
     res.push(...v)
