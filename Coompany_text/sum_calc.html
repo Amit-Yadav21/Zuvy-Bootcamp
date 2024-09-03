@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dynamic Input Addition and Sum</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <h2>Dynamic Input Addition and Sum</h2>
+
+            <form id="sumForm">
+                <div id="numberInputs">
+                    <label for="num1">Number 1:</label>
+                    <input type="number" id="num1" name="num1" required>
+
+                    <label for="num2">Number 2:</label>
+                    <input type="number" id="num2" name="num2" required>
+                </div>
+
+                <!-- Add Input Button -->
+                <button type="button" onclick="addInput()">Add Input</button>
+
+                <!-- Calculate Sum Button -->
+                <button type="button" onclick="calculateSum()">Calculate
+                    Sum</button>
+            </form>
+
+            <!-- Output Sum -->
+            <div id="result"></div>
+        </div>
+
+        <!-- External Script -->
+        <script src="script.js"></script>
+    </body>
+</html>
