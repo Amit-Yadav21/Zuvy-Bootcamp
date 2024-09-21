@@ -68,19 +68,3 @@ function copyElement(arr) {
     return arr;
 }
 // console.log(copyElement([1, 2, 3]));    // [1, 3, 3]
-
-// ..........................find Max value of notes 
-function getGoodNotes(arrObj) {
-    const goodNotes = [];
-    arrObj.forEach(student => {
-        const highestNote = Math.max(...student.notes);
-        goodNotes.push({ name: student.name, goodNote: highestNote });
-    });
-    return goodNotes;
-}
-const arrObj = [
-    { name: "Bob", notes: [3, 5, 4] },
-    { name: "Rary", notes: [1, 4, 6] },
-    { name: "Jack", notes: [1, 2, 3] }
-];
-// console.log(getGoodNotes(arrObj)); // Output: [ { name: 'Bob', goodNote: 5 } ]
