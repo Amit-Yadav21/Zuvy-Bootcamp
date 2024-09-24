@@ -1,0 +1,494 @@
+React Basics (Components, JSX, Props, State, etc.) ----------------------------------------
+Q. What is React?
+- React is a JavaScript library used to build user interfaces, mainly for single-page applications
+
+Q. What are components in React?
+- Reusable pieces of UI that can hold their own state and props.
+
+Q. What is JSX?
+- JSX stands for JavaScript XML. It allows you to write HTML-like code inside JavaScript and makes it easier to write React components. Behind the scenes, React converts JSX into regular JavaScript, so the browser can understand it.
+
+Q. What is the difference between functional and class components?
+- Class components use ES6 classes and can manage state, while functional components are simpler functions.
+
+Q. What is state in React?
+- State is a built-in object that allows components to store and manage dynamic data. It holds information about a component.
+
+Q. What are props in React?
+- Props (short for "properties") are a way to pass data from one component to another, typically from a parent component to a child component. They are read-only and allow data to be passed to child components.
+
+Q. What are default props?
+- Default props are values that a component uses if no value is provided.
+
+Q. What are render props?
+- Render props are a way to share code between components by passing a function as a prop. This function lets the component decide what to display.
+
+Q. What is the children prop in React?
+- The children prop allows you to pass JSX or components between the opening and closing tags of a component.
+
+Q. What is the virtual DOM?
+- A lightweight copy of the actual DOM used for efficient updates.
+
+Q. What are controlled and uncontrolled components?
+- Controlled components have their value managed by React via state, while uncontrolled components rely on the DOM to handle their own state using refs.
+
+React Hooks (useState, useEffect, useRef, etc.) ------------------------------
+Q. What are hooks in React?
+- Hooks are functions that let you "hook into" React state and lifecycle features from function components.
+
+Q. How does useState work?
+- useState is a Hook that allows you to add state to functional components.
+
+Q. What is useEffect used for?
+- useEffect is a Hook that allows you to perform side effects in your components (e.g., fetching data, subscriptions).
+
+Q. What is the purpose of useEffect?
+- A hook for managing side effects in functional components.
+
+Q. What is ref in React?
+- A ref is a way to access the DOM nodes or React elements directly within React. It's often used to manipulate or access DOM elements imperatively.
+
+Q. What is useRef in React?
+- useRef is a hook that returns a mutable ref object which does not cause re-renders when its value is updated. It’s used to reference DOM elements or store persistent values.
+
+Q. What is useMemo in React?
+- useMemo is a hook that memoizes a computed value, ensuring that a function is only recomputed when its dependencies change, optimizing performance.
+
+Q. How can you fetch data with useEffect only once when the component mounts?
+- By passing an empty array [] as the second argument to useEffect, the effect runs only once after the component mounts.
+
+Q. What is the purpose of the useReducer hook?
+- useReducer is used to manage more complex state logic in React by providing a reducer function to handle different state changes based on actions.
+
+Q. Can you use multiple useState or useEffect in a single component?
+- Yes, you can use multiple useState or useEffect hooks in one component.
+
+Q. What is the purpose of custom hooks in React?
+- Custom hooks allow you to encapsulate reusable logic in a function that can be shared between components. They help keep components clean and abstract common logic.
+
+Q. What is the purpose of custom hooks in React?
+- Custom hooks allow you to encapsulate reusable logic in a function that can be shared between components. They help keep components clean and abstract common logic.
+    function useFetch(url) {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch(url)
+        .then((response) => response.json())
+        .then((data) => {
+            setData(data);
+            setLoading(false);
+        });
+    }, [url]);
+
+    return { data, loading };
+    }
+
+Q. Can you use multiple custom hooks in a single component?
+- Yes, you can use as many custom hooks as needed in a component. Each hook operates independently and can manage its own state and side effects.
+
+Q. How do you prevent unnecessary re-renders when using useEffect?
+- You can prevent unnecessary re-renders by ensuring that the dependencies array passed to useEffect only contains values that, when changed, should trigger a re-render.
+
+-----------------------------------------
+
+React Routing -----------------------------------------
+Q. What is React Router?
+- React Router is a library that allows you to implement routing in a React application. It allows you to navigate between different parts of your app without refreshing the page.
+
+Q. How do you create routes in React?
+- You use the Route component from react-router-dom to define different paths and link them to components.
+
+Q. What is the difference between <BrowserRouter> and <HashRouter>?
+- <BrowserRouter> uses HTML5 history API, while <HashRouter> uses the URL hash (#) for navigation.
+
+Q. How do you navigate programmatically in React Router?
+- You can use the useNavigate hook or the history.push() method in older versions to navigate programmatically.
+
+Q. What is lazy loading in React, and how do you implement it in routing?
+- Lazy loading allows you to load components only when they are needed. You can implement it in React using React.lazy() and Suspense for route components.
+
+Q. How do you optimize performance in a React application?
+- By using memoization, lazy loading, and minimizing re-renders.
+
+Q. How does lazy loading work in React?
+- By using React.lazy and Suspense to dynamically import components, improving load time.
+
+Q. How can you achieve code splitting in React?
+- By using dynamic imports with React.lazy to load components only when needed.
+
+Q. How to implement lazy loading for components?
+- Use React.lazy and Suspense to load components only when needed.
+
+Q. How do you implement code splitting in a React application?
+- By using dynamic imports with React.lazy and Suspense to load components only when they are needed.
+
+Q. What is the purpose of React.lazy?
+- It enables dynamic import of components for code splitting, reducing the initial load time of an application.
+
+Q. How can you optimize performance in a large React application?
+- By implementing memoization, lazy loading, and avoiding unnecessary re-renders with hooks like useMemo and useCallback.
+
+Q. What is the difference between Link and NavLink in React Router?
+- Link is used for navigation between routes, while NavLink is a special type of Link that adds styling to the active route.
+-------------------------------------------------------
+
+Forms and Events (Handling Forms, Event Handling) --------------------------------------
+Q. How do you handle forms in React?
+- By using controlled components with state or uncontrolled components with refs.
+
+Q. How can you manage forms with validation in React?
+- By using controlled components along with validation libraries like Formik or Yup.
+
+Q. How do you handle events in React?
+- I can handle events in React by passing event handlers (like onClick or onChange) to JSX elements. Event listeners are added directly to JSX elements using camelCase syntax .
+
+Q. How do you prevent the default form submit behavior in React?
+- I use event.preventDefault() inside the form's submit handler.
+
+Q. What is a controlled component in React forms?
+- A controlled component is one whose value is controlled by React’s state, ensuring the form element value is always synced with the state.
+
+Q. How do you handle multiple input fields in a form?
+- I can handle multiple input fields by using a dynamic key in the state object, updating the field based on event.target.name.
+
+Q. What is onChange event in React?
+- The onChange event is triggered whenever the value of an input field changes. It is used to update the component's state based on user input.
+-------------------------------------------------------
+
+State Management (Context API, Redux) ----------------------------------------------
+Q. What is Context API?
+- The Context API is a way to pass data through the component tree without manually passing props at every level. It allows you to share data between components without prop drilling .
+
+Q. What is context in React?
+- A way to share values across components without passing props manually.
+
+Q. What is Redux?
+- Redux is a state management library that helps you manage your application's state in a predictable way. It works with React through the react-redux library.
+
+Q. What are the main principles of Redux?
+- The three principles are:
+    Single source of truth (store).
+    State is read-only.
+    Changes are made with pure functions (reducers).
+
+Q. What is the useContext hook in React?
+- The useContext hook allows you to access values from the Context API without needing to pass props down manually at each level of the component tree.
+
+Q. What is the Provider component in the Context API?
+- The Provider component allows you to wrap a part of your React component tree and provide a context value to all components within that tree.
+
+Q. How does Redux help manage state in larger applications?
+- Redux centralizes the state management in a global store, which can be accessed by any component, reducing the need to pass state via props and improving state predictability.
+
+Q. What are Redux actions?
+- Redux actions are plain JavaScript objects that represent an intention to change the state. Each action must have a type property.
+
+Q. What are Redux reducers?
+- Redux reducers are pure functions that take the current state and an action as input and return a new state based on the action's type.
+
+Q. How do you dispatch an action in Redux?
+- You dispatch an action using the dispatch function provided by Redux, which triggers a state change via the reducer.
+
+Q. What is useSelector in Redux, and how does it work?
+- useSelector is a hook that allows you to extract and subscribe to specific parts of the Redux store's state in functional components.
+    const counter = useSelector((state) => state.counter);
+
+Q. What is useDispatch in Redux, and how is it used?
+- useDispatch is a hook that gives you access to the dispatch function in Redux, allowing you to dispatch actions from within a React component.
+
+Q. What is Redux Thunk, and how does it work with React?
+- Redux Thunk is middleware that allows you to write action creators that return a function instead of an action. This function can dispatch actions asynchronously, such as when fetching data from an API.
+
+Q. How do you handle asynchronous actions in Redux without Thunk?
+- Without Redux Thunk, you can handle asynchronous actions using other middleware like Redux-Saga, which provides a more declarative way to manage side effects in Redux.
+---------------------------------------------------------------
+
+Performance Optimization (React.memo, useCallback, etc.) --------------------------------------------
+Q. What is React.memo?
+- React.memo is a higher-order component that prevents re-rendering of a component if its props have not changed.
+
+Q. How does useCallback help in performance?
+- useCallback memoizes a function and ensures the function is not recreated unless its dependencies change, improving performance.
+
+Q. How do you optimize rendering in React?
+- I can optimize rendering by using React.memo, useMemo, useCallback, and ensuring that components only update when necessary (e.g., by comparing props)
+
+Q. What are React fragments?
+- React fragments (<></>) allow you to return multiple elements without adding extra nodes to the DOM.
+
+Q. What is code splitting in React?
+- Code splitting is a technique used to split the code into smaller chunks, loading only the necessary parts of the application. It can be done using dynamic imports or React’s lazy and Suspense.
+
+Q. What is reconciliation in React?
+- Reconciliation is the process through which React updates the DOM by comparing the virtual DOM with the real DOM and only updating the parts that have changed.
+
+Q. How does React’s key prop affect reconciliation?
+- React uses the key prop to identify which items in a list have changed, been added, or removed, which helps in optimizing the reconciliation process by avoiding unnecessary re-renders.
+
+Q. What is React.PureComponent, and how does it differ from React.Component?
+- React.PureComponent is similar to React.Component, but it implements a shallow comparison in shouldComponentUpdate, preventing unnecessary re-renders if the component's props and state haven’t changed.
+
+Q. What is code splitting, and how does it work in React?
+- Code splitting allows you to split your app’s code into separate bundles so that only the necessary parts of your app are loaded initially. In React, it’s commonly done using React.lazy() and Suspense for lazy-loading components.
+
+Q. What is tree shaking in React?
+- Tree shaking is a technique used in the build process to remove unused code from the final bundle, helping reduce the bundle size. React’s build tools, like Webpack, can automatically tree shake unused components and functions.
+------------------------------------------------------------------------------
+
+What are higher-order components (HOCs)?
+Functions that take a component and return a new one, enabling logic reuse.
+
+Q. What is a key in React, and why is it important? What is the purpose of keys in React lists?
+- The key prop is a special attribute used in lists to help React identify which items have changed, are added, or are removed. the purpose of keys is Uniqueness, Efficient Updates and Avoiding Unnecessary Re-renders.
+
+How do you optimize performance in a React application?
+By using memoization, lazy loading, and minimizing re-renders.
+
+What is the difference between useMemo and useCallback?
+useMemo memoizes values, while useCallback memoizes functions.
+Can you explain the lifecycle of a React component?
+Phases include mounting, updating, and unmounting, with specific lifecycle methods.
+
+What are error boundaries?
+Components that catch errors in their child components and display fallback UI.
+
+What are some common performance issues in React?
+Unnecessary re-renders, large component trees, and heavy computations during rendering
+
+
+     23 . What is the purpose of render() in a React component?
+           The render() method (in class components) returns the UI to display. Functional components return UI directly.
+
+Intermediate Questions
+What are lifecycle methods?
+Lifecycle methods are special functions that run at different points in a component’s life, like when it mounts or updates.
+
+What is useEffect?
+useEffect is a hook for performing side effects, like data fetching, in functional components.
+
+What are hooks in React?
+Hooks are functions that let you use state and other React features in functional components.
+
+What are controlled vs. uncontrolled components?
+Controlled components manage their form data using React state, while uncontrolled components keep their own state.
+
+How does useReducer differ from useState?
+useReducer is for managing more complex state logic compared to useState, which is simpler.
+
+What is memoization?
+Memoization saves the results of expensive calculations to improve performance.
+
+What is a fragment in React?
+A fragment groups multiple children without adding extra nodes to the DOM.
+
+What is the purpose of useReducer?
+A hook for managing complex state logic in functional components, similar to Redux.
+
+
+
+How does the shouldComponentUpdate method work?
+It allows you to optimize component rendering by preventing updates when unnecessary.
+
+What is the purpose of React.memo?
+A higher-order component that prevents re-renders of functional components when props haven't changed.
+
+What are the benefits of using TypeScript with React?
+TypeScript provides static type checking, improving code quality and reducing runtime errors.
+
+What is the difference between useEffect and useLayoutEffect?
+useLayoutEffect runs synchronously after all DOM mutations, while useEffect runs asynchronously.
+
+How do you handle side effects in a functional component?
+By using the useEffect hook to perform actions after rendering.
+
+What is the Context API, and how is it used?
+A built-in feature for sharing global data across components without prop drilling.
+
+What are custom hooks?
+Functions that let you extract and reuse stateful logic in functional components.
+
+How does lazy loading work in React?
+By using React.lazy and Suspense to dynamically import components, improving load time.
+
+What is the purpose of useCallback?
+To memoize functions and prevent unnecessary re-creations on re-renders.
+
+How can you prevent a component from re-rendering?
+By implementing shouldComponentUpdate, using React.memo, or optimizing state updates.
+
+What is the difference between controlled and uncontrolled components?
+Controlled components manage their state through React, while uncontrolled components manage their state through the DOM.
+
+How can you achieve code splitting in React?
+By using dynamic imports with React.lazy to load components only when needed.
+
+What are prop types, and why are they used?
+Prop types are a way to enforce the type and shape of props passed to components for better validation.
+
+What is the role of useImperativeHandle?
+It customizes the instance value that is exposed to parent components when using ref.
+
+How can you test React components?
+By using testing libraries like Jest and React Testing Library to simulate interactions and assertions.
+
+Advanced Questions
+What are higher-order components (HOCs)?
+HOCs are functions that take a component and return a new one, often used for adding shared functionality.
+
+How do you optimize performance in a React app?
+You can use React.memo, code splitting, and avoid unnecessary re-renders to improve performance.
+
+
+What is server-side rendering (SSR)?
+SSR means rendering React components on the server before sending them to the client, improving load time and SEO.
+
+How can you handle errors in React?
+Error boundaries catch errors in child components, preventing crashes.
+
+What is code splitting?
+Code splitting divides your code into smaller pieces that load only when needed, improving load times.
+
+What is the difference between useCallback and useMemo?
+useCallback memoizes functions, while useMemo memoizes values to avoid recalculating them unnecessarily.
+
+How to implement lazy loading for components?
+Use React.lazy and Suspense to load components only when needed.
+
+What are common performance pitfalls?
+Excessive re-renders, not using keys, and not memoizing expensive computations can hurt performance.
+
+How to implement authentication in a React app?
+Use context or state management to store user data and protect routes based on authentication.
+
+What are React hooks, and why are they important?
+Hooks are functions that allow functional components to manage state and side effects, promoting cleaner and reusable code.
+
+What is the purpose of useContext?
+It allows functional components to consume values from the React context directly, avoiding prop drilling.
+
+How do you implement code splitting in a React application?
+By using dynamic imports with React.lazy and Suspense to load components only when they are needed.
+What is the role of useDeferredValue?
+It allows you to defer updates to a value, improving the responsiveness of the UI during high-priority updates.
+
+What are the differences between useEffect and useLayoutEffect?
+useLayoutEffect runs synchronously after all DOM mutations, while useEffect runs asynchronously after rendering.
+
+What are React Portals?
+Portals provide a way to render children into a DOM node outside of their parent component hierarchy.
+
+What is reconciliation in React?
+The process React uses to determine what changes need to be made to the DOM by comparing the new virtual DOM to the previous one.
+
+What is the significance of React.StrictMode?
+It helps identify potential problems in an application by intentionally invoking additional checks and warnings.
+
+How can you create a custom hook?
+By defining a function that uses built-in hooks and can be reused across multiple components.
+
+What are memoization and its benefits in React?
+Memoization optimizes performance by caching expensive calculations and avoiding unnecessary re-renders.
+
+What is the difference between server-side rendering (SSR) and client-side rendering (CSR)?
+SSR generates HTML on the server before sending it to the client, while CSR renders HTML in the browser after the initial load.
+
+What is the purpose of React.lazy?
+It enables dynamic import of components for code splitting, reducing the initial load time of an application.
+
+How do you handle authentication in a React app?
+By using context or state management libraries to manage authentication state and protect routes.
+What are the benefits of using a state management library like Redux?
+It provides a centralized store, predictable state updates, and easier debugging of state changes.
+
+What is the use of useTransition?
+It allows you to mark updates as non-urgent, improving the user experience during state transitions.
+
+How can you optimize performance in a large React application?
+By implementing memoization, lazy loading, and avoiding unnecessary re-renders with hooks like useMemo and useCallback.
+
+What is the purpose of the key prop in lists?
+It helps React identify and manage individual elements in a list for efficient updates.
+
+What are derived state and its implications?
+Derived state is computed from props or other state, which can lead to bugs if not managed correctly.
+
+How do you use React's Context API with a reducer?
+By combining the Context API with useReducer to manage global state with actions and state transitions.
+
+What are the trade-offs of using React Hooks vs. Class Components?
+Hooks offer cleaner syntax and better composability, while class components have lifecycle methods that may be more familiar to some developers.
+
+Practical Questions
+1 . How to build a simple form in React?
+import React, { useState } from 'react';
+
+const SimpleForm = () => {
+  const [name, setName] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert(`Submitted name: ${name}`);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+};
+
+2 . How to implement routing in a React app?
+
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+
+const App = () => (
+  <Router>
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/about" component={About} />
+    </Switch>
+  </Router>
+);
+
+3 . How to fetch data in a React component?
+
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
+const DataFetchingComponent = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get('https://api.example.com/data');
+      setData(response.data);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  return <div>{JSON.stringify(data)}</div>;
+};
+
+4 . What strategies to manage component state?
+Use useState for local state, Context API or Redux for shared state, and useReducer for complex state management.
+
+Behavioral Questions
+Describe a challenging project you worked on using React.
+Share a specific project, focusing on challenges like managing state, optimizing performance, or working with APIs, and how you solved them.
+
+How do you stay updated with new React features?
+I read the official React documentation, follow blogs, listen to podcasts, and participate in community forums.
+
+What do you find exciting about working with React?
+I enjoy the component-based structure, fast updates with the Virtual DOM, and the large ecosystem of tools.
